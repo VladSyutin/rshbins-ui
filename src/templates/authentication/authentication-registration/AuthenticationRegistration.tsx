@@ -8,15 +8,15 @@ import {
   type ReactNode
 } from 'react';
 import './AuthenticationRegistration.scss';
-import { Button, type ButtonProps } from '../../../button/Button';
-import { Checkbox, type CheckboxProps } from '../../../checkbox/Checkbox';
-import { Header } from '../../../header/Header';
-import { InputEmail, isEmailValueValid, type InputEmailProps } from '../../../input-email/InputEmail';
-import { InputInn, type InputInnProps } from '../../../input-inn/InputInn';
-import { InputPhone, type InputPhoneProps } from '../../../input-phone/InputPhone';
-import { Tabs } from '../../../tabs/Tabs';
-import type { ThemeProps } from '../../../theme/Theme';
-import arrowLeftIconUrl from '../../../../../icons/arrow-left.svg';
+import { Button, type ButtonProps } from '../../../components/button/Button';
+import { Checkbox, type CheckboxProps } from '../../../components/checkbox/Checkbox';
+import { Header } from '../../../components/header/Header';
+import { InputEmail, isEmailValueValid, type InputEmailProps } from '../../../components/input-email/InputEmail';
+import { InputInn, type InputInnProps } from '../../../components/input-inn/InputInn';
+import { InputPhone, type InputPhoneProps } from '../../../components/input-phone/InputPhone';
+import { Tabs } from '../../../components/tabs/Tabs';
+import type { ThemeProps } from '../../../components/theme/Theme';
+import arrowLeftIconUrl from '../../../../icons/arrow-left.svg';
 
 const PERSONAL_DATA_POLICY_URL =
   'https://rshbins.ru/about/documentation/Politika_obrabotki_PDN.pdf';

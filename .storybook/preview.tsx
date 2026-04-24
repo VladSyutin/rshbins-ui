@@ -14,6 +14,7 @@ const preview: Preview = {
     layout: 'fullscreen',
     options: {
       storySort: {
+        order: ['Components', 'Dialogs', 'Templates', 'Prototypes', '*'],
         method: 'alphabetical'
       }
     },

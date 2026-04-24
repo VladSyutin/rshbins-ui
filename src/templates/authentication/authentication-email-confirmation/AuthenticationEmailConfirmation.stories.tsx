@@ -1,19 +1,18 @@
 import { useState, type CSSProperties } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import {
-  AuthenticationRegistrationData,
-  type AuthenticationRegistrationDataSubmitPayload
-} from './AuthenticationRegistrationData';
-import type { ThemeMode } from '../../../theme/Theme';
+import { AuthenticationEmailConfirmation } from './AuthenticationEmailConfirmation';
+import type { ThemeMode } from '../../../components/theme/Theme';
 
 const meta = {
-  title: 'Templates/Authentication/AuthenticationRegistrationData',
-  component: AuthenticationRegistrationData,
+  title: 'Templates/Authentication/AuthenticationEmailConfirmation',
+  component: AuthenticationEmailConfirmation,
   tags: ['autodocs'],
   args: {
-    device: 'desktop'
+    device: 'desktop',
+    email: 'syutinvi@rshbins.ru',
+    emailMode: 'visible'
   }
-} satisfies Meta<typeof AuthenticationRegistrationData>;
+} satisfies Meta<typeof AuthenticationEmailConfirmation>;
 
 export default meta;
 
@@ -74,23 +73,12 @@ const labelStyle: CSSProperties = {
 export const Playground: Story = {
   render: (args) => {
     const [mode, setMode] = useState<ThemeMode>('light');
-    const [lastSubmit, setLastSubmit] =
-      useState<AuthenticationRegistrationDataSubmitPayload | null>(null);
 
     return (
       <div className={`theme-${mode}`} style={surfaceStyle}>
         <div style={args.device === 'mobile' ? mobileWidthStyle : storyWidthStyle}>
-          <AuthenticationRegistrationData
+          <AuthenticationEmailConfirmation
             {...args}
-            defaultBirthDate={lastSubmit?.birthDate}
-            defaultConsentAccepted={lastSubmit?.consentAccepted}
-            defaultEmail={lastSubmit?.email ?? ''}
-            defaultGender={lastSubmit?.gender}
-            defaultMiddleName={lastSubmit?.middleName ?? ''}
-            defaultName={lastSubmit?.name ?? ''}
-            defaultSurname={lastSubmit?.surname ?? ''}
-            defaultWithoutMiddleName={lastSubmit?.withoutMiddleName ?? false}
-            onSubmit={setLastSubmit}
             themeProps={{
               applyToDocument: false,
               mode,
@@ -115,10 +103,24 @@ export const Overview: Story = {
         <p style={labelStyle}>Desktop</p>
         <div style={desktopOverviewGridStyle}>
           <section style={sectionStyle}>
-            <p style={labelStyle}>Default</p>
+            <p style={labelStyle}>Email открыт</p>
             <div className="theme-light" style={storyWidthStyle}>
-              <AuthenticationRegistrationData
+              <AuthenticationEmailConfirmation
                 device="desktop"
+                email="syutinvi@rshbins.ru"
+                emailMode="visible"
+                themeProps={{ applyToDocument: false }}
+              />
+            </div>
+          </section>
+
+          <section style={sectionStyle}>
+            <p style={labelStyle}>Email скрыт</p>
+            <div className="theme-light" style={storyWidthStyle}>
+              <AuthenticationEmailConfirmation
+                device="desktop"
+                email="syutinvi@rshbins.ru"
+                emailMode="hidden"
                 themeProps={{ applyToDocument: false }}
               />
             </div>
@@ -130,10 +132,24 @@ export const Overview: Story = {
         <p style={labelStyle}>Mobile</p>
         <div style={mobileOverviewGridStyle}>
           <section style={sectionStyle}>
-            <p style={labelStyle}>Default</p>
+            <p style={labelStyle}>Email открыт</p>
             <div className="theme-light" style={mobileWidthStyle}>
-              <AuthenticationRegistrationData
+              <AuthenticationEmailConfirmation
                 device="mobile"
+                email="syutinvi@rshbins.ru"
+                emailMode="visible"
+                themeProps={{ applyToDocument: false }}
+              />
+            </div>
+          </section>
+
+          <section style={sectionStyle}>
+            <p style={labelStyle}>Email скрыт</p>
+            <div className="theme-light" style={mobileWidthStyle}>
+              <AuthenticationEmailConfirmation
+                device="mobile"
+                email="syutinvi@rshbins.ru"
+                emailMode="hidden"
                 themeProps={{ applyToDocument: false }}
               />
             </div>

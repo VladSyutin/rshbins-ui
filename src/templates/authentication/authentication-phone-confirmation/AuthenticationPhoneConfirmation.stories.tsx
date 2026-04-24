@@ -1,20 +1,19 @@
 import { useState, type CSSProperties } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import {
-  AuthenticationFirstScreen,
-  type AuthenticationClientType
-} from './AuthenticationFirstScreen';
-import type { ThemeMode } from '../../../theme/Theme';
+import { AuthenticationPhoneConfirmation } from './AuthenticationPhoneConfirmation';
+import type { ThemeMode } from '../../../components/theme/Theme';
 
 const meta = {
-  title: 'Templates/Authentication/AuthenticationFirstScreen',
-  component: AuthenticationFirstScreen,
+  title: 'Templates/Authentication/AuthenticationPhoneConfirmation',
+  component: AuthenticationPhoneConfirmation,
   tags: ['autodocs'],
   args: {
-    defaultClientType: 'individual',
-    device: 'desktop'
+    device: 'desktop',
+    phoneMode: 'visible',
+    phoneNumber: '+7 (952) 999-99-99',
+    showEmailButton: true
   }
-} satisfies Meta<typeof AuthenticationFirstScreen>;
+} satisfies Meta<typeof AuthenticationPhoneConfirmation>;
 
 export default meta;
 
@@ -75,16 +74,12 @@ const labelStyle: CSSProperties = {
 export const Playground: Story = {
   render: (args) => {
     const [mode, setMode] = useState<ThemeMode>('light');
-    const [clientType, setClientType] =
-      useState<AuthenticationClientType>(args.defaultClientType ?? 'individual');
 
     return (
       <div className={`theme-${mode}`} style={surfaceStyle}>
-        <div style={storyWidthStyle}>
-          <AuthenticationFirstScreen
+        <div style={args.device === 'mobile' ? mobileWidthStyle : storyWidthStyle}>
+          <AuthenticationPhoneConfirmation
             {...args}
-            clientType={clientType}
-            onClientTypeChange={setClientType}
             themeProps={{
               applyToDocument: false,
               mode,
@@ -109,22 +104,24 @@ export const Overview: Story = {
         <p style={labelStyle}>Desktop</p>
         <div style={desktopOverviewGridStyle}>
           <section style={sectionStyle}>
-            <p style={labelStyle}>Физическое лицо</p>
+            <p style={labelStyle}>Номер открыт</p>
             <div className="theme-light" style={storyWidthStyle}>
-              <AuthenticationFirstScreen
-                defaultClientType="individual"
+              <AuthenticationPhoneConfirmation
                 device="desktop"
+                phoneMode="visible"
+                phoneNumber="+7 (952) 999-99-99"
                 themeProps={{ applyToDocument: false }}
               />
             </div>
           </section>
 
           <section style={sectionStyle}>
-            <p style={labelStyle}>Корпорат. клиент</p>
+            <p style={labelStyle}>Номер скрыт</p>
             <div className="theme-light" style={storyWidthStyle}>
-              <AuthenticationFirstScreen
-                defaultClientType="corporate"
+              <AuthenticationPhoneConfirmation
                 device="desktop"
+                phoneMode="hidden"
+                phoneNumber="+7 (952) 999-99-99"
                 themeProps={{ applyToDocument: false }}
               />
             </div>
@@ -136,22 +133,24 @@ export const Overview: Story = {
         <p style={labelStyle}>Mobile</p>
         <div style={mobileOverviewGridStyle}>
           <section style={sectionStyle}>
-            <p style={labelStyle}>Физ. лицо</p>
+            <p style={labelStyle}>Номер открыт</p>
             <div className="theme-light" style={mobileWidthStyle}>
-              <AuthenticationFirstScreen
-                defaultClientType="individual"
+              <AuthenticationPhoneConfirmation
                 device="mobile"
+                phoneMode="visible"
+                phoneNumber="+7 (952) 999-99-99"
                 themeProps={{ applyToDocument: false }}
               />
             </div>
           </section>
 
           <section style={sectionStyle}>
-            <p style={labelStyle}>Корпорат. клиент</p>
+            <p style={labelStyle}>Номер скрыт</p>
             <div className="theme-light" style={mobileWidthStyle}>
-              <AuthenticationFirstScreen
-                defaultClientType="corporate"
+              <AuthenticationPhoneConfirmation
                 device="mobile"
+                phoneMode="hidden"
+                phoneNumber="+7 (952) 999-99-99"
                 themeProps={{ applyToDocument: false }}
               />
             </div>

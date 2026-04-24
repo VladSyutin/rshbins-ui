@@ -8,16 +8,16 @@ import {
   type ReactNode
 } from 'react';
 import './AuthenticationFirstScreen.scss';
-import { Button, type ButtonProps } from '../../../button/Button';
-import { Checkbox, type CheckboxProps } from '../../../checkbox/Checkbox';
-import { Divider } from '../../../divider/Divider';
-import { Header } from '../../../header/Header';
-import { InputLogin, type InputLoginProps } from '../../../input-login/InputLogin';
-import { InputPassword, type InputPasswordProps } from '../../../input-password/InputPassword';
-import { InputPhone, type InputPhoneProps } from '../../../input-phone/InputPhone';
-import { SegmentedControl } from '../../../segmented-control/SegmentedControl';
-import type { ThemeProps } from '../../../theme/Theme';
-import gosuslugiIconUrl from '../../../../../icons/gosuslugi.svg';
+import { Button, type ButtonProps } from '../../../components/button/Button';
+import { Checkbox, type CheckboxProps } from '../../../components/checkbox/Checkbox';
+import { Divider } from '../../../components/divider/Divider';
+import { Header } from '../../../components/header/Header';
+import { InputLogin, type InputLoginProps } from '../../../components/input-login/InputLogin';
+import { InputPassword, type InputPasswordProps } from '../../../components/input-password/InputPassword';
+import { InputPhone, type InputPhoneProps } from '../../../components/input-phone/InputPhone';
+import { SegmentedControl } from '../../../components/segmented-control/SegmentedControl';
+import type { ThemeProps } from '../../../components/theme/Theme';
+import gosuslugiIconUrl from '../../../../icons/gosuslugi.svg';
 
 const PERSONAL_DATA_POLICY_URL =
   'https://rshbins.ru/about/documentation/Politika_obrabotki_PDN.pdf';

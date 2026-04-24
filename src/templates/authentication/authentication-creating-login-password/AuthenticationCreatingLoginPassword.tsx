@@ -6,11 +6,11 @@ import {
   type ReactNode
 } from 'react';
 import './AuthenticationCreatingLoginPassword.scss';
-import { Button, type ButtonProps } from '../../../button/Button';
-import { Header } from '../../../header/Header';
-import { InputLogin, type InputLoginProps } from '../../../input-login/InputLogin';
-import { InputPassword, type InputPasswordProps } from '../../../input-password/InputPassword';
-import type { ThemeProps } from '../../../theme/Theme';
+import { Button, type ButtonProps } from '../../../components/button/Button';
+import { Header } from '../../../components/header/Header';
+import { InputLogin, type InputLoginProps } from '../../../components/input-login/InputLogin';
+import { InputPassword, type InputPasswordProps } from '../../../components/input-password/InputPassword';
+import type { ThemeProps } from '../../../components/theme/Theme';
 
 export type AuthenticationCreatingLoginPasswordDevice = 'auto' | 'desktop' | 'mobile';
 export type AuthenticationCreatingLoginPasswordMode = 'login' | 'password' | 'login-and-password';

@@ -1,19 +1,17 @@
 import { useState, type CSSProperties } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { AuthenticationPhoneConfirmation } from './AuthenticationPhoneConfirmation';
-import type { ThemeMode } from '../../../theme/Theme';
+import { AuthenticationCreatingLoginPassword } from './AuthenticationCreatingLoginPassword';
+import type { ThemeMode } from '../../../components/theme/Theme';
 
 const meta = {
-  title: 'Templates/Authentication/AuthenticationPhoneConfirmation',
-  component: AuthenticationPhoneConfirmation,
+  title: 'Templates/Authentication/AuthenticationCreatingLoginPassword',
+  component: AuthenticationCreatingLoginPassword,
   tags: ['autodocs'],
   args: {
     device: 'desktop',
-    phoneMode: 'visible',
-    phoneNumber: '+7 (952) 999-99-99',
-    showEmailButton: true
+    mode: 'login'
   }
-} satisfies Meta<typeof AuthenticationPhoneConfirmation>;
+} satisfies Meta<typeof AuthenticationCreatingLoginPassword>;
 
 export default meta;
 
@@ -78,7 +76,7 @@ export const Playground: Story = {
     return (
       <div className={`theme-${mode}`} style={surfaceStyle}>
         <div style={args.device === 'mobile' ? mobileWidthStyle : storyWidthStyle}>
-          <AuthenticationPhoneConfirmation
+          <AuthenticationCreatingLoginPassword
             {...args}
             themeProps={{
               applyToDocument: false,
@@ -104,24 +102,33 @@ export const Overview: Story = {
         <p style={labelStyle}>Desktop</p>
         <div style={desktopOverviewGridStyle}>
           <section style={sectionStyle}>
-            <p style={labelStyle}>Номер открыт</p>
+            <p style={labelStyle}>Логин</p>
             <div className="theme-light" style={storyWidthStyle}>
-              <AuthenticationPhoneConfirmation
+              <AuthenticationCreatingLoginPassword
                 device="desktop"
-                phoneMode="visible"
-                phoneNumber="+7 (952) 999-99-99"
+                mode="login"
                 themeProps={{ applyToDocument: false }}
               />
             </div>
           </section>
 
           <section style={sectionStyle}>
-            <p style={labelStyle}>Номер скрыт</p>
+            <p style={labelStyle}>Пароль</p>
             <div className="theme-light" style={storyWidthStyle}>
-              <AuthenticationPhoneConfirmation
+              <AuthenticationCreatingLoginPassword
                 device="desktop"
-                phoneMode="hidden"
-                phoneNumber="+7 (952) 999-99-99"
+                mode="password"
+                themeProps={{ applyToDocument: false }}
+              />
+            </div>
+          </section>
+
+          <section style={sectionStyle}>
+            <p style={labelStyle}>Логин и пароль</p>
+            <div className="theme-light" style={storyWidthStyle}>
+              <AuthenticationCreatingLoginPassword
+                device="desktop"
+                mode="login-and-password"
                 themeProps={{ applyToDocument: false }}
               />
             </div>
@@ -133,24 +140,33 @@ export const Overview: Story = {
         <p style={labelStyle}>Mobile</p>
         <div style={mobileOverviewGridStyle}>
           <section style={sectionStyle}>
-            <p style={labelStyle}>Номер открыт</p>
+            <p style={labelStyle}>Логин</p>
             <div className="theme-light" style={mobileWidthStyle}>
-              <AuthenticationPhoneConfirmation
+              <AuthenticationCreatingLoginPassword
                 device="mobile"
-                phoneMode="visible"
-                phoneNumber="+7 (952) 999-99-99"
+                mode="login"
                 themeProps={{ applyToDocument: false }}
               />
             </div>
           </section>
 
           <section style={sectionStyle}>
-            <p style={labelStyle}>Номер скрыт</p>
+            <p style={labelStyle}>Пароль</p>
             <div className="theme-light" style={mobileWidthStyle}>
-              <AuthenticationPhoneConfirmation
+              <AuthenticationCreatingLoginPassword
                 device="mobile"
-                phoneMode="hidden"
-                phoneNumber="+7 (952) 999-99-99"
+                mode="password"
+                themeProps={{ applyToDocument: false }}
+              />
+            </div>
+          </section>
+
+          <section style={sectionStyle}>
+            <p style={labelStyle}>Логин и пароль</p>
+            <div className="theme-light" style={mobileWidthStyle}>
+              <AuthenticationCreatingLoginPassword
+                device="mobile"
+                mode="login-and-password"
                 themeProps={{ applyToDocument: false }}
               />
             </div>

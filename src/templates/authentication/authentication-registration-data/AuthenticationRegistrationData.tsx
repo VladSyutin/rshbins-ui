@@ -7,17 +7,17 @@ import {
   type ReactNode
 } from 'react';
 import './AuthenticationRegistrationData.scss';
-import { Button, type ButtonProps } from '../../../button/Button';
-import { Checkbox, type CheckboxProps } from '../../../checkbox/Checkbox';
-import { InputBirthDate, isBirthDateValueValid, type InputBirthDateProps } from '../../../input-birth-date/InputBirthDate';
-import { Gender, type GenderProps, type GenderValue } from '../../../gender/Gender';
-import { Header } from '../../../header/Header';
-import { InputEmail, isEmailValueValid, type InputEmailProps } from '../../../input-email/InputEmail';
-import { InputMiddleName, isMiddleNameValueValid, type InputMiddleNameProps } from '../../../input-middle-name/InputMiddleName';
-import { InputName, isNameValueValid, type InputNameProps } from '../../../input-name/InputName';
-import { InputSurname, isSurnameValueValid, type InputSurnameProps } from '../../../input-surname/InputSurname';
-import { InputText, type InputTextProps } from '../../../input-text/InputText';
-import type { ThemeProps } from '../../../theme/Theme';
+import { Button, type ButtonProps } from '../../../components/button/Button';
+import { Checkbox, type CheckboxProps } from '../../../components/checkbox/Checkbox';
+import { InputBirthDate, isBirthDateValueValid, type InputBirthDateProps } from '../../../components/input-birth-date/InputBirthDate';
+import { Gender, type GenderProps, type GenderValue } from '../../../components/gender/Gender';
+import { Header } from '../../../components/header/Header';
+import { InputEmail, isEmailValueValid, type InputEmailProps } from '../../../components/input-email/InputEmail';
+import { InputMiddleName, isMiddleNameValueValid, type InputMiddleNameProps } from '../../../components/input-middle-name/InputMiddleName';
+import { InputName, isNameValueValid, type InputNameProps } from '../../../components/input-name/InputName';
+import { InputSurname, isSurnameValueValid, type InputSurnameProps } from '../../../components/input-surname/InputSurname';
+import { InputText, type InputTextProps } from '../../../components/input-text/InputText';
+import type { ThemeProps } from '../../../components/theme/Theme';
 
 const PERSONAL_DATA_POLICY_URL =
   'https://rshbins.ru/about/documentation/Politika_obrabotki_PDN.pdf';

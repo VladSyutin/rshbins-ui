@@ -1,5 +1,4 @@
 import './App.scss';
-import { FoundationsPreview } from './components/foundations-preview/FoundationsPreview';
 import { Header } from './components/header/Header';
 
 export function App() {
@@ -8,9 +7,7 @@ export function App() {
       <header className="app-shell__header">
         <Header />
       </header>
-      <main className="app-shell__content">
-        <FoundationsPreview />
-      </main>
+      <main className="app-shell__content" />
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import { useEffect, useState, type ButtonHTMLAttributes, type HTMLAttributes, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import './AuthenticationEmailConfirmation.scss';
-import { Button } from '../../../button/Button';
-import { InputCodeItem, type InputCodeItemProps } from '../../../input-code-item/InputCodeItem';
-import { Header } from '../../../header/Header';
-import type { ThemeProps } from '../../../theme/Theme';
-import { NewCodeHasBeenSent } from '../../../../dialogs/toasts/new-code-has-been-sent/NewCodeHasBeenSent';
+import { Button } from '../../../components/button/Button';
+import { InputCodeItem, type InputCodeItemProps } from '../../../components/input-code-item/InputCodeItem';
+import { Header } from '../../../components/header/Header';
+import type { ThemeProps } from '../../../components/theme/Theme';
+import { NewCodeHasBeenSent } from '../../../dialogs/toasts/new-code-has-been-sent/NewCodeHasBeenSent';
 
 export type AuthenticationEmailConfirmationDevice = 'auto' | 'desktop' | 'mobile';
 export type AuthenticationEmailConfirmationEmailMode = 'visible' | 'hidden';

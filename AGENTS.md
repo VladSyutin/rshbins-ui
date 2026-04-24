@@ -24,7 +24,7 @@
 - Import component styles directly from the component entry file, following the existing pattern:
 
 ```tsx
-import './FoundationsPreview.scss';
+import './ComponentName.scss';
 ```
 
 - Keep global styling concerns in `src/styles/global.scss`.
@@ -40,6 +40,8 @@ export function ComponentName() {
 ## Component Organization
 
 - Put reusable UI components under `src/components/`.
+- Put reusable page/block templates under `src/templates/`.
+- Put experimental screen flows and orchestration layers under `src/prototypes/`.
 - Follow the existing folder convention:
   - folder name in kebab-case
   - component file in PascalCase
@@ -56,6 +58,11 @@ src/components/component-name/
 
 - Reuse and extend existing components before creating parallel variants.
 - Keep components presentational unless the task explicitly requires behavior or data wiring.
+- Treat the layers distinctly:
+  - `src/components/` — reusable library primitives and controls
+  - `src/templates/` — reusable composed templates built from primitives
+  - `src/prototypes/` — scenario flows and prototype orchestration built from templates
+  - `src/dialogs/` — modal and toast scenario compositions
 
 ## Token Usage Rules
 

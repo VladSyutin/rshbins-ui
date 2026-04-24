@@ -5,10 +5,10 @@ import {
   type ButtonHTMLAttributes,
   type HTMLAttributes
 } from 'react';
-import { Captcha } from '../../../dialogs/modals/captcha/Captcha';
-import { Timeout } from '../../../dialogs/modals/timeout/Timeout';
-import { SuccessfulAuthentication } from '../../../dialogs/toasts/successful-authentication/SuccessfulAuthentication';
-import { LoaderBrand } from '../../loader-brand/LoaderBrand';
+import { Captcha } from '../../dialogs/modals/captcha/Captcha';
+import { Timeout } from '../../dialogs/modals/timeout/Timeout';
+import { SuccessfulAuthentication } from '../../dialogs/toasts/successful-authentication/SuccessfulAuthentication';
+import { LoaderBrand } from '../../components/loader-brand/LoaderBrand';
 import {
   AuthenticationFirstScreen,
   type AuthenticationClientType,
@@ -28,9 +28,9 @@ import {
   AuthenticationPhoneConfirmation,
   type AuthenticationPhoneConfirmationProps
 } from '../../templates/authentication/authentication-phone-confirmation/AuthenticationPhoneConfirmation';
-import { LogInThroughTheGosuslugi } from '../../../dialogs/modals/log-in-through-the-gosuslugi/LogInThroughTheGosuslugi';
-import { ProofOfIdentity } from '../../../dialogs/modals/proof-of-identity/ProofOfIdentity';
-import { TheUserWasNotFound } from '../../../dialogs/toasts/the-user-was-not-found/TheUserWasNotFound';
+import { LogInThroughTheGosuslugi } from '../../dialogs/modals/log-in-through-the-gosuslugi/LogInThroughTheGosuslugi';
+import { ProofOfIdentity } from '../../dialogs/modals/proof-of-identity/ProofOfIdentity';
+import { TheUserWasNotFound } from '../../dialogs/toasts/the-user-was-not-found/TheUserWasNotFound';
 import {
   AuthenticationRegistrationData,
   type AuthenticationRegistrationDataSubmitPayload,
@@ -50,7 +50,7 @@ import {
   type AuthenticationRestoringAccessMethod,
   type AuthenticationRestoringAccessProps
 } from '../../templates/authentication/authentication-restoring-access/AuthenticationRestoringAccess';
-import type { ThemeMode } from '../../theme/Theme';
+import type { ThemeMode } from '../../components/theme/Theme';
 import './AuthenticationPrototype.scss';
 
 type AuthenticationPrototypeStep =

@@ -1,22 +1,20 @@
 import { useState, type CSSProperties } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import {
-  AuthenticationRestoringAccess,
-  type AuthenticationRestoringAccessFlow,
-  type AuthenticationRestoringAccessMethod
-} from './AuthenticationRestoringAccess';
-import type { ThemeMode } from '../../../theme/Theme';
+  AuthenticationRegistration,
+  type AuthenticationRegistrationMethod
+} from './AuthenticationRegistration';
+import type { ThemeMode } from '../../../components/theme/Theme';
 
 const meta = {
-  title: 'Templates/Authentication/AuthenticationRestoringAccess',
-  component: AuthenticationRestoringAccess,
+  title: 'Templates/Authentication/AuthenticationRegistration',
+  component: AuthenticationRegistration,
   tags: ['autodocs'],
   args: {
-    defaultLoginMethod: 'email',
-    defaultRestoringFlow: 'password',
+    defaultMethod: 'email',
     device: 'desktop'
   }
-} satisfies Meta<typeof AuthenticationRestoringAccess>;
+} satisfies Meta<typeof AuthenticationRegistration>;
 
 export default meta;
 
@@ -77,22 +75,17 @@ const labelStyle: CSSProperties = {
 export const Playground: Story = {
   render: (args) => {
     const [mode, setMode] = useState<ThemeMode>('light');
-    const [flow, setFlow] = useState<AuthenticationRestoringAccessFlow>(
-      args.defaultRestoringFlow ?? 'password'
-    );
-    const [method, setMethod] = useState<AuthenticationRestoringAccessMethod>(
-      args.defaultLoginMethod ?? 'email'
+    const [method, setMethod] = useState<AuthenticationRegistrationMethod>(
+      args.defaultMethod ?? 'email'
     );
 
     return (
       <div className={`theme-${mode}`} style={surfaceStyle}>
         <div style={args.device === 'mobile' ? mobileWidthStyle : storyWidthStyle}>
-          <AuthenticationRestoringAccess
+          <AuthenticationRegistration
             {...args}
-            loginMethod={method}
-            onLoginMethodChange={setMethod}
-            onRestoringFlowChange={setFlow}
-            restoringFlow={flow}
+            method={method}
+            onMethodChange={setMethod}
             themeProps={{
               applyToDocument: false,
               mode,
@@ -117,10 +110,10 @@ export const Overview: Story = {
         <p style={labelStyle}>Desktop</p>
         <div style={desktopOverviewGridStyle}>
           <section style={sectionStyle}>
-            <p style={labelStyle}>Восстановление пароля</p>
+            <p style={labelStyle}>Email</p>
             <div className="theme-light" style={storyWidthStyle}>
-              <AuthenticationRestoringAccess
-                defaultRestoringFlow="password"
+              <AuthenticationRegistration
+                defaultMethod="email"
                 device="desktop"
                 themeProps={{ applyToDocument: false }}
               />
@@ -128,23 +121,10 @@ export const Overview: Story = {
           </section>
 
           <section style={sectionStyle}>
-            <p style={labelStyle}>Восстановление логина / Email</p>
+            <p style={labelStyle}>Phone</p>
             <div className="theme-light" style={storyWidthStyle}>
-              <AuthenticationRestoringAccess
-                defaultLoginMethod="email"
-                defaultRestoringFlow="login"
-                device="desktop"
-                themeProps={{ applyToDocument: false }}
-              />
-            </div>
-          </section>
-
-          <section style={sectionStyle}>
-            <p style={labelStyle}>Восстановление логина / Телефон</p>
-            <div className="theme-light" style={storyWidthStyle}>
-              <AuthenticationRestoringAccess
-                defaultLoginMethod="phone"
-                defaultRestoringFlow="login"
+              <AuthenticationRegistration
+                defaultMethod="phone"
                 device="desktop"
                 themeProps={{ applyToDocument: false }}
               />
@@ -157,10 +137,10 @@ export const Overview: Story = {
         <p style={labelStyle}>Mobile</p>
         <div style={mobileOverviewGridStyle}>
           <section style={sectionStyle}>
-            <p style={labelStyle}>Восстановление пароля</p>
+            <p style={labelStyle}>Email</p>
             <div className="theme-light" style={mobileWidthStyle}>
-              <AuthenticationRestoringAccess
-                defaultRestoringFlow="password"
+              <AuthenticationRegistration
+                defaultMethod="email"
                 device="mobile"
                 themeProps={{ applyToDocument: false }}
               />
@@ -168,23 +148,10 @@ export const Overview: Story = {
           </section>
 
           <section style={sectionStyle}>
-            <p style={labelStyle}>Восстановление логина / Email</p>
+            <p style={labelStyle}>Phone</p>
             <div className="theme-light" style={mobileWidthStyle}>
-              <AuthenticationRestoringAccess
-                defaultLoginMethod="email"
-                defaultRestoringFlow="login"
-                device="mobile"
-                themeProps={{ applyToDocument: false }}
-              />
-            </div>
-          </section>
-
-          <section style={sectionStyle}>
-            <p style={labelStyle}>Восстановление логина / Телефон</p>
-            <div className="theme-light" style={mobileWidthStyle}>
-              <AuthenticationRestoringAccess
-                defaultLoginMethod="phone"
-                defaultRestoringFlow="login"
+              <AuthenticationRegistration
+                defaultMethod="phone"
                 device="mobile"
                 themeProps={{ applyToDocument: false }}
               />

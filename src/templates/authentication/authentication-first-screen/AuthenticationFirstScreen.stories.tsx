@@ -1,20 +1,20 @@
 import { useState, type CSSProperties } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import {
-  AuthenticationRegistration,
-  type AuthenticationRegistrationMethod
-} from './AuthenticationRegistration';
-import type { ThemeMode } from '../../../theme/Theme';
+  AuthenticationFirstScreen,
+  type AuthenticationClientType
+} from './AuthenticationFirstScreen';
+import type { ThemeMode } from '../../../components/theme/Theme';
 
 const meta = {
-  title: 'Templates/Authentication/AuthenticationRegistration',
-  component: AuthenticationRegistration,
+  title: 'Templates/Authentication/AuthenticationFirstScreen',
+  component: AuthenticationFirstScreen,
   tags: ['autodocs'],
   args: {
-    defaultMethod: 'email',
+    defaultClientType: 'individual',
     device: 'desktop'
   }
-} satisfies Meta<typeof AuthenticationRegistration>;
+} satisfies Meta<typeof AuthenticationFirstScreen>;
 
 export default meta;
 
@@ -75,17 +75,16 @@ const labelStyle: CSSProperties = {
 export const Playground: Story = {
   render: (args) => {
     const [mode, setMode] = useState<ThemeMode>('light');
-    const [method, setMethod] = useState<AuthenticationRegistrationMethod>(
-      args.defaultMethod ?? 'email'
-    );
+    const [clientType, setClientType] =
+      useState<AuthenticationClientType>(args.defaultClientType ?? 'individual');
 
     return (
       <div className={`theme-${mode}`} style={surfaceStyle}>
-        <div style={args.device === 'mobile' ? mobileWidthStyle : storyWidthStyle}>
-          <AuthenticationRegistration
+        <div style={storyWidthStyle}>
+          <AuthenticationFirstScreen
             {...args}
-            method={method}
-            onMethodChange={setMethod}
+            clientType={clientType}
+            onClientTypeChange={setClientType}
             themeProps={{
               applyToDocument: false,
               mode,
@@ -110,10 +109,10 @@ export const Overview: Story = {
         <p style={labelStyle}>Desktop</p>
         <div style={desktopOverviewGridStyle}>
           <section style={sectionStyle}>
-            <p style={labelStyle}>Email</p>
+            <p style={labelStyle}>Физическое лицо</p>
             <div className="theme-light" style={storyWidthStyle}>
-              <AuthenticationRegistration
-                defaultMethod="email"
+              <AuthenticationFirstScreen
+                defaultClientType="individual"
                 device="desktop"
                 themeProps={{ applyToDocument: false }}
               />
@@ -121,10 +120,10 @@ export const Overview: Story = {
           </section>
 
           <section style={sectionStyle}>
-            <p style={labelStyle}>Phone</p>
+            <p style={labelStyle}>Корпорат. клиент</p>
             <div className="theme-light" style={storyWidthStyle}>
-              <AuthenticationRegistration
-                defaultMethod="phone"
+              <AuthenticationFirstScreen
+                defaultClientType="corporate"
                 device="desktop"
                 themeProps={{ applyToDocument: false }}
               />
@@ -137,10 +136,10 @@ export const Overview: Story = {
         <p style={labelStyle}>Mobile</p>
         <div style={mobileOverviewGridStyle}>
           <section style={sectionStyle}>
-            <p style={labelStyle}>Email</p>
+            <p style={labelStyle}>Физ. лицо</p>
             <div className="theme-light" style={mobileWidthStyle}>
-              <AuthenticationRegistration
-                defaultMethod="email"
+              <AuthenticationFirstScreen
+                defaultClientType="individual"
                 device="mobile"
                 themeProps={{ applyToDocument: false }}
               />
@@ -148,10 +147,10 @@ export const Overview: Story = {
           </section>
 
           <section style={sectionStyle}>
-            <p style={labelStyle}>Phone</p>
+            <p style={labelStyle}>Корпорат. клиент</p>
             <div className="theme-light" style={mobileWidthStyle}>
-              <AuthenticationRegistration
-                defaultMethod="phone"
+              <AuthenticationFirstScreen
+                defaultClientType="corporate"
                 device="mobile"
                 themeProps={{ applyToDocument: false }}
               />
