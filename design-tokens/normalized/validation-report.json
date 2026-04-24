@@ -1,0 +1,29 @@
+{
+  "errors": [],
+  "warnings": [
+    "Raw export does not include token descriptions. This is fine for now, but documentation and tooling will be easier with descriptions in a curated layer.",
+    "Typography weight labels are normalized to numeric fontWeight and explicit fontStyle in runtime output.",
+    "Animation timing tokens are exported as px by the Figma plugin; runtime output normalizes them to ms."
+  ],
+  "stats": {
+    "rawTokenCount": 565,
+    "resolvedReferenceCount": 90
+  },
+  "checkedFiles": [
+    "Animation.Mode 1.tokens.json",
+    "Color Primitives.Mode 1.tokens.json",
+    "Color Styles.Mode: Dark.tokens.json",
+    "Color Styles.Mode: Light.tokens.json",
+    "Effects.Mode 1.tokens.json",
+    "Icon.Mode: Dark.tokens.json",
+    "Icon.Mode: Light.tokens.json",
+    "Radius.Mode 1.tokens.json",
+    "Responsive.Mode 1.tokens.json",
+    "Spacings.Mode 1.tokens.json",
+    "Typography Primitives.Mode 1.tokens.json",
+    "effect.styles.tokens.json",
+    "grid.styles.tokens.json",
+    "manifest.json",
+    "text.styles.tokens.json"
+  ]
+}

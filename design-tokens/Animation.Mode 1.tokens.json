@@ -1,0 +1,176 @@
+{
+  "Hover": {
+    "Curve": {
+      "$type": "string",
+      "$value": "Ease out"
+    },
+    "Duration": {
+      "$type": "dimension",
+      "$value": "50px"
+    }
+  },
+  "Pressed": {
+    "Curve": {
+      "$type": "string",
+      "$value": "Ease out"
+    },
+    "Duration": {
+      "$type": "dimension",
+      "$value": "50px"
+    }
+  },
+  "Move_in": {
+    "Left": {
+      "Animation": {
+        "$type": "string",
+        "$value": "Move in"
+      },
+      "Direction": {
+        "$type": "string",
+        "$value": "Left"
+      },
+      "Curve": {
+        "$type": "string",
+        "$value": "Ease out"
+      },
+      "Duration": {
+        "$type": "dimension",
+        "$value": "150px"
+      }
+    },
+    "Right": {
+      "Animation": {
+        "$type": "string",
+        "$value": "Move in"
+      },
+      "Direction": {
+        "$type": "string",
+        "$value": "Right"
+      },
+      "Curve": {
+        "$type": "string",
+        "$value": "Ease out"
+      },
+      "Duration": {
+        "$type": "dimension",
+        "$value": "150px"
+      }
+    },
+    "Up": {
+      "Animation": {
+        "$type": "string",
+        "$value": "Move in"
+      },
+      "Direction": {
+        "$type": "string",
+        "$value": "Up"
+      },
+      "Curve": {
+        "$type": "string",
+        "$value": "Ease out"
+      },
+      "Duration": {
+        "$type": "dimension",
+        "$value": "150px"
+      }
+    },
+    "Down": {
+      "Animation": {
+        "$type": "string",
+        "$value": "Move in"
+      },
+      "Direction": {
+        "$type": "string",
+        "$value": "Down"
+      },
+      "Curve": {
+        "$type": "string",
+        "$value": "Ease out"
+      },
+      "Duration": {
+        "$type": "dimension",
+        "$value": "150px"
+      }
+    }
+  },
+  "Theme": {
+    "Animation": {
+      "$type": "string",
+      "$value": "Dissolve"
+    },
+    "Curve": {
+      "$type": "string",
+      "$value": "Linear"
+    },
+    "Duration": {
+      "$type": "dimension",
+      "$value": "150px"
+    }
+  },
+  "Spin": {
+    "Curve": {
+      "$type": "string",
+      "$value": "Linear"
+    },
+    "Duration": {
+      "$type": "dimension",
+      "$value": "200px"
+    }
+  },
+  "LoaderBrand": {
+    "Logo": {
+      "Curve": {
+        "$type": "string",
+        "$value": "Ease out"
+      },
+      "Duration": {
+        "$type": "dimension",
+        "$value": "200px"
+      }
+    },
+    "Text": {
+      "Delay": {
+        "$type": "dimension",
+        "$value": "5000px"
+      },
+      "Animation": {
+        "$type": "string",
+        "$value": "Dissolve"
+      },
+      "Curve": {
+        "$type": "string",
+        "$value": "Ease out"
+      },
+      "Duration": {
+        "$type": "dimension",
+        "$value": "300px"
+      }
+    }
+  },
+  "Move_up": {
+    "Starting_position": {
+      "$type": "string",
+      "$value": "translateY(0)"
+    },
+    "Final_position": {
+      "$type": "string",
+      "$value": "translateY(100)"
+    },
+    "Animation": {
+      "$type": "string",
+      "$value": "Move in"
+    },
+    "Direction": {
+      "$type": "string",
+      "$value": "Up"
+    },
+    "Curve": {
+      "$type": "string",
+      "$value": "Ease out"
+    },
+    "Duration": {
+      "$type": "dimension",
+      "$value": "150px"
+    }
+  }
+}

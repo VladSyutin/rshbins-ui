@@ -1,0 +1,52 @@
+.rshb-authentication-prototype {
+  display: grid;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100vw;
+  min-height: 100vh;
+  min-height: 100svh;
+  justify-items: center;
+  align-items: start;
+  padding: 116px var(--space-paddings-inside-xl);
+  background: var(--color-background-default-secondary);
+  color: var(--color-text-default-primary);
+}
+
+.rshb-authentication-prototype__template {
+  width: 448px;
+  max-width: 100%;
+}
+
+.rshb-authentication-prototype--loading {
+  place-items: center;
+  padding: var(--space-paddings-inside-xl);
+  background: var(--color-background-default-primary);
+}
+
+.rshb-authentication-prototype__loading {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100%;
+}
+
+@media (max-width: 1023px) and (min-width: 744px) {
+  .rshb-authentication-prototype:not(.rshb-authentication-prototype--loading) {
+    align-items: center;
+    padding-block: var(--space-paddings-inside-xl);
+  }
+}
+
+@media (max-width: 743px) {
+  .rshb-authentication-prototype:not(.rshb-authentication-prototype--loading) {
+    justify-items: stretch;
+    padding: 0 16px 32px;
+    background: var(--color-background-default-primary);
+  }
+
+  .rshb-authentication-prototype__template {
+    width: 100%;
+    max-width: none;
+  }
+}

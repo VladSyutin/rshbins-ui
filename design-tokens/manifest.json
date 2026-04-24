@@ -1,0 +1,79 @@
+{
+  "name": "Design Tokens",
+  "collections": {
+    "Color Primitives": {
+      "modes": {
+        "Mode 1": [
+          "Color Primitives.Mode 1.tokens.json"
+        ]
+      }
+    },
+    "Spacings": {
+      "modes": {
+        "Mode 1": [
+          "Spacings.Mode 1.tokens.json"
+        ]
+      }
+    },
+    "Radius": {
+      "modes": {
+        "Mode 1": [
+          "Radius.Mode 1.tokens.json"
+        ]
+      }
+    },
+    "Typography Primitives": {
+      "modes": {
+        "Mode 1": [
+          "Typography Primitives.Mode 1.tokens.json"
+        ]
+      }
+    },
+    "Responsive": {
+      "modes": {
+        "Mode 1": [
+          "Responsive.Mode 1.tokens.json"
+        ]
+      }
+    },
+    "Effects": {
+      "modes": {
+        "Mode 1": [
+          "Effects.Mode 1.tokens.json"
+        ]
+      }
+    },
+    "Icon": {
+      "modes": {
+        "Mode: Light": [
+          "Icon.Mode: Light.tokens.json"
+        ],
+        "Mode: Dark": [
+          "Icon.Mode: Dark.tokens.json"
+        ]
+      }
+    },
+    "Animation": {
+      "modes": {
+        "Mode 1": [
+          "Animation.Mode 1.tokens.json"
+        ]
+      }
+    }
+  },
+  "styles": {
+    "Color Styles": [
+      "Color Styles.Mode: Light.tokens.json",
+      "Color Styles.Mode: Dark.tokens.json"
+    ],
+    "text": [
+      "text.styles.tokens.json"
+    ],
+    "effect": [
+      "effect.styles.tokens.json"
+    ],
+    "grid": [
+      "grid.styles.tokens.json"
+    ]
+  }
+}

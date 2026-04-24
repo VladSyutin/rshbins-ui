@@ -1,0 +1,134 @@
+{
+  "font-family": {
+    "ubuntu": {
+      "$type": "string",
+      "$value": "Ubuntu"
+    }
+  },
+  "font-weight": {
+    "light": {
+      "$type": "string",
+      "$value": "Light"
+    },
+    "regular": {
+      "$type": "string",
+      "$value": "Regular"
+    },
+    "medium": {
+      "$type": "string",
+      "$value": "Medium"
+    },
+    "bold": {
+      "$type": "string",
+      "$value": "Bold"
+    },
+    "light-italic": {
+      "$type": "string",
+      "$value": "Light Italic"
+    },
+    "italic": {
+      "$type": "string",
+      "$value": "Italic"
+    },
+    "medium-italic": {
+      "$type": "string",
+      "$value": "Medium Italic"
+    },
+    "bold-italic": {
+      "$type": "string",
+      "$value": "Bold Italic"
+    }
+  },
+  "font-size": {
+    "display": {
+      "D1": {
+        "$type": "dimension",
+        "$value": "48px"
+      },
+      "D2": {
+        "$type": "dimension",
+        "$value": "40px"
+      }
+    },
+    "headings": {
+      "H1": {
+        "$type": "dimension",
+        "$value": "32px"
+      },
+      "H2": {
+        "$type": "dimension",
+        "$value": "28px"
+      }
+    },
+    "subheadings": {
+      "SH1": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "SH2": {
+        "$type": "dimension",
+        "$value": "20px"
+      }
+    },
+    "body": {
+      "default": {
+        "$type": "dimension",
+        "$value": "17px"
+      },
+      "footnote": {
+        "$type": "dimension",
+        "$value": "15px"
+      },
+      "caption": {
+        "$type": "dimension",
+        "$value": "13px"
+      }
+    }
+  },
+  "line-height": {
+    "display": {
+      "D1": {
+        "$type": "dimension",
+        "$value": "52px"
+      },
+      "D2": {
+        "$type": "dimension",
+        "$value": "48px"
+      }
+    },
+    "headings": {
+      "H1": {
+        "$type": "dimension",
+        "$value": "40px"
+      },
+      "H2": {
+        "$type": "dimension",
+        "$value": "36px"
+      }
+    },
+    "subheadings": {
+      "SH1": {
+        "$type": "dimension",
+        "$value": "28px"
+      },
+      "SH2": {
+        "$type": "dimension",
+        "$value": "24px"
+      }
+    },
+    "body": {
+      "default": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "footnote": {
+        "$type": "dimension",
+        "$value": "20px"
+      },
+      "caption": {
+        "$type": "dimension",
+        "$value": "18px"
+      }
+    }
+  }
+}

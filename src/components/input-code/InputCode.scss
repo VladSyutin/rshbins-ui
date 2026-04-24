@@ -1,0 +1,76 @@
+.rshb-input-code__control,
+.rshb-input-code__mask,
+.rshb-input-code__helper-icon {
+  font-variant-numeric: tabular-nums;
+}
+
+.rshb-input-code .rshb-input-text__field {
+  background: transparent;
+}
+
+.rshb-input-code__mask {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  display: block;
+  overflow: hidden;
+  color: var(--color-text-default-disabled);
+  font-family: var(--typography-body-regular-fontFamily);
+  font-size: var(--typography-body-regular-fontSize);
+  font-style: var(--typography-body-regular-fontStyle);
+  font-weight: var(--typography-body-regular-fontWeight);
+  line-height: var(--typography-body-regular-lineHeight);
+  letter-spacing: var(--typography-body-regular-letterSpacing);
+  text-decoration: var(--typography-body-regular-textDecoration);
+  text-overflow: ellipsis;
+  text-transform: var(--typography-body-regular-textTransform);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.rshb-input-code__mask-filled {
+  color: var(--color-text-default-primary);
+}
+
+.rshb-input-code__mask-placeholder {
+  color: var(--color-text-default-disabled);
+}
+
+.rshb-input-code__helper-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: currentColor;
+  -webkit-mask: var(--rshb-input-code-icon-url) center / contain no-repeat;
+  mask: var(--rshb-input-code-icon-url) center / contain no-repeat;
+}
+
+.rshb-input-code[data-state='disabled'] .rshb-input-code__mask,
+.rshb-input-code[data-state='disabled-entered'] .rshb-input-code__mask {
+  color: var(--color-text-default-disabled);
+}
+
+.rshb-input-code[data-state='disabled'] .rshb-input-code__mask-filled,
+.rshb-input-code[data-state='disabled-entered'] .rshb-input-code__mask-filled,
+.rshb-input-code[data-state='disabled'] .rshb-input-code__mask-placeholder,
+.rshb-input-code[data-state='disabled-entered'] .rshb-input-code__mask-placeholder {
+  color: var(--color-text-default-disabled);
+}
+
+.rshb-input-code[data-state='error'] .rshb-input-code__mask,
+.rshb-input-code[data-state='error-hover'] .rshb-input-code__mask,
+.rshb-input-code[data-state='error-entered'] .rshb-input-code__mask,
+.rshb-input-code[data-state='error-entered-hover'] .rshb-input-code__mask {
+  color: var(--color-text-error-default);
+}
+
+.rshb-input-code[data-state='error'] .rshb-input-code__mask-filled,
+.rshb-input-code[data-state='error-hover'] .rshb-input-code__mask-filled,
+.rshb-input-code[data-state='error-entered'] .rshb-input-code__mask-filled,
+.rshb-input-code[data-state='error-entered-hover'] .rshb-input-code__mask-filled,
+.rshb-input-code[data-state='error'] .rshb-input-code__mask-placeholder,
+.rshb-input-code[data-state='error-hover'] .rshb-input-code__mask-placeholder,
+.rshb-input-code[data-state='error-entered'] .rshb-input-code__mask-placeholder,
+.rshb-input-code[data-state='error-entered-hover'] .rshb-input-code__mask-placeholder {
+  color: var(--color-text-error-default);
+}

@@ -1,0 +1,30 @@
+{
+  "2XS": {
+    "$type": "dimension",
+    "$value": "4px"
+  },
+  "XS": {
+    "$type": "dimension",
+    "$value": "8px"
+  },
+  "S": {
+    "$type": "dimension",
+    "$value": "12px"
+  },
+  "M": {
+    "$type": "dimension",
+    "$value": "16px"
+  },
+  "L": {
+    "$type": "dimension",
+    "$value": "24px"
+  },
+  "XL": {
+    "$type": "dimension",
+    "$value": "32px"
+  },
+  "2XL": {
+    "$type": "dimension",
+    "$value": "40px"
+  }
+}

@@ -1,0 +1,16 @@
+.rshb-input-middle-name {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  width: 361px;
+  max-width: 100%;
+}
+
+.rshb-input-middle-name > .rshb-input-text {
+  width: 100%;
+}
+
+.rshb-input-middle-name__switch {
+  align-self: flex-start;
+}

@@ -1,0 +1,12 @@
+{
+  "Theme": {
+    "Moon": {
+      "$type": "boolean",
+      "$value": false
+    },
+    "Sun": {
+      "$type": "boolean",
+      "$value": true
+    }
+  }
+}

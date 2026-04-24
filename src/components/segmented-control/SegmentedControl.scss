@@ -1,0 +1,8 @@
+.rshb-segmented-control {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-margins-inside-m);
+  width: fit-content;
+  max-width: 100%;
+  flex-wrap: wrap;
+}

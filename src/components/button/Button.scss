@@ -1,0 +1,254 @@
+.rshb-button {
+  --button-background: transparent;
+  --button-color: var(--color-text-default-primary);
+  --button-cursor: pointer;
+  --button-opacity: 1;
+  --button-ring: inset 0 0 0 0 transparent;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0;
+  border: 0;
+  border-radius: var(--radius-xs);
+  background: var(--button-background);
+  box-shadow: var(--button-ring);
+  color: var(--button-color);
+  cursor: var(--button-cursor);
+  opacity: var(--button-opacity);
+  transition:
+    background-color var(--motion-hover-duration) var(--motion-hover-curve),
+    box-shadow var(--motion-hover-duration) var(--motion-hover-curve),
+    color var(--motion-hover-duration) var(--motion-hover-curve),
+    opacity var(--motion-hover-duration) var(--motion-hover-curve);
+  font-family: var(--typography-body-regular-fontFamily);
+  font-size: var(--typography-body-regular-fontSize);
+  font-weight: var(--typography-body-regular-fontWeight);
+  font-style: var(--typography-body-regular-fontStyle);
+  line-height: var(--typography-body-regular-lineHeight);
+  letter-spacing: var(--typography-body-regular-letterSpacing);
+  text-decoration: var(--typography-body-regular-textDecoration);
+  text-transform: var(--typography-body-regular-textTransform);
+  text-rendering: optimizeLegibility;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.rshb-button:focus {
+  outline: none;
+}
+
+.rshb-button[data-size='m'][data-icon-only='false'] {
+  min-height: 56px;
+  padding: 16px;
+}
+
+.rshb-button[data-size='s'][data-icon-only='false'] {
+  min-height: 40px;
+  padding: 8px 16px;
+}
+
+.rshb-button[data-size='m'][data-icon-only='true'] {
+  min-width: 56px;
+  min-height: 56px;
+  padding: 19px;
+}
+
+.rshb-button[data-size='s'][data-icon-only='true'] {
+  min-width: 40px;
+  min-height: 40px;
+  padding: 11px;
+}
+
+.rshb-button__content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.rshb-button__content--ghost {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rshb-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.rshb-button__icon > svg,
+.rshb-button__icon > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.rshb-button__label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rshb-button__spinner {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+
+.rshb-button[data-state='loading'][data-icon-only='false'] {
+  min-inline-size: 150px;
+}
+
+.rshb-button[data-state='disabled'],
+.rshb-button[data-state='loading'] {
+  --button-cursor: not-allowed;
+}
+
+.rshb-button[data-state='selection'] {
+  --button-background: var(--color-background-brand-selection);
+  --button-color: var(--color-text-brand-on-selection);
+}
+
+.rshb-button[data-state='focused'] {
+  --button-ring: inset 0 0 0 2px var(--color-border-default-default-focus);
+}
+
+.rshb-button[data-state='loading'][data-variant='brand'],
+.rshb-button[data-state='loading'][data-variant='normal'] {
+  --button-background: var(--color-background-default-disabled);
+  --button-color: var(--color-text-brand-default);
+}
+
+.rshb-button[data-state='loading'][data-variant='flat-primary'],
+.rshb-button[data-state='loading'][data-variant='flat-secondary'] {
+  --button-color: var(--color-text-brand-default);
+}
+
+.rshb-button[data-variant='brand'][data-state='default'],
+.rshb-button[data-variant='brand'][data-state='focused'] {
+  --button-background: var(--color-background-brand-default);
+  --button-color: var(--color-text-brand-on-brand);
+}
+
+.rshb-button[data-variant='brand'][data-state='default']:hover,
+.rshb-button[data-variant='brand'][data-state='hover'] {
+  --button-background: var(--color-background-brand-hover);
+  --button-color: var(--color-text-brand-on-brand);
+}
+
+.rshb-button[data-variant='brand'][data-state='default']:active,
+.rshb-button[data-variant='brand'][data-state='pressed'] {
+  --button-background: var(--color-background-brand-focus);
+  --button-color: var(--color-text-brand-on-brand);
+  transition-duration: var(--motion-pressed-duration);
+  transition-timing-function: var(--motion-pressed-curve);
+}
+
+.rshb-button[data-variant='brand'][data-state='default']:focus-visible {
+  --button-background: var(--color-background-brand-default);
+  --button-color: var(--color-text-brand-on-brand);
+  --button-ring: inset 0 0 0 2px var(--color-border-default-default-focus);
+}
+
+.rshb-button[data-variant='brand'][data-state='disabled'] {
+  --button-background: var(--color-background-brand-default);
+  --button-color: var(--color-text-brand-on-brand);
+  --button-opacity: 0.7;
+}
+
+.rshb-button[data-variant='normal'][data-state='default'],
+.rshb-button[data-variant='normal'][data-state='focused'] {
+  --button-background: var(--color-background-default-generic);
+  --button-color: var(--color-text-default-primary);
+}
+
+.rshb-button[data-variant='normal'][data-state='default']:hover,
+.rshb-button[data-variant='normal'][data-state='hover'] {
+  --button-background: var(--color-background-default-generic-hover);
+  --button-color: var(--color-text-default-primary);
+}
+
+.rshb-button[data-variant='normal'][data-state='default']:active,
+.rshb-button[data-variant='normal'][data-state='pressed'] {
+  --button-background: var(--color-background-default-generic-focus);
+  --button-color: var(--color-text-default-primary);
+  transition-duration: var(--motion-pressed-duration);
+  transition-timing-function: var(--motion-pressed-curve);
+}
+
+.rshb-button[data-variant='normal'][data-state='default']:focus-visible {
+  --button-background: var(--color-background-default-generic);
+  --button-color: var(--color-text-default-primary);
+  --button-ring: inset 0 0 0 2px var(--color-border-default-default-focus);
+}
+
+.rshb-button[data-variant='normal'][data-state='disabled'] {
+  --button-background: var(--color-background-default-secondary);
+  --button-color: var(--color-text-default-disabled);
+  --button-opacity: 0.7;
+}
+
+.rshb-button[data-variant='flat-primary'][data-state='default'],
+.rshb-button[data-variant='flat-primary'][data-state='focused'] {
+  --button-color: var(--color-text-default-primary);
+}
+
+.rshb-button[data-variant='flat-primary'][data-state='default']:hover,
+.rshb-button[data-variant='flat-primary'][data-state='hover'] {
+  --button-background: var(--color-background-default-simple-hover);
+  --button-color: var(--color-text-default-primary);
+}
+
+.rshb-button[data-variant='flat-primary'][data-state='default']:active,
+.rshb-button[data-variant='flat-primary'][data-state='pressed'] {
+  --button-background: var(--color-background-default-simple-focus);
+  --button-color: var(--color-text-default-primary);
+  transition-duration: var(--motion-pressed-duration);
+  transition-timing-function: var(--motion-pressed-curve);
+}
+
+.rshb-button[data-variant='flat-primary'][data-state='default']:focus-visible {
+  --button-color: var(--color-text-default-primary);
+  --button-ring: inset 0 0 0 2px var(--color-border-default-default-focus);
+}
+
+.rshb-button[data-variant='flat-primary'][data-state='disabled'] {
+  --button-color: var(--color-text-default-disabled);
+}
+
+.rshb-button[data-variant='flat-secondary'][data-state='default'] {
+  --button-color: var(--color-text-default-tertiary);
+}
+
+.rshb-button[data-variant='flat-secondary'][data-state='default']:hover,
+.rshb-button[data-variant='flat-secondary'][data-state='hover'],
+.rshb-button[data-variant='flat-secondary'][data-state='focused'],
+.rshb-button[data-variant='flat-secondary'][data-state='pressed'] {
+  --button-color: var(--color-text-default-primary);
+}
+
+.rshb-button[data-variant='flat-secondary'][data-state='default']:active {
+  --button-color: var(--color-text-default-primary);
+  transition-duration: var(--motion-pressed-duration);
+  transition-timing-function: var(--motion-pressed-curve);
+}
+
+.rshb-button[data-variant='flat-secondary'][data-state='default']:focus-visible {
+  --button-color: var(--color-text-default-primary);
+  --button-ring: inset 0 0 0 2px var(--color-border-default-default-focus);
+}
+
+.rshb-button[data-variant='flat-secondary'][data-state='disabled'] {
+  --button-color: var(--color-text-default-disabled);
+}

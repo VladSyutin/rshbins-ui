@@ -1,0 +1,34 @@
+.rshb-divider {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  min-height: 24px;
+  min-width: 0;
+}
+
+.rshb-divider__line {
+  display: block;
+  flex: 1 0 0;
+  min-width: 1px;
+  border-bottom: 1px solid var(--color-border-default-default);
+}
+
+.rshb-divider__label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding-inline: 8px;
+  color: var(--color-text-default-tertiary);
+  text-align: center;
+  font-family: var(--typography-body-regular-fontFamily);
+  font-size: var(--typography-body-regular-fontSize);
+  font-weight: var(--typography-body-regular-fontWeight);
+  font-style: var(--typography-body-regular-fontStyle);
+  line-height: var(--typography-body-regular-lineHeight);
+  letter-spacing: var(--typography-body-regular-letterSpacing);
+  text-decoration: var(--typography-body-regular-textDecoration);
+  text-transform: var(--typography-body-regular-textTransform);
+  white-space: nowrap;
+}

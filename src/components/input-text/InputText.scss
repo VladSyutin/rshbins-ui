@@ -1,0 +1,292 @@
+.rshb-input-text {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  width: 361px;
+  max-width: 100%;
+  color: var(--color-text-default-primary);
+}
+
+.rshb-input-text__field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 58px;
+  padding: 7px 8px 7px 16px;
+  border: 2px solid var(--color-border-default-default);
+  border-radius: var(--radius-xs);
+  background: transparent;
+  transition:
+    border-color var(--motion-hover-duration) var(--motion-hover-curve),
+    background-color var(--motion-hover-duration) var(--motion-hover-curve),
+    color var(--motion-hover-duration) var(--motion-hover-curve);
+}
+
+.rshb-input-text__start-icon,
+.rshb-input-text__clear,
+.rshb-input-text__helper-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rshb-input-text__start-icon {
+  width: 18px;
+  height: 18px;
+  color: inherit;
+}
+
+.rshb-input-text__start-icon > svg,
+.rshb-input-text__start-icon > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.rshb-input-text__content {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 42px;
+}
+
+.rshb-input-text__label,
+.rshb-input-text__control,
+.rshb-input-text__helper-text {
+  font-family: var(--typography-body-regular-fontFamily);
+  font-style: var(--typography-body-regular-fontStyle);
+  font-weight: var(--typography-body-regular-fontWeight);
+  letter-spacing: var(--typography-body-regular-letterSpacing);
+  text-decoration: var(--typography-body-regular-textDecoration);
+  text-transform: var(--typography-body-regular-textTransform);
+}
+
+.rshb-input-text__label {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 9px;
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--color-text-default-secondary);
+  font-size: var(--typography-body-regular-fontSize);
+  line-height: var(--typography-body-regular-lineHeight);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+  transition:
+    inset-block-start var(--motion-hover-duration) var(--motion-hover-curve),
+    color var(--motion-hover-duration) var(--motion-hover-curve),
+    font-size var(--motion-hover-duration) var(--motion-hover-curve),
+    line-height var(--motion-hover-duration) var(--motion-hover-curve);
+}
+
+.rshb-input-text__control {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  width: 100%;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-default-primary);
+  font-size: var(--typography-body-regular-fontSize);
+  line-height: var(--typography-body-regular-lineHeight);
+  outline: none;
+  caret-color: var(--color-text-brand-default);
+}
+
+.rshb-input-text__control::placeholder {
+  color: var(--color-text-default-disabled);
+}
+
+.rshb-input-text__control:disabled {
+  cursor: not-allowed;
+}
+
+.rshb-input-text__clear {
+  width: 40px;
+  height: 40px;
+  padding: 11px;
+  border: 0;
+  border-radius: var(--radius-xs);
+  background: transparent;
+  color: var(--color-text-default-tertiary);
+  cursor: pointer;
+  transition: color var(--motion-hover-duration) var(--motion-hover-curve);
+}
+
+.rshb-input-text__clear-icon,
+.rshb-input-text__helper-icon {
+  display: block;
+  background: currentColor;
+  -webkit-mask: var(--rshb-input-text-icon-url) center / contain no-repeat;
+  mask: var(--rshb-input-text-icon-url) center / contain no-repeat;
+}
+
+.rshb-input-text__clear-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.rshb-input-text__helper {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+  color: var(--color-text-default-tertiary);
+}
+
+.rshb-input-text__helper-icon-wrapper {
+  padding-top: 3px;
+}
+
+.rshb-input-text__helper-icon,
+.rshb-input-text__helper-icon-wrapper > svg,
+.rshb-input-text__helper-icon-wrapper > img {
+  width: 16px;
+  height: 16px;
+}
+
+.rshb-input-text__helper-icon-wrapper > svg,
+.rshb-input-text__helper-icon-wrapper > img {
+  display: block;
+}
+
+.rshb-input-text__helper-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--typography-footnote-regular-fontFamily);
+  font-size: var(--typography-footnote-regular-fontSize);
+  font-style: var(--typography-footnote-regular-fontStyle);
+  font-weight: var(--typography-footnote-regular-fontWeight);
+  line-height: var(--typography-footnote-regular-lineHeight);
+  letter-spacing: var(--typography-footnote-regular-letterSpacing);
+  text-decoration: var(--typography-footnote-regular-textDecoration);
+  text-transform: var(--typography-footnote-regular-textTransform);
+}
+
+.rshb-input-text[data-state='default']:hover .rshb-input-text__field,
+.rshb-input-text[data-state='entered']:hover .rshb-input-text__field,
+.rshb-input-text[data-state='error']:hover .rshb-input-text__field,
+.rshb-input-text[data-state='error-entered']:hover .rshb-input-text__field,
+.rshb-input-text[data-state='hover'] .rshb-input-text__field,
+.rshb-input-text[data-state='entered-hover'] .rshb-input-text__field {
+  border-color: var(--color-border-default-default-hover);
+}
+
+.rshb-input-text[data-state='error-hover'] .rshb-input-text__field,
+.rshb-input-text[data-state='error-entered-hover'] .rshb-input-text__field,
+.rshb-input-text[data-state='error']:hover .rshb-input-text__field,
+.rshb-input-text[data-state='error-entered']:hover .rshb-input-text__field {
+  border-color: var(--color-border-error-default-hover);
+}
+
+.rshb-input-text[data-state='focused'] .rshb-input-text__field,
+.rshb-input-text[data-state='typing'] .rshb-input-text__field {
+  border-color: var(--color-border-brand-default);
+}
+
+.rshb-input-text[data-state='keyboard-focused'] .rshb-input-text__field {
+  border-color: var(--color-border-default-default-focus);
+}
+
+.rshb-input-text[data-state='error'] .rshb-input-text__field,
+.rshb-input-text[data-state='error-entered'] .rshb-input-text__field {
+  border-color: var(--color-border-error-default);
+}
+
+.rshb-input-text[data-state='disabled'] .rshb-input-text__field,
+.rshb-input-text[data-state='disabled-entered'] .rshb-input-text__field {
+  border-color: transparent;
+  background: var(--color-background-default-disabled);
+}
+
+.rshb-input-text[data-state='focused'] .rshb-input-text__label,
+.rshb-input-text[data-state='typing'] .rshb-input-text__label,
+.rshb-input-text[data-state='entered'] .rshb-input-text__label,
+.rshb-input-text[data-state='entered-hover'] .rshb-input-text__label,
+.rshb-input-text[data-state='error-entered'] .rshb-input-text__label,
+.rshb-input-text[data-state='error-entered-hover'] .rshb-input-text__label,
+.rshb-input-text[data-state='disabled-entered'] .rshb-input-text__label {
+  inset-block-start: 0;
+  font-family: var(--typography-footnote-regular-fontFamily);
+  font-size: var(--typography-footnote-regular-fontSize);
+  font-style: var(--typography-footnote-regular-fontStyle);
+  font-weight: var(--typography-footnote-regular-fontWeight);
+  line-height: var(--typography-footnote-regular-lineHeight);
+  letter-spacing: var(--typography-footnote-regular-letterSpacing);
+  text-decoration: var(--typography-footnote-regular-textDecoration);
+  text-transform: var(--typography-footnote-regular-textTransform);
+}
+
+.rshb-input-text[data-state='error'] .rshb-input-text__label,
+.rshb-input-text[data-state='error-hover'] .rshb-input-text__label,
+.rshb-input-text[data-state='error-entered'] .rshb-input-text__label,
+.rshb-input-text[data-state='error-entered-hover'] .rshb-input-text__label {
+  color: var(--color-text-error-default);
+}
+
+.rshb-input-text[data-state='disabled'] .rshb-input-text__label,
+.rshb-input-text[data-state='disabled-entered'] .rshb-input-text__label,
+.rshb-input-text[data-state='disabled'] .rshb-input-text__control,
+.rshb-input-text[data-state='disabled-entered'] .rshb-input-text__control,
+.rshb-input-text[data-state='disabled'] .rshb-input-text__helper,
+.rshb-input-text[data-state='disabled-entered'] .rshb-input-text__helper {
+  color: var(--color-text-default-disabled);
+}
+
+.rshb-input-text[data-state='default'] .rshb-input-text__control,
+.rshb-input-text[data-state='hover'] .rshb-input-text__control,
+.rshb-input-text[data-state='error'] .rshb-input-text__control,
+.rshb-input-text[data-state='error-hover'] .rshb-input-text__control,
+.rshb-input-text[data-state='keyboard-focused'] .rshb-input-text__control,
+.rshb-input-text[data-state='disabled'] .rshb-input-text__control {
+  color: transparent;
+}
+
+.rshb-input-text[data-state='default'] .rshb-input-text__control::selection,
+.rshb-input-text[data-state='hover'] .rshb-input-text__control::selection,
+.rshb-input-text[data-state='error'] .rshb-input-text__control::selection,
+.rshb-input-text[data-state='error-hover'] .rshb-input-text__control::selection,
+.rshb-input-text[data-state='keyboard-focused'] .rshb-input-text__control::selection,
+.rshb-input-text[data-state='disabled'] .rshb-input-text__control::selection {
+  background: transparent;
+}
+
+.rshb-input-text[data-state='default'] .rshb-input-text__control,
+.rshb-input-text[data-state='hover'] .rshb-input-text__control,
+.rshb-input-text[data-state='error'] .rshb-input-text__control,
+.rshb-input-text[data-state='error-hover'] .rshb-input-text__control,
+.rshb-input-text[data-state='keyboard-focused'] .rshb-input-text__control {
+  caret-color: transparent;
+}
+
+.rshb-input-text[data-state='disabled'] .rshb-input-text__control::placeholder,
+.rshb-input-text[data-state='disabled-entered'] .rshb-input-text__control::placeholder {
+  color: var(--color-text-default-disabled);
+}
+
+.rshb-input-text__clear:hover {
+  color: var(--color-text-default-primary);
+}
+
+.rshb-input-text[data-state='error'] .rshb-input-text__helper,
+.rshb-input-text[data-state='error-hover'] .rshb-input-text__helper,
+.rshb-input-text[data-state='error-entered'] .rshb-input-text__helper,
+.rshb-input-text[data-state='error-entered-hover'] .rshb-input-text__helper {
+  color: var(--color-text-danger-tertiary);
+}
+
+.rshb-input-text[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.rshb-input-text[data-disabled='true'] .rshb-input-text__field,
+.rshb-input-text[data-disabled='true'] .rshb-input-text__label,
+.rshb-input-text[data-disabled='true'] .rshb-input-text__start-icon {
+  cursor: not-allowed;
+}

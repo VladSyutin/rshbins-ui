@@ -1,0 +1,28 @@
+.app-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, var(--color-background-brand-selection) 0, transparent 28%),
+    linear-gradient(180deg, var(--color-background-default-primary) 0%, var(--color-background-default-secondary) 100%);
+  color: var(--color-text-default-primary);
+}
+
+.app-shell__header {
+  width: min(1280px, calc(100% - var(--space-paddings-inside-l) * 2));
+  margin: 0 auto;
+  padding: var(--space-paddings-inside-xl) 0 var(--space-paddings-inside-m);
+}
+
+.app-shell__content {
+  padding: 0 var(--space-paddings-inside-l) clamp(
+      var(--space-paddings-inside-l),
+      4vw,
+      calc(var(--space-paddings-inside-l) * 2)
+    );
+}
+
+@media (max-width: 744px) {
+  .app-shell__header {
+    width: min(100% - var(--space-paddings-inside-s) * 2, 1280px);
+    padding-top: var(--space-paddings-inside-m);
+  }
+}

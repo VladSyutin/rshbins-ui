@@ -1,0 +1,61 @@
+@import './tokens.css';
+
+:root {
+  font-family: var(--font-family-ubuntu, 'Ubuntu', sans-serif);
+  color: var(--color-text-default-primary);
+  background: var(--color-background-default-primary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --surface-radius: var(--radius-xl);
+  --surface-radius-lg: var(--radius-2xl);
+  --surface-padding: var(--space-paddings-inside-xl);
+  --surface-gap: var(--space-paddings-inside-l);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+#storybook-root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background-default-primary);
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.theme-light {
+  color-scheme: light;
+}
+
+.theme-dark {
+  color-scheme: dark;
+}
+
+.storybook-surface {
+  min-height: 100vh;
+  padding: clamp(20px, 3vw, 40px);
+  background:
+    radial-gradient(circle at top left, var(--color-background-brand-selection) 0, transparent 28%),
+    linear-gradient(180deg, var(--color-background-default-primary) 0%, var(--color-background-default-secondary) 100%);
+  color: var(--color-text-default-primary);
+}

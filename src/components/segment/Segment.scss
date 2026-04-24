@@ -1,0 +1,133 @@
+.rshb-segment {
+  --segment-cursor: pointer;
+  --segment-opacity: 1;
+  position: relative;
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  cursor: var(--segment-cursor);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.rshb-segment[data-disabled='true'] {
+  --segment-cursor: not-allowed;
+  --segment-opacity: 0.7;
+}
+
+.rshb-segment[data-preview-status='active']:not([data-disabled='true']) {
+  --segment-cursor: default;
+}
+
+.rshb-segment:has(.rshb-segment__input:checked):not([data-disabled='true']) {
+  --segment-cursor: default;
+}
+
+.rshb-segment__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.rshb-segment__content {
+  --segment-background: transparent;
+  --segment-color: var(--color-text-default-tertiary);
+  --segment-ring: inset 0 0 0 0 transparent;
+  --segment-transition-duration: var(--motion-hover-duration);
+  box-sizing: border-box;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 56px;
+  max-width: 100%;
+  padding: var(--space-paddings-inside-m);
+  border-radius: var(--radius-xs);
+  background: var(--segment-background);
+  box-shadow: var(--segment-ring);
+  color: var(--segment-color);
+  opacity: var(--segment-opacity);
+  transition:
+    background-color var(--segment-transition-duration) var(--motion-hover-curve),
+    box-shadow var(--motion-hover-duration) var(--motion-hover-curve),
+    color var(--segment-transition-duration) var(--motion-hover-curve),
+    opacity var(--motion-hover-duration) var(--motion-hover-curve);
+}
+
+.rshb-segment__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.rshb-segment__icon > svg,
+.rshb-segment__icon > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.rshb-segment__label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--typography-body-regular-fontFamily);
+  font-size: var(--typography-body-regular-fontSize);
+  font-weight: var(--typography-body-regular-fontWeight);
+  font-style: var(--typography-body-regular-fontStyle);
+  line-height: var(--typography-body-regular-lineHeight);
+  letter-spacing: var(--typography-body-regular-letterSpacing);
+  text-decoration: var(--typography-body-regular-textDecoration);
+  text-transform: var(--typography-body-regular-textTransform);
+}
+
+.rshb-segment:hover .rshb-segment__input:not(:disabled):not(:checked) + .rshb-segment__content {
+  --segment-background: var(--color-background-default-simple-hover);
+}
+
+.rshb-segment__input:not(:disabled):focus-visible + .rshb-segment__content {
+  --segment-ring: inset 0 0 0 2px var(--color-border-default-default-focus);
+}
+
+.rshb-segment__input:not(:disabled):checked + .rshb-segment__content {
+  --segment-background: var(--color-background-brand-selection);
+  --segment-color: var(--color-text-brand-on-selection);
+  --segment-transition-duration: 0ms;
+}
+
+.rshb-segment:hover .rshb-segment__input:not(:disabled):checked + .rshb-segment__content {
+  --segment-background: var(--color-background-brand-selection);
+  --segment-color: var(--color-text-brand-on-selection);
+  --segment-transition-duration: 0ms;
+}
+
+.rshb-segment__input:not(:disabled):checked:focus-visible + .rshb-segment__content {
+  --segment-ring: inset 0 0 0 2px var(--color-border-default-default-focus);
+}
+
+.rshb-segment[data-preview-state='hover'][data-preview-status='inactive']:not([data-disabled='true']) .rshb-segment__content {
+  --segment-background: var(--color-background-default-simple-hover);
+}
+
+.rshb-segment[data-preview-state='focused'][data-preview-status='inactive']:not([data-disabled='true']) .rshb-segment__content,
+.rshb-segment[data-preview-state='focused'][data-preview-status='active']:not([data-disabled='true']) .rshb-segment__content {
+  --segment-ring: inset 0 0 0 2px var(--color-border-default-default-focus);
+}
+
+.rshb-segment[data-preview-status='active'] .rshb-segment__content {
+  --segment-background: var(--color-background-brand-selection);
+  --segment-color: var(--color-text-brand-on-selection);
+  --segment-transition-duration: 0ms;
+}

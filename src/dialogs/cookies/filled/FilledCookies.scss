@@ -1,0 +1,18 @@
+.rshb-filled-cookies .rshb-cookies__description {
+  color: var(--color-text-default-primary);
+}
+
+.rshb-filled-cookies__link {
+  color: var(--color-text-brand-default);
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 2px;
+}
+
+.rshb-filled-cookies__link:hover {
+  color: var(--color-text-brand-hover);
+}
+
+.rshb-filled-cookies__link:active {
+  color: var(--color-text-brand-focus);
+}

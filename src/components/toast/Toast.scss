@@ -1,0 +1,182 @@
+.rshb-toast {
+  --toast-background: var(--color-background-danger-default);
+  --toast-color: var(--color-text-danger-on-danger);
+  --toast-status-icon-size: 20px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-margins-inside-xs);
+  width: fit-content;
+  max-width: 100%;
+  min-height: 40px;
+  padding-inline-start: var(--space-paddings-inside-m);
+  border-radius: var(--radius-xs);
+  background: var(--toast-background);
+  box-shadow: var(--shadow-flyout);
+  color: var(--toast-color);
+  animation: rshb-toast-move-in-down var(--motion-move-in-down-duration) var(--motion-move-in-down-curve);
+}
+
+.rshb-toast[data-variant='success'] {
+  --toast-background: var(--color-background-positive-default);
+  --toast-color: var(--color-text-positive-on-positive);
+  --toast-status-icon-size: 14px;
+}
+
+.rshb-toast[data-preview-state='closing'] {
+  animation: rshb-toast-move-in-up var(--motion-move-in-up-duration) var(--motion-move-in-up-curve) forwards;
+}
+
+.rshb-toast[data-placement='top-center'] {
+  position: fixed;
+  z-index: 1000;
+  inset-block-start: 32px;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+}
+
+.rshb-toast__status-icon,
+.rshb-toast__close-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: inherit;
+}
+
+.rshb-toast__status-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.rshb-toast__close-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.rshb-toast__status-icon::before,
+.rshb-toast__close-icon::before {
+  content: '';
+  display: block;
+  width: var(--toast-status-icon-size, 100%);
+  height: var(--toast-status-icon-size, 100%);
+  background: currentColor;
+  -webkit-mask: var(--rshb-toast-icon-url) center / contain no-repeat;
+  mask: var(--rshb-toast-icon-url) center / contain no-repeat;
+}
+
+.rshb-toast__close-icon::before {
+  width: 100%;
+  height: 100%;
+}
+
+.rshb-toast__content {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--typography-body-regular-fontFamily);
+  font-size: var(--typography-body-regular-fontSize);
+  font-weight: var(--typography-body-regular-fontWeight);
+  font-style: var(--typography-body-regular-fontStyle);
+  line-height: var(--typography-body-regular-lineHeight);
+  letter-spacing: var(--typography-body-regular-letterSpacing);
+  text-decoration: var(--typography-body-regular-textDecoration);
+  text-transform: var(--typography-body-regular-textTransform);
+}
+
+.rshb-toast__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 12px;
+  border: 0;
+  border-radius: var(--radius-xs);
+  background: transparent;
+  box-shadow: inset 0 0 0 0 transparent;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    background-color var(--motion-hover-duration) var(--motion-hover-curve),
+    box-shadow var(--motion-hover-duration) var(--motion-hover-curve);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.rshb-toast__close:hover {
+  background: color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.rshb-toast__close:active {
+  background: color-mix(in srgb, currentColor 20%, transparent);
+  transition-duration: var(--motion-pressed-duration);
+  transition-timing-function: var(--motion-pressed-curve);
+}
+
+.rshb-toast__close:focus {
+  outline: none;
+}
+
+.rshb-toast__close:focus-visible {
+  box-shadow: inset 0 0 0 2px currentColor;
+}
+
+@keyframes rshb-toast-move-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rshb-toast-move-in-up {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+.rshb-toast[data-placement='top-center'] {
+  animation-name: rshb-toast-fixed-move-in-down;
+}
+
+.rshb-toast[data-placement='top-center'][data-preview-state='closing'] {
+  animation-name: rshb-toast-fixed-move-in-up;
+}
+
+@keyframes rshb-toast-fixed-move-in-down {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes rshb-toast-fixed-move-in-up {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+}

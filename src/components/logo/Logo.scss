@@ -1,0 +1,25 @@
+.rshb-logo {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: min(196px, 100%);
+  max-width: 100%;
+  min-height: 48px;
+  color: var(--color-logo-text);
+  cursor: pointer;
+}
+
+.rshb-logo[data-state='focused'] {
+  outline: 2px solid var(--color-border-default-default-focus);
+  outline-offset: -2px;
+}
+
+.rshb-logo__graphic {
+  display: block;
+  width: 196px;
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  cursor: pointer;
+}

@@ -1,0 +1,100 @@
+{
+  "paddings": {
+    "inside": {
+      "2XS": {
+        "$type": "dimension",
+        "$value": "4px"
+      },
+      "XS": {
+        "$type": "dimension",
+        "$value": "8px"
+      },
+      "S": {
+        "$type": "dimension",
+        "$value": "12px"
+      },
+      "M": {
+        "$type": "dimension",
+        "$value": "16px"
+      },
+      "L": {
+        "$type": "dimension",
+        "$value": "20px"
+      },
+      "XL": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "2XL": {
+        "$type": "dimension",
+        "$value": "32px"
+      }
+    }
+  },
+  "margins": {
+    "inside": {
+      "2XS": {
+        "$type": "dimension",
+        "$value": "4px"
+      },
+      "XS": {
+        "$type": "dimension",
+        "$value": "8px"
+      },
+      "S": {
+        "$type": "dimension",
+        "$value": "12px"
+      },
+      "M": {
+        "$type": "dimension",
+        "$value": "16px"
+      },
+      "L": {
+        "$type": "dimension",
+        "$value": "20px"
+      },
+      "XL": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "2XL": {
+        "$type": "dimension",
+        "$value": "32px"
+      }
+    },
+    "outside": {
+      "3XL": {
+        "$type": "dimension",
+        "$value": "40px"
+      },
+      "4XL": {
+        "$type": "dimension",
+        "$value": "48px"
+      },
+      "5XL": {
+        "$type": "dimension",
+        "$value": "56px"
+      },
+      "6XL": {
+        "$type": "dimension",
+        "$value": "64px"
+      },
+      "7XL": {
+        "$type": "dimension",
+        "$value": "72px"
+      },
+      "8XL": {
+        "$type": "dimension",
+        "$value": "80px"
+      },
+      "9XL": {
+        "$type": "dimension",
+        "$value": "88px"
+      },
+      "10XL": {
+        "$type": "dimension",
+        "$value": "96px"
+      }
+    }
+  }
+}

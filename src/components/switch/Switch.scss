@@ -1,0 +1,138 @@
+.rshb-switch {
+  --switch-background: var(--color-background-default-secondary);
+  --switch-border-color: var(--color-border-default-default);
+  --switch-thumb-color: var(--color-background-default-primary);
+  --switch-thumb-offset: 2px;
+  --switch-thumb-translate-x: 0;
+  --switch-cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: fit-content;
+  max-width: 100%;
+  color: var(--color-text-default-primary);
+  cursor: var(--switch-cursor);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.rshb-switch[data-disabled='true'] {
+  --switch-cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.rshb-switch__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.rshb-switch__control {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 40px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: var(--radius-l);
+  background: var(--switch-background);
+  transition:
+    background-color var(--motion-hover-duration) var(--motion-hover-curve),
+    opacity var(--motion-hover-duration) var(--motion-hover-curve);
+}
+
+.rshb-switch__control::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--switch-border-color);
+  border-radius: inherit;
+  pointer-events: none;
+  transition: border-color var(--motion-hover-duration) var(--motion-hover-curve);
+}
+
+.rshb-switch__thumb {
+  position: absolute;
+  top: 50%;
+  left: var(--switch-thumb-offset);
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--switch-thumb-color);
+  transform: translate(var(--switch-thumb-translate-x), -50%);
+  transition:
+    transform var(--motion-pressed-duration) var(--motion-pressed-curve),
+    background-color var(--motion-hover-duration) var(--motion-hover-curve);
+}
+
+.rshb-switch__label {
+  min-width: 0;
+  color: inherit;
+  font-family: var(--typography-body-regular-fontFamily);
+  font-size: var(--typography-body-regular-fontSize);
+  font-weight: var(--typography-body-regular-fontWeight);
+  font-style: var(--typography-body-regular-fontStyle);
+  line-height: var(--typography-body-regular-lineHeight);
+  letter-spacing: var(--typography-body-regular-letterSpacing);
+  text-decoration: var(--typography-body-regular-textDecoration);
+  text-transform: var(--typography-body-regular-textTransform);
+}
+
+.rshb-switch__input:checked + .rshb-switch__control {
+  --switch-background: var(--color-background-brand-default);
+  --switch-border-color: transparent;
+  --switch-thumb-translate-x: 16px;
+}
+
+.rshb-switch:hover .rshb-switch__input:not(:disabled):not(:checked) + .rshb-switch__control {
+  --switch-border-color: var(--color-border-default-default-hover);
+}
+
+.rshb-switch:hover .rshb-switch__input:not(:disabled):checked + .rshb-switch__control {
+  --switch-background: var(--color-background-brand-hover);
+  --switch-border-color: transparent;
+}
+
+.rshb-switch__input:not(:disabled):focus-visible + .rshb-switch__control {
+  --switch-border-color: var(--color-border-default-default-focus);
+}
+
+.rshb-switch__input:not(:disabled):checked:focus-visible + .rshb-switch__control {
+  --switch-background: var(--color-background-brand-default);
+  --switch-border-color: var(--color-border-default-default-focus);
+}
+
+.rshb-switch[data-preview-state='hover'][data-preview-status='inactive']:not([data-disabled='true']) .rshb-switch__control {
+  --switch-border-color: var(--color-border-default-default-hover);
+}
+
+.rshb-switch[data-preview-state='hover'][data-preview-status='active']:not([data-disabled='true']) .rshb-switch__control {
+  --switch-background: var(--color-background-brand-hover);
+  --switch-border-color: transparent;
+}
+
+.rshb-switch[data-preview-state='focused'][data-preview-status='inactive']:not([data-disabled='true']) .rshb-switch__control {
+  --switch-border-color: var(--color-border-default-default-focus);
+}
+
+.rshb-switch[data-preview-state='focused'][data-preview-status='active']:not([data-disabled='true']) .rshb-switch__control {
+  --switch-background: var(--color-background-brand-default);
+  --switch-border-color: var(--color-border-default-default-focus);
+}
+
+.rshb-switch[data-preview-status='active'] .rshb-switch__control {
+  --switch-background: var(--color-background-brand-default);
+  --switch-border-color: transparent;
+  --switch-thumb-translate-x: 16px;
+}

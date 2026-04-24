@@ -1,0 +1,24 @@
+{
+  "Flyout": {
+    "Position_X": {
+      "$type": "dimension",
+      "$value": "0px"
+    },
+    "Position_Y": {
+      "$type": "dimension",
+      "$value": "8px"
+    },
+    "Blur": {
+      "$type": "dimension",
+      "$value": "20px"
+    },
+    "Spread": {
+      "$type": "dimension",
+      "$value": "0px"
+    },
+    "Color": {
+      "$type": "color",
+      "$value": "{black.150}"
+    }
+  }
+}

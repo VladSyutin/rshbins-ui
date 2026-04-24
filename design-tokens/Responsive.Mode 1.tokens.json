@@ -1,0 +1,22 @@
+{
+  "XL": {
+    "$type": "dimension",
+    "$value": "1920px"
+  },
+  "L": {
+    "$type": "dimension",
+    "$value": "1280px"
+  },
+  "M": {
+    "$type": "dimension",
+    "$value": "1024px"
+  },
+  "S": {
+    "$type": "dimension",
+    "$value": "744px"
+  },
+  "XS": {
+    "$type": "dimension",
+    "$value": "393px"
+  }
+}

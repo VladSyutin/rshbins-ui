@@ -1,0 +1,14 @@
+{
+  "Flyout": {
+    "$type": "shadow",
+    "$value": [
+      {
+        "offsetX": "{Flyout.Position_X}",
+        "offsetY": "{Flyout.Position_Y}",
+        "blur": "{Flyout.Blur}",
+        "spread": "{Flyout.Spread}",
+        "color": "{Flyout.Color}"
+      }
+    ]
+  }
+}

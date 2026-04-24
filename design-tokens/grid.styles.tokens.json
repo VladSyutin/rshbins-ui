@@ -1,0 +1,207 @@
+{
+  "XL": {
+    "$type": "grid",
+    "$value": [
+      {
+        "pattern": "rows",
+        "visible": true,
+        "alignment": "max",
+        "color": "#5282ff1a",
+        "gutterSize": "20px",
+        "count": 1,
+        "offset": "0px"
+      },
+      {
+        "pattern": "columns",
+        "visible": true,
+        "alignment": "center",
+        "color": "#5282ff1a",
+        "gutterSize": "24px",
+        "count": 12,
+        "offset": "0px"
+      },
+      {
+        "pattern": "rows",
+        "visible": true,
+        "alignment": "min",
+        "color": "#5282ff1a",
+        "gutterSize": "4px",
+        "count": null,
+        "offset": "4px"
+      },
+      {
+        "pattern": "rows",
+        "visible": true,
+        "alignment": "min",
+        "color": "#5282ff1a",
+        "gutterSize": "20px",
+        "count": 1,
+        "offset": "0px"
+      }
+    ]
+  },
+  "L": {
+    "$type": "grid",
+    "$value": [
+      {
+        "pattern": "rows",
+        "visible": true,
+        "alignment": "max",
+        "color": "#5282ff1a",
+        "gutterSize": "20px",
+        "count": 1,
+        "offset": "0px"
+      },
+      {
+        "pattern": "columns",
+        "visible": true,
+        "alignment": "center",
+        "color": "#5282ff1a",
+        "gutterSize": "24px",
+        "count": 10,
+        "offset": "0px"
+      },
+      {
+        "pattern": "rows",
+        "visible": true,
+        "alignment": "min",
+        "color": "#5282ff1a",
+        "gutterSize": "4px",
+        "count": null,
+        "offset": "4px"
+      },
+      {
+        "pattern": "rows",
+        "visible": true,
+        "alignment": "min",
+        "color": "#5282ff1a",
+        "gutterSize": "20px",
+        "count": 1,
+        "offset": "0px"
+      }
+    ]
+  },
+  "M": {
+    "$type": "grid",
+    "$value": [
+      {
+        "pattern": "rows",
+        "visible": true,
+        "alignment": "max",
+        "color": "#5282ff1a",
+        "gutterSize": "20px",
+        "count": 1,
+        "offset": "0px"
+      },
+      {
+        "pattern": "columns",
+        "visible": true,
+        "alignment": "center",
+        "color": "#5282ff1a",
+        "gutterSize": "24px",
+        "count": 8,
+        "offset": "0px"
+      },
+      {
+        "pattern": "rows",
+        "visible": true,
+        "alignment": "min",
+        "color": "#5282ff1a",
+        "gutterSize": "4px",
+        "count": null,
+        "offset": "4px"
+      },
+      {
+        "pattern": "rows",
+        "visible": true,
+        "alignment": "min",
+        "color": "#5282ff1a",
+        "gutterSize": "20px",
+        "count": 1,
+        "offset": "0px"
+      }
+    ]
+  },
+  "S": {
+    "$type": "grid",
+    "$value": [
+      {
+        "pattern": "rows",
+        "visible": true,
+        "alignment": "max",
+        "color": "#5282ff1a",
+        "gutterSize": "20px",
+        "count": 1,
+        "offset": "0px"
+      },
+      {
+        "pattern": "columns",
+        "visible": true,
+        "alignment": "center",
+        "color": "#5282ff1a",
+        "gutterSize": "24px",
+        "count": 6,
+        "offset": "0px"
+      },
+      {
+        "pattern": "rows",
+        "visible": true,
+        "alignment": "min",
+        "color": "#5282ff1a",
+        "gutterSize": "4px",
+        "count": null,
+        "offset": "4px"
+      },
+      {
+        "pattern": "rows",
+        "visible": true,
+        "alignment": "min",
+        "color": "#5282ff1a",
+        "gutterSize": "20px",
+        "count": 1,
+        "offset": "0px"
+      }
+    ]
+  },
+  "XS": {
+    "$type": "grid",
+    "$value": [
+      {
+        "pattern": "rows",
+        "visible": true,
+        "alignment": "max",
+        "color": "#5282ff1a",
+        "gutterSize": "20px",
+        "count": 1,
+        "offset": "0px"
+      },
+      {
+        "pattern": "columns",
+        "visible": true,
+        "alignment": "stretch",
+        "color": "#5282ff1a",
+        "gutterSize": "16px",
+        "count": 4,
+        "offset": "16px"
+      },
+      {
+        "pattern": "rows",
+        "visible": true,
+        "alignment": "min",
+        "color": "#5282ff1a",
+        "gutterSize": "4px",
+        "count": null,
+        "offset": "4px"
+      },
+      {
+        "pattern": "rows",
+        "visible": true,
+        "alignment": "min",
+        "color": "#5282ff1a",
+        "gutterSize": "20px",
+        "count": 1,
+        "offset": "0px"
+      }
+    ]
+  }
+}

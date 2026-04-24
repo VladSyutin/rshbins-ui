@@ -1,0 +1,193 @@
+.rshb-authentication-registration {
+  --rshb-authentication-registration-surface-width: 448px;
+  display: grid;
+  gap: var(--space-margins-inside-xl);
+  width: 100%;
+  max-width: var(--rshb-authentication-registration-surface-width);
+  padding: var(--space-paddings-inside-2xl);
+  border-radius: var(--radius-2xl);
+  background: var(--color-background-default-on-secondary);
+  color: var(--color-text-default-primary);
+}
+
+.rshb-authentication-registration__topbar {
+  padding: 0;
+}
+
+.rshb-authentication-registration__content,
+.rshb-authentication-registration__heading,
+.rshb-authentication-registration__panel,
+.rshb-authentication-registration__group,
+.rshb-authentication-registration__fields,
+.rshb-authentication-registration__actions {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+}
+
+.rshb-authentication-registration__content {
+  gap: var(--space-margins-inside-xl);
+}
+
+.rshb-authentication-registration__heading {
+  gap: var(--space-margins-inside-xs);
+}
+
+.rshb-authentication-registration__panel,
+.rshb-authentication-registration__group,
+.rshb-authentication-registration__actions {
+  gap: var(--space-margins-inside-m);
+}
+
+.rshb-authentication-registration__fields {
+  gap: var(--space-margins-inside-xs);
+}
+
+.rshb-authentication-registration__back.rshb-button {
+  justify-self: start;
+}
+
+.rshb-authentication-registration__back .rshb-button__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.rshb-authentication-registration__back-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: currentColor;
+  -webkit-mask: var(--rshb-authentication-registration-back-icon-url) center / contain no-repeat;
+  mask: var(--rshb-authentication-registration-back-icon-url) center / contain no-repeat;
+}
+
+.rshb-authentication-registration__title,
+.rshb-authentication-registration__description {
+  margin: 0;
+}
+
+.rshb-authentication-registration__title {
+  color: var(--color-text-default-primary);
+  font-family: var(--typography-heading-1-regular-fontFamily, var(--font-family-ubuntu));
+  font-size: var(--typography-heading-1-regular-fontSize, var(--font-size-headings-h1));
+  font-weight: var(--typography-heading-1-regular-fontWeight, var(--font-weight-regular-fontWeight));
+  font-style: var(--typography-heading-1-regular-fontStyle, var(--font-weight-regular-fontStyle));
+  line-height: var(--typography-heading-1-regular-lineHeight, var(--font-line-height-headings-h1));
+  letter-spacing: var(--typography-heading-1-regular-letterSpacing, 0);
+  text-decoration: var(--typography-heading-1-regular-textDecoration, none);
+  text-transform: var(--typography-heading-1-regular-textTransform, none);
+}
+
+.rshb-authentication-registration__tabs {
+  width: fit-content;
+  max-width: 100%;
+}
+
+.rshb-authentication-registration__description {
+  color: var(--color-text-default-primary);
+  font-family: var(--typography-body-regular-fontFamily);
+  font-size: var(--typography-body-regular-fontSize);
+  font-weight: var(--typography-body-regular-fontWeight);
+  font-style: var(--typography-body-regular-fontStyle);
+  line-height: var(--typography-body-regular-lineHeight);
+  letter-spacing: var(--typography-body-regular-letterSpacing);
+  text-decoration: var(--typography-body-regular-textDecoration);
+  text-transform: var(--typography-body-regular-textTransform);
+}
+
+.rshb-authentication-registration__field,
+.rshb-authentication-registration__field.rshb-input-text,
+.rshb-authentication-registration__field.rshb-input-phone {
+  display: flex;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+
+.rshb-authentication-registration__field .rshb-input-text__field,
+.rshb-authentication-registration__field .rshb-input-phone__field {
+  width: 100%;
+  min-width: 0;
+}
+
+.rshb-authentication-registration__consent {
+  width: 100%;
+}
+
+.rshb-authentication-registration__consent .rshb-checkbox__label {
+  line-height: var(--typography-footnote-regular-lineHeight);
+}
+
+.rshb-authentication-registration__link-button {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-brand-link);
+  cursor: pointer;
+  font-family: var(--typography-footnote-regular-fontFamily);
+  font-size: var(--typography-footnote-regular-fontSize);
+  font-weight: var(--typography-footnote-regular-fontWeight);
+  font-style: var(--typography-footnote-regular-fontStyle);
+  line-height: var(--typography-footnote-regular-lineHeight);
+  letter-spacing: var(--typography-footnote-regular-letterSpacing);
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-transform: var(--typography-footnote-regular-textTransform);
+  transition:
+    color var(--motion-hover-duration) var(--motion-hover-curve),
+    outline-color var(--motion-hover-duration) var(--motion-hover-curve);
+}
+
+.rshb-authentication-registration__link-button:focus {
+  outline: none;
+}
+
+.rshb-authentication-registration__link-button:hover {
+  color: var(--color-text-brand-link-hover);
+}
+
+.rshb-authentication-registration__link-button:active {
+  color: var(--color-text-brand-link-focus);
+}
+
+.rshb-authentication-registration__link-button:focus-visible {
+  color: var(--color-text-brand-link-focus);
+  border-radius: var(--radius-2xs);
+  outline: 2px solid var(--color-border-default-default-focus);
+  outline-offset: 2px;
+}
+
+.rshb-authentication-registration__action {
+  width: 100%;
+}
+
+.rshb-authentication-registration__action.rshb-button {
+  display: flex;
+  width: 100%;
+}
+
+.rshb-authentication-registration[data-device='mobile'] {
+  --rshb-authentication-registration-surface-width: 361px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.rshb-authentication-registration[data-device='mobile'] .rshb-authentication-registration__topbar {
+  min-height: 72px;
+}
+
+@media (max-width: 743px) {
+  .rshb-authentication-registration[data-device='auto'] {
+    --rshb-authentication-registration-surface-width: 361px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .rshb-authentication-registration[data-device='auto'] .rshb-authentication-registration__topbar {
+    min-height: 72px;
+  }
+}

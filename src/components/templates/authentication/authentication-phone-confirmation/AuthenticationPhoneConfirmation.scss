@@ -1,0 +1,190 @@
+.rshb-authentication-phone-confirmation {
+  --rshb-authentication-phone-confirmation-surface-width: 448px;
+  display: grid;
+  gap: var(--space-margins-inside-xl);
+  width: 100%;
+  max-width: var(--rshb-authentication-phone-confirmation-surface-width);
+  padding: var(--space-paddings-inside-2xl);
+  border-radius: var(--radius-2xl);
+  background: var(--color-background-default-on-secondary);
+  color: var(--color-text-default-primary);
+}
+
+.rshb-authentication-phone-confirmation__topbar {
+  padding: 0;
+}
+
+.rshb-authentication-phone-confirmation__heading,
+.rshb-authentication-phone-confirmation__code-group,
+.rshb-authentication-phone-confirmation__actions {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+}
+
+.rshb-authentication-phone-confirmation__heading {
+  gap: var(--space-margins-inside-xs);
+}
+
+.rshb-authentication-phone-confirmation__code-group {
+  justify-items: center;
+  gap: var(--space-paddings-inside-m);
+}
+
+.rshb-authentication-phone-confirmation__actions {
+  gap: var(--space-margins-inside-xs);
+}
+
+.rshb-authentication-phone-confirmation__title,
+.rshb-authentication-phone-confirmation__description,
+.rshb-authentication-phone-confirmation__safety {
+  margin: 0;
+}
+
+.rshb-authentication-phone-confirmation__title {
+  color: var(--color-text-default-primary);
+  font-family: var(--typography-heading-1-regular-fontFamily, var(--font-family-ubuntu));
+  font-size: var(--typography-heading-1-regular-fontSize, var(--font-size-headings-h1));
+  font-weight: var(--typography-heading-1-regular-fontWeight, var(--font-weight-regular-fontWeight));
+  font-style: var(--typography-heading-1-regular-fontStyle, var(--font-weight-regular-fontStyle));
+  line-height: var(--typography-heading-1-regular-lineHeight, var(--font-line-height-headings-h1));
+  letter-spacing: var(--typography-heading-1-regular-letterSpacing, 0);
+  text-decoration: var(--typography-heading-1-regular-textDecoration, none);
+  text-transform: var(--typography-heading-1-regular-textTransform, none);
+}
+
+.rshb-authentication-phone-confirmation__description {
+  color: var(--color-text-default-primary);
+  font-family: var(--typography-body-regular-fontFamily);
+  font-size: var(--typography-body-regular-fontSize);
+  font-weight: var(--typography-body-regular-fontWeight);
+  font-style: var(--typography-body-regular-fontStyle);
+  line-height: var(--typography-body-regular-lineHeight);
+  letter-spacing: var(--typography-body-regular-letterSpacing);
+  text-decoration: var(--typography-body-regular-textDecoration);
+  text-transform: var(--typography-body-regular-textTransform);
+}
+
+.rshb-authentication-phone-confirmation__phone {
+  font-family: var(--typography-body-emphasized-fontFamily);
+  font-size: var(--typography-body-emphasized-fontSize);
+  font-weight: var(--typography-body-emphasized-fontWeight);
+  font-style: var(--typography-body-emphasized-fontStyle);
+  line-height: var(--typography-body-emphasized-lineHeight);
+  letter-spacing: var(--typography-body-emphasized-letterSpacing);
+  text-decoration: var(--typography-body-emphasized-textDecoration);
+  text-transform: var(--typography-body-emphasized-textTransform);
+}
+
+.rshb-authentication-phone-confirmation__description-prefix--mobile {
+  display: none;
+}
+
+.rshb-authentication-phone-confirmation__link-button {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-brand-link);
+  cursor: pointer;
+  font-family: var(--typography-body-link-fontFamily);
+  font-size: var(--typography-body-link-fontSize);
+  font-weight: var(--typography-body-link-fontWeight);
+  font-style: var(--typography-body-link-fontStyle);
+  line-height: var(--typography-body-link-lineHeight);
+  letter-spacing: var(--typography-body-link-letterSpacing);
+  text-decoration: var(--typography-body-link-textDecoration);
+  text-decoration-thickness: from-font;
+  text-transform: var(--typography-body-link-textTransform);
+  transition:
+    color var(--motion-hover-duration) var(--motion-hover-curve),
+    outline-color var(--motion-hover-duration) var(--motion-hover-curve);
+}
+
+.rshb-authentication-phone-confirmation__link-button:focus {
+  outline: none;
+}
+
+.rshb-authentication-phone-confirmation__link-button:hover {
+  color: var(--color-text-brand-link-hover);
+}
+
+.rshb-authentication-phone-confirmation__link-button:active {
+  color: var(--color-text-brand-link-focus);
+}
+
+.rshb-authentication-phone-confirmation__link-button:focus-visible {
+  color: var(--color-text-brand-link-focus);
+  border-radius: var(--radius-2xs);
+  outline: 2px solid var(--color-border-default-default-focus);
+  outline-offset: 2px;
+}
+
+.rshb-authentication-phone-confirmation__code {
+  width: fit-content;
+  max-width: 100%;
+}
+
+.rshb-authentication-phone-confirmation__safety {
+  width: 100%;
+  color: var(--color-text-default-primary);
+  font-family: var(--typography-footnote-regular-fontFamily);
+  font-size: var(--typography-footnote-regular-fontSize);
+  font-weight: var(--typography-footnote-regular-fontWeight);
+  font-style: var(--typography-footnote-regular-fontStyle);
+  line-height: var(--typography-footnote-regular-lineHeight);
+  letter-spacing: var(--typography-footnote-regular-letterSpacing);
+  text-align: center;
+  text-decoration: var(--typography-footnote-regular-textDecoration);
+  text-transform: var(--typography-footnote-regular-textTransform);
+}
+
+.rshb-authentication-phone-confirmation__action {
+  width: 100%;
+}
+
+.rshb-authentication-phone-confirmation__action.rshb-button {
+  display: flex;
+  width: 100%;
+}
+
+.rshb-authentication-phone-confirmation[data-device='mobile'] {
+  --rshb-authentication-phone-confirmation-surface-width: 361px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.rshb-authentication-phone-confirmation[data-device='mobile'] .rshb-authentication-phone-confirmation__topbar {
+  min-height: 72px;
+}
+
+.rshb-authentication-phone-confirmation[data-device='mobile'] .rshb-authentication-phone-confirmation__description-prefix--desktop {
+  display: none;
+}
+
+.rshb-authentication-phone-confirmation[data-device='mobile'] .rshb-authentication-phone-confirmation__description-prefix--mobile {
+  display: inline;
+}
+
+@media (max-width: 743px) {
+  .rshb-authentication-phone-confirmation[data-device='auto'] {
+    --rshb-authentication-phone-confirmation-surface-width: 361px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .rshb-authentication-phone-confirmation[data-device='auto'] .rshb-authentication-phone-confirmation__topbar {
+    min-height: 72px;
+  }
+
+  .rshb-authentication-phone-confirmation[data-device='auto'] .rshb-authentication-phone-confirmation__description-prefix--desktop {
+    display: none;
+  }
+
+  .rshb-authentication-phone-confirmation[data-device='auto'] .rshb-authentication-phone-confirmation__description-prefix--mobile {
+    display: inline;
+  }
+}

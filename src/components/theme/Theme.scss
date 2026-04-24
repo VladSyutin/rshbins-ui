@@ -1,0 +1,77 @@
+.rshb-theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 11px;
+  border: 0;
+  border-radius: var(--radius-xs);
+  background: transparent;
+  box-shadow: inset 0 0 0 0 transparent;
+  color: var(--color-icon-default-primary, var(--color-text-default-primary));
+  cursor: pointer;
+  transition:
+    background-color var(--motion-hover-duration) var(--motion-hover-curve),
+    box-shadow var(--motion-hover-duration) var(--motion-hover-curve),
+    color var(--motion-theme-duration) var(--motion-theme-curve);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.rshb-theme:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.rshb-theme:hover:not(:disabled),
+.rshb-theme[data-preview-state='hover']:not(:disabled) {
+  background: var(--color-background-default-generic-hover);
+}
+
+.rshb-theme:active:not(:disabled),
+.rshb-theme[data-preview-state='pressed']:not(:disabled) {
+  background: var(--color-background-default-generic-focus);
+  transition-duration: var(--motion-pressed-duration);
+  transition-timing-function: var(--motion-pressed-curve);
+}
+
+.rshb-theme:focus {
+  outline: none;
+}
+
+.rshb-theme:focus-visible,
+.rshb-theme[data-preview-state='focused'] {
+  box-shadow: inset 0 0 0 2px var(--color-border-default-default-focus);
+}
+
+.rshb-theme__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: inherit;
+  animation: rshb-theme-icon-swap var(--motion-theme-duration) var(--motion-theme-curve);
+}
+
+.rshb-theme__icon::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: currentColor;
+  -webkit-mask: var(--rshb-theme-icon-url) center / contain no-repeat;
+  mask: var(--rshb-theme-icon-url) center / contain no-repeat;
+}
+
+@keyframes rshb-theme-icon-swap {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

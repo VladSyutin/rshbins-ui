@@ -1,0 +1,308 @@
+{
+  "Display 1": {
+    "Regular": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.display.D1}",
+        "fontWeight": "{font-weight.regular}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.display.D1}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Emphasized": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.display.D1}",
+        "fontWeight": "{font-weight.medium}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.display.D1}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    }
+  },
+  "Display 2": {
+    "Regular": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.display.D2}",
+        "fontWeight": "{font-weight.regular}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.display.D2}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Emphasized": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.display.D2}",
+        "fontWeight": "{font-weight.medium}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.display.D2}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    }
+  },
+  "Heading 1": {
+    "Regular": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.headings.H1}",
+        "fontWeight": "{font-weight.regular}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.headings.H1}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Emphasized": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.headings.H1}",
+        "fontWeight": "{font-weight.medium}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.headings.H1}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    }
+  },
+  "Heading 2": {
+    "Regular": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.headings.H2}",
+        "fontWeight": "{font-weight.regular}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.headings.H2}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Emphasized": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.headings.H2}",
+        "fontWeight": "{font-weight.medium}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.headings.H2}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    }
+  },
+  "Subheading 1": {
+    "Regular": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.subheadings.SH1}",
+        "fontWeight": "{font-weight.regular}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.subheadings.SH1}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Emphasized": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.subheadings.SH1}",
+        "fontWeight": "{font-weight.medium}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.subheadings.SH1}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    }
+  },
+  "Subheading 2": {
+    "Regular": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.subheadings.SH2}",
+        "fontWeight": "{font-weight.regular}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.subheadings.SH2}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Emphasized": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.subheadings.SH2}",
+        "fontWeight": "{font-weight.medium}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.subheadings.SH2}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    }
+  },
+  "Body": {
+    "Regular": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.body.default}",
+        "fontWeight": "{font-weight.regular}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.body.default}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Emphasized": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.body.default}",
+        "fontWeight": "{font-weight.medium}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.body.default}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Italic": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.body.default}",
+        "fontWeight": "{font-weight.italic}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.body.default}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Link": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.body.default}",
+        "fontWeight": "{font-weight.regular}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.body.default}",
+        "textTransform": "none",
+        "textDecoration": "underline"
+      }
+    }
+  },
+  "Footnote": {
+    "Regular": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.body.footnote}",
+        "fontWeight": "{font-weight.regular}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.body.footnote}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Italic": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.body.footnote}",
+        "fontWeight": "{font-weight.italic}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.body.footnote}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Link": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.body.footnote}",
+        "fontWeight": "{font-weight.regular}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.body.footnote}",
+        "textTransform": "none",
+        "textDecoration": "underline"
+      }
+    },
+    "Striketrough": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.body.footnote}",
+        "fontWeight": "{font-weight.regular}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.body.footnote}",
+        "textTransform": "none",
+        "textDecoration": "line-through"
+      }
+    }
+  },
+  "Caption": {
+    "Regular": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.body.caption}",
+        "fontWeight": "{font-weight.regular}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.body.caption}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Italic": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.body.caption}",
+        "fontWeight": "{font-weight.italic}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.body.caption}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Link": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.body.caption}",
+        "fontWeight": "{font-weight.regular}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.body.caption}",
+        "textTransform": "none",
+        "textDecoration": "underline"
+      }
+    },
+    "Striketrough": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font-family.ubuntu}",
+        "fontSize": "{font-size.body.caption}",
+        "fontWeight": "{font-weight.regular}",
+        "letterSpacing": "0%",
+        "lineHeight": "{line-height.body.caption}",
+        "textTransform": "none",
+        "textDecoration": "line-through"
+      }
+    }
+  }
+}
