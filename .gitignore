@@ -8,5 +8,3 @@ scripts/project_memory
 .env
 .env.*
 !.env.example
-icons/chevrons-collapse-vertical.svg
-icons/circle-info-regular.svg
