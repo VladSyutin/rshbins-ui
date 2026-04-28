@@ -91,6 +91,47 @@
   text-transform: var(--typography-footnote-regular-textTransform);
 }
 
+.rshb-cookies__link {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-brand-link);
+  cursor: pointer;
+  font-family: var(--typography-footnote-regular-fontFamily);
+  font-size: var(--typography-footnote-regular-fontSize);
+  font-weight: var(--typography-footnote-regular-fontWeight);
+  font-style: var(--typography-footnote-regular-fontStyle);
+  line-height: var(--typography-footnote-regular-lineHeight);
+  letter-spacing: var(--typography-footnote-regular-letterSpacing);
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-transform: var(--typography-footnote-regular-textTransform);
+  transition:
+    color var(--motion-hover-duration) var(--motion-hover-curve),
+    outline-color var(--motion-hover-duration) var(--motion-hover-curve);
+}
+
+.rshb-cookies__link:focus {
+  outline: none;
+}
+
+.rshb-cookies__link:hover {
+  color: var(--color-text-brand-link-hover);
+}
+
+.rshb-cookies__link:active {
+  color: var(--color-text-brand-link-focus);
+}
+
+.rshb-cookies__link:focus-visible {
+  color: var(--color-text-brand-link-focus);
+  border-radius: var(--radius-2xs);
+  outline: 2px solid var(--color-border-default-default-focus);
+  outline-offset: 2px;
+}
+
 .rshb-cookies__actions {
   display: inline-flex;
   flex-shrink: 0;
