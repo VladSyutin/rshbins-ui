@@ -30,7 +30,7 @@ import {
 } from '../../templates/authentication/authentication-phone-confirmation/AuthenticationPhoneConfirmation';
 import { LogInThroughTheGosuslugi } from '../../dialogs/modals/log-in-through-the-gosuslugi/LogInThroughTheGosuslugi';
 import { ProofOfIdentity } from '../../dialogs/modals/proof-of-identity/ProofOfIdentity';
-import { Cookies } from '../../components/cookies/Cookies';
+import { FilledCookies } from '../../dialogs/cookies/filled/FilledCookies';
 import { TheUserWasNotFound } from '../../dialogs/toasts/the-user-was-not-found/TheUserWasNotFound';
 import {
   AuthenticationRegistrationData,
@@ -1348,13 +1348,10 @@ export function AuthenticationPrototype({
         />
       ) : null}
       {isCookiesVisible ? (
-        <Cookies
-          description={<>Продолжая использование сайта, вы соглашаетесь на обработку файлов cookie и иных персональных данных с помощью сервиса Яндекс Метрика в соответствии с <a className="rshb-cookies__link" href="https://rshbins.ru/about/documentation/Politika_obrabotki_PDN.pdf" rel="noopener noreferrer" target="_blank">Политикой АО СК «РСХБ-Страхование»</a>.</>}
-          heading={null}
+        <FilledCookies
           onClose={() => setIsCookiesVisible(false)}
           placement="bottom-center"
-          primaryActionLabel="Понятно"
-          secondaryActionLabel={null}
+          policyLinkProps={{ target: '_blank' }}
           size={isMobileViewport ? 'xs' : 's'}
         />
       ) : null}
