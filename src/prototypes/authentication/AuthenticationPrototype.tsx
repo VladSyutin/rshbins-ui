@@ -30,6 +30,7 @@ import {
 } from '../../templates/authentication/authentication-phone-confirmation/AuthenticationPhoneConfirmation';
 import { LogInThroughTheGosuslugi } from '../../dialogs/modals/log-in-through-the-gosuslugi/LogInThroughTheGosuslugi';
 import { ProofOfIdentity } from '../../dialogs/modals/proof-of-identity/ProofOfIdentity';
+import { Cookies } from '../../components/cookies/Cookies';
 import { TheUserWasNotFound } from '../../dialogs/toasts/the-user-was-not-found/TheUserWasNotFound';
 import {
   AuthenticationRegistrationData,
@@ -195,6 +196,7 @@ export function AuthenticationPrototype({
   const [registrationDraft, setRegistrationDraft] =
     useState<AuthenticationRegistrationSubmitPayload | null>(null);
   const [isInitialLoading, setIsInitialLoading] = useState(true);
+  const [isCookiesVisible, setIsCookiesVisible] = useState(false);
   const [isStepLoading, setIsStepLoading] = useState(false);
   const [submittedPhoneNumber, setSubmittedPhoneNumber] = useState('');
   const [policyholderDetailsDraft, setPolicyholderDetailsDraft] =
@@ -240,6 +242,7 @@ export function AuthenticationPrototype({
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {
       setIsInitialLoading(false);
+      setIsCookiesVisible(true);
     }, INITIAL_LOADING_DURATION_MS);
 
     return () => {
@@ -1326,6 +1329,16 @@ export function AuthenticationPrototype({
           key={userWasNotFoundToastKey}
           onClose={() => setUserWasNotFoundToastKey(0)}
           placement="top-center"
+        />
+      ) : null}
+      {isCookiesVisible ? (
+        <Cookies
+          description="Продолжая использование сайта, вы соглашаетесь на обработку файлов cookie и иных персональных данных с помощью сервиса Яндекс Метрика в соответствии с Политикой АО СК «РСХБ-Страхование»."
+          heading={null}
+          onClose={() => setIsCookiesVisible(false)}
+          placement="bottom-center"
+          primaryActionLabel="Понятно"
+          secondaryActionLabel={null}
         />
       ) : null}
     </div>
