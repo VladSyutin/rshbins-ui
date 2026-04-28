@@ -1333,7 +1333,7 @@ export function AuthenticationPrototype({
       ) : null}
       {isCookiesVisible ? (
         <Cookies
-          description="Продолжая использование сайта, вы соглашаетесь на обработку файлов cookie и иных персональных данных с помощью сервиса Яндекс Метрика в соответствии с Политикой АО СК «РСХБ-Страхование»."
+          description={<>Продолжая использование сайта, вы соглашаетесь на обработку файлов cookie и иных персональных данных с помощью сервиса Яндекс Метрика в соответствии с <a href="https://rshbins.ru/about/documentation/Politika_obrabotki_PDN.pdf" rel="noopener noreferrer" target="_blank">Политикой АО СК «РСХБ-Страхование»</a>.</>}
           heading={null}
           onClose={() => setIsCookiesVisible(false)}
           placement="bottom-center"
