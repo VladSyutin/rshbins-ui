@@ -1167,6 +1167,7 @@ export function AuthenticationPrototype({
           onChangePhone={handleBackToFirstScreen}
           onRequestEmailCode={openHiddenEmailCodeStep}
           phoneNumber={formatPhoneNumber(submittedPhoneNumber)}
+          showEmailButton={REGISTRATION_SKIPPED_PHONE_NUMBERS.has(submittedPhoneNumber)}
           themeProps={sharedThemeProps}
         />
       );
