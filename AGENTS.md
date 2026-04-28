@@ -162,6 +162,14 @@ Before finishing any design-system or Figma task, verify the following:
 - Light and dark themes both render correctly when applicable.
 - No new icon dependency was added.
 
+## Memory Rules
+
+- IMPORTANT: At the start of every session, read `memory/agents.md` before touching any memory files.
+- To add a session log entry use `scripts/project_memory/log_session.py`.
+- To rebuild memory indexes use `scripts/project_memory/flush.py`.
+- To check memory integrity use `scripts/project_memory/lint.py`.
+- Never create or edit files inside `memory/` manually — always use the scripts above.
+
 ## What To Avoid
 
 - Do not introduce Tailwind.
