@@ -114,7 +114,7 @@ function joinClassNames(...values: Array<string | false | null | undefined>): st
 }
 
 type BrandButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children' | 'type'>;
-const COOKIES_XS_BREAKPOINT = 393;
+const COOKIES_XS_BREAKPOINT = 743;
 const INITIAL_LOADING_DURATION_MS = 7000;
 const CAPTCHA_PHONE_NUMBER = '79999999992';
 const CAPTCHA_TIMEOUT_VALUE = 'timeout';
