@@ -62,6 +62,15 @@
   flex: none;
 }
 
+.rshb-cookies[data-size='xs'] .rshb-cookies__actions {
+  width: 100%;
+}
+
+.rshb-cookies[data-size='xs'] .rshb-cookies__actions > * {
+  flex: 1 0 0;
+  min-width: 0;
+}
+
 .rshb-cookies__title,
 .rshb-cookies__description {
   margin: 0;
@@ -199,5 +208,14 @@
   .rshb-cookies[data-size='s'] .rshb-cookies__content {
     width: 100%;
     flex: none;
+  }
+
+  .rshb-cookies[data-size='s'] .rshb-cookies__actions {
+    width: 100%;
+  }
+
+  .rshb-cookies[data-size='s'] .rshb-cookies__actions > * {
+    flex: 1 0 0;
+    min-width: 0;
   }
 }
