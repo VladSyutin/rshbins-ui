@@ -114,6 +114,7 @@ function joinClassNames(...values: Array<string | false | null | undefined>): st
 }
 
 type BrandButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children' | 'type'>;
+const COOKIES_XS_BREAKPOINT = 393;
 const INITIAL_LOADING_DURATION_MS = 7000;
 const CAPTCHA_PHONE_NUMBER = '79999999992';
 const CAPTCHA_TIMEOUT_VALUE = 'timeout';
@@ -197,6 +198,9 @@ export function AuthenticationPrototype({
     useState<AuthenticationRegistrationSubmitPayload | null>(null);
   const [isInitialLoading, setIsInitialLoading] = useState(true);
   const [isCookiesVisible, setIsCookiesVisible] = useState(false);
+  const [isMobileViewport, setIsMobileViewport] = useState(
+    () => typeof window !== 'undefined' && window.innerWidth <= COOKIES_XS_BREAKPOINT
+  );
   const [isStepLoading, setIsStepLoading] = useState(false);
   const [submittedPhoneNumber, setSubmittedPhoneNumber] = useState('');
   const [policyholderDetailsDraft, setPolicyholderDetailsDraft] =
@@ -247,6 +251,18 @@ export function AuthenticationPrototype({
 
     return () => {
       window.clearTimeout(timeoutId);
+    };
+  }, []);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobileViewport(window.innerWidth <= COOKIES_XS_BREAKPOINT);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -1339,6 +1355,7 @@ export function AuthenticationPrototype({
           placement="bottom-center"
           primaryActionLabel="Понятно"
           secondaryActionLabel={null}
+          size={isMobileViewport ? 'xs' : 's'}
         />
       ) : null}
     </div>
