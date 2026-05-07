@@ -20,7 +20,13 @@
   --legacy-color-text-brand-on-brand: var(--color-text-brand-on-brand, #ffffff);
   --legacy-color-text-brand-on-selection: var(--color-text-brand-on-selection, #4f7f43);
   --legacy-color-border-default-default: var(--color-border-default-default, #d7dce1);
+  --legacy-color-border-default-default-hover: var(--color-border-default-default-hover, #00000033);
   --legacy-color-border-default-focus: var(--color-border-default-default-focus, #67a757);
+  --legacy-color-border-brand-default: var(--color-border-brand-default, #67a757);
+  --legacy-color-border-error-default: var(--color-border-error-default, #e2325a);
+  --legacy-color-border-error-default-hover: var(--color-border-error-default-hover, #b0002c);
+  --legacy-color-text-error-default: var(--color-text-error-default, #c10033);
+  --legacy-color-text-danger-tertiary: var(--color-text-danger-tertiary, #c10033);
   --legacy-radius-xs: var(--radius-xs, 8px);
   --legacy-motion-hover-duration: var(--motion-hover-duration, 50ms);
   --legacy-motion-hover-curve: var(--motion-hover-curve, ease-out);
