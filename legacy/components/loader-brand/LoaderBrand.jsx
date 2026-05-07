@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import '../../tokens/legacy-theme.css';
 import './styles.css';
 
 var LOGO_STEP_SEQUENCE = ['1', '2', '3', '4', '5', '6', '7', '8'];

@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import '../../tokens/legacy-theme.css';
 import './styles.css';
 
 let idCounter = 0;

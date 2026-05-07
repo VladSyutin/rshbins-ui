@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import '../../tokens/legacy-theme.css';
 import './styles.css';
 
 const NAVIGATION_ANIMATION_DURATION_MS = 150;

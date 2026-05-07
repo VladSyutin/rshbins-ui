@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import '../../tokens/legacy-theme.css';
 import './styles.css';
 import Button from '../button/index.js';
 import InputText from '../input-text/index.js';

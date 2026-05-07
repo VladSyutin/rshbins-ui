@@ -2,9 +2,9 @@
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--legacy-space-paddings-inside-xs);
+  gap: var(--space-paddings-inside-xs);
   inline-size: fit-content;
-  color: var(--legacy-color-text-default-primary);
+  color: var(--color-text-default-primary);
 }
 
 .rshb-legacy-loader-brand__logo {
@@ -22,7 +22,7 @@
   block-size: var(--rshb-legacy-loader-brand-bar-height);
   flex-shrink: 0;
   background: var(--rshb-legacy-loader-brand-bar-color);
-  transition: block-size var(--legacy-motion-loaderbrand-logo-duration) var(--legacy-motion-loaderbrand-logo-curve);
+  transition: block-size var(--motion-loaderbrand-logo-duration) var(--motion-loaderbrand-logo-curve);
   will-change: block-size;
 }
 
@@ -30,12 +30,12 @@
   position: relative;
   display: inline-grid;
   place-items: center;
-  min-block-size: var(--legacy-typography-body-line-height);
-  color: var(--legacy-color-text-default-primary);
-  font-family: var(--legacy-typography-body-font-family);
-  font-size: var(--legacy-typography-body-font-size);
-  font-weight: var(--legacy-typography-body-font-weight);
-  line-height: var(--legacy-typography-body-line-height);
+  min-block-size: var(--typography-body-regular-lineHeight);
+  color: var(--color-text-default-primary);
+  font-family: var(--typography-body-regular-fontFamily);
+  font-size: var(--typography-body-regular-fontSize);
+  font-weight: var(--typography-body-regular-fontWeight);
+  line-height: var(--typography-body-regular-lineHeight);
   white-space: nowrap;
 }
 
@@ -53,11 +53,11 @@
 }
 
 .rshb-legacy-loader-brand__text-layer[data-phase='entering'] {
-  animation: rshb-legacy-loader-brand-text-in var(--legacy-motion-loaderbrand-text-duration) var(--legacy-motion-loaderbrand-text-curve) forwards;
+  animation: rshb-legacy-loader-brand-text-in var(--motion-loaderbrand-text-duration) var(--motion-loaderbrand-text-curve) forwards;
 }
 
 .rshb-legacy-loader-brand__text-layer[data-phase='exiting'] {
-  animation: rshb-legacy-loader-brand-text-out var(--legacy-motion-loaderbrand-text-duration) var(--legacy-motion-loaderbrand-text-curve) forwards;
+  animation: rshb-legacy-loader-brand-text-out var(--motion-loaderbrand-text-duration) var(--motion-loaderbrand-text-curve) forwards;
 }
 
 @keyframes rshb-legacy-loader-brand-text-in {

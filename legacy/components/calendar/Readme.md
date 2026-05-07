@@ -7,7 +7,7 @@ React 17-compatible delivery of the calendar component for FOS integration.
 - `Calendar.jsx` — component implementation with `day`, `month`, and `year` views
 - `styles.css` — plain CSS styles for the flyout surface and picker cells
 - `index.js` — default export entry point plus named item exports
-- `../../tokens/legacy-theme.css` — shared legacy token aliases with semantic-token fallbacks
+- `src/styles/tokens.css` — design tokens (loaded globally, not imported per-component)
 
 ### Integration Notes
 
