@@ -1,4 +1,5 @@
-import { useState, type CSSProperties } from 'react';
+import { useEffect, useState, type CSSProperties, type ReactNode } from 'react';
+import { createPortal } from 'react-dom';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import type { LegacyCookiesProps } from './index.js';
 import Cookies from './index.js';
@@ -14,8 +15,8 @@ const meta = {
     heading: 'Заголовок',
     placement: 'inline',
     previewState: 'shown',
-    primaryActionLabel: 'Принять',
-    secondaryActionLabel: 'Настройки',
+    primaryActionLabel: 'Контент',
+    secondaryActionLabel: 'Контент',
     size: 's'
   },
   argTypes: {
@@ -38,6 +39,47 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+function getPortalDocument(): Document {
+  try {
+    if (window.parent.document?.body && window.parent.document !== document) {
+      return window.parent.document;
+    }
+  } catch {
+    return document;
+  }
+  return document;
+}
+
+function syncPreviewStyles(targetDocument: Document) {
+  if (targetDocument === document || targetDocument.head.querySelector('[data-rshb-legacy-cookies-portal-style]')) {
+    return;
+  }
+  document.querySelectorAll('link[rel="stylesheet"], style').forEach((node) => {
+    const clone = node.cloneNode(true) as HTMLLinkElement | HTMLStyleElement;
+    clone.setAttribute('data-rshb-legacy-cookies-portal-style', 'true');
+    if (node.tagName === 'LINK' && clone.tagName === 'LINK') {
+      (clone as HTMLLinkElement).href = (node as HTMLLinkElement).href;
+    }
+    targetDocument.head.appendChild(clone);
+  });
+}
+
+function ParentDocumentPortal({ children }: { children: ReactNode }) {
+  const [portalRoot, setPortalRoot] = useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const targetDocument = getPortalDocument();
+    syncPreviewStyles(targetDocument);
+    const root = targetDocument.createElement('div');
+    root.setAttribute('data-rshb-legacy-cookies-portal-root', 'true');
+    targetDocument.body.appendChild(root);
+    setPortalRoot(root);
+    return () => { root.remove(); };
+  }, []);
+
+  return portalRoot ? createPortal(children, portalRoot) : null;
+}
+
 function InteractiveCookiesDemo(args: LegacyCookiesProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [cookiesKey, setCookiesKey] = useState(0);
@@ -54,13 +96,15 @@ function InteractiveCookiesDemo(args: LegacyCookiesProps) {
           Показать cookies
         </LegacyButton>
         {isVisible ? (
-          <Cookies
-            {...args}
-            key={cookiesKey}
-            onClose={() => setIsVisible(false)}
-            placement="bottom-center"
-            primaryActionLabel="Закрыть"
-          />
+          <ParentDocumentPortal>
+            <Cookies
+              {...args}
+              key={cookiesKey}
+              onClose={() => setIsVisible(false)}
+              placement="bottom-center"
+              primaryActionLabel="Закрыть"
+            />
+          </ParentDocumentPortal>
         ) : null}
       </div>
     </div>
