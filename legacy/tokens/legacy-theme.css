@@ -32,6 +32,14 @@
   --legacy-motion-hover-curve: var(--motion-hover-curve, ease-out);
   --legacy-motion-pressed-duration: var(--motion-pressed-duration, 50ms);
   --legacy-motion-pressed-curve: var(--motion-pressed-curve, ease-out);
+  --legacy-motion-loaderbrand-logo-duration: var(--motion-loaderbrand-logo-duration, 200ms);
+  --legacy-motion-loaderbrand-logo-curve: var(--motion-loaderbrand-logo-curve, ease-out);
+  --legacy-motion-loaderbrand-text-duration: var(--motion-loaderbrand-text-duration, 300ms);
+  --legacy-motion-loaderbrand-text-curve: var(--motion-loaderbrand-text-curve, ease-out);
+  --legacy-space-paddings-inside-xs: var(--space-paddings-inside-xs, 8px);
+  --legacy-color-logo-line-1: var(--color-logo-line-1, #ffcb05);
+  --legacy-color-logo-line-2: var(--color-logo-line-2, #a6ce39);
+  --legacy-color-logo-line-3: var(--color-logo-line-3, #238441);
   --legacy-typography-body-font-family: var(
     --typography-body-regular-fontFamily,
     var(--font-family-ubuntu, 'Ubuntu', sans-serif)
