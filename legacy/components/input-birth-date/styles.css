@@ -1,0 +1,344 @@
+.rshb-legacy-input-birth-date {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  width: 361px;
+  max-width: 100%;
+  color: var(--color-text-default-primary);
+}
+
+.rshb-legacy-input-birth-date__field {
+  display: flex;
+  align-items: center;
+  gap: var(--space-margins-inside-xs);
+  min-height: 58px;
+  padding: 7px 8px 7px 16px;
+  border: 2px solid var(--color-border-default-default);
+  border-radius: var(--radius-xs);
+  background: transparent;
+  transition:
+    border-color var(--motion-hover-duration) var(--motion-hover-curve),
+    background-color var(--motion-hover-duration) var(--motion-hover-curve),
+    color var(--motion-hover-duration) var(--motion-hover-curve);
+}
+
+.rshb-legacy-input-birth-date__content {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 42px;
+}
+
+.rshb-legacy-input-birth-date__label,
+.rshb-legacy-input-birth-date__control,
+.rshb-legacy-input-birth-date__mask,
+.rshb-legacy-input-birth-date__helper-text {
+  font-family: var(--typography-body-regular-fontFamily);
+  font-size: var(--typography-body-regular-fontSize);
+  font-weight: var(--typography-body-regular-fontWeight);
+  line-height: var(--typography-body-regular-lineHeight);
+}
+
+.rshb-legacy-input-birth-date__label {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 9px;
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--color-text-default-secondary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+  transition:
+    inset-block-start var(--motion-hover-duration) var(--motion-hover-curve),
+    color var(--motion-hover-duration) var(--motion-hover-curve),
+    font-size var(--motion-hover-duration) var(--motion-hover-curve),
+    line-height var(--motion-hover-duration) var(--motion-hover-curve);
+}
+
+.rshb-legacy-input-birth-date__value-row {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-end: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 24px;
+  min-width: 0;
+}
+
+.rshb-legacy-input-birth-date__input-shell {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.rshb-legacy-input-birth-date__control,
+.rshb-legacy-input-birth-date__mask,
+.rshb-legacy-input-birth-date__native-input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.rshb-legacy-input-birth-date__control {
+  position: relative;
+  z-index: 1;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-default-primary);
+  outline: none;
+  caret-color: var(--color-text-brand-default);
+}
+
+.rshb-legacy-input-birth-date__mask {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  color: var(--color-text-default-disabled);
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
+.rshb-legacy-input-birth-date__native-input {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.rshb-legacy-input-birth-date__native-input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.rshb-legacy-input-birth-date__activator {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: transparent;
+  cursor: text;
+}
+
+.rshb-legacy-input-birth-date__action-button,
+.rshb-legacy-input-birth-date__helper-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rshb-legacy-input-birth-date__action-button {
+  width: 40px;
+  height: 40px;
+  padding: 11px;
+  border: 0;
+  border-radius: var(--radius-xs);
+  background: transparent;
+  color: var(--color-text-default-tertiary);
+  cursor: pointer;
+  transition:
+    background-color var(--motion-hover-duration) var(--motion-hover-curve),
+    color var(--motion-hover-duration) var(--motion-hover-curve);
+}
+
+.rshb-legacy-input-birth-date__action-button[data-selected='true'] {
+  background: var(--color-background-brand-selection);
+  color: var(--color-text-brand-on-selection);
+}
+
+.rshb-legacy-input-birth-date__action-icon,
+.rshb-legacy-input-birth-date__helper-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rshb-legacy-input-birth-date__action-icon--calendar {
+  width: 18px;
+  height: 18px;
+}
+
+.rshb-legacy-input-birth-date__action-icon--clear,
+.rshb-legacy-input-birth-date__helper-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.rshb-legacy-input-birth-date__action-icon > svg,
+.rshb-legacy-input-birth-date__helper-icon > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.rshb-legacy-input-birth-date__helper {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-margins-inside-2xs);
+  width: 100%;
+  color: var(--color-text-default-tertiary);
+}
+
+.rshb-legacy-input-birth-date__helper-icon-wrapper {
+  padding-top: 3px;
+}
+
+.rshb-legacy-input-birth-date__helper-icon-wrapper > svg,
+.rshb-legacy-input-birth-date__helper-icon-wrapper > img {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.rshb-legacy-input-birth-date__helper-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--typography-footnote-regular-fontFamily);
+  font-size: var(--typography-footnote-regular-fontSize);
+  font-weight: var(--typography-footnote-regular-fontWeight);
+  line-height: var(--typography-footnote-regular-lineHeight);
+}
+
+.rshb-legacy-input-birth-date__calendar {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+
+.rshb-legacy-input-birth-date[data-state='default']:hover .rshb-legacy-input-birth-date__field,
+.rshb-legacy-input-birth-date[data-state='entered']:hover .rshb-legacy-input-birth-date__field,
+.rshb-legacy-input-birth-date[data-state='error']:hover .rshb-legacy-input-birth-date__field,
+.rshb-legacy-input-birth-date[data-state='error-entered']:hover .rshb-legacy-input-birth-date__field,
+.rshb-legacy-input-birth-date[data-state='hover'] .rshb-legacy-input-birth-date__field,
+.rshb-legacy-input-birth-date[data-state='entered-hover'] .rshb-legacy-input-birth-date__field {
+  border-color: var(--color-border-default-default-hover);
+}
+
+.rshb-legacy-input-birth-date[data-state='error-hover'] .rshb-legacy-input-birth-date__field,
+.rshb-legacy-input-birth-date[data-state='error-entered-hover'] .rshb-legacy-input-birth-date__field,
+.rshb-legacy-input-birth-date[data-state='error']:hover .rshb-legacy-input-birth-date__field,
+.rshb-legacy-input-birth-date[data-state='error-entered']:hover .rshb-legacy-input-birth-date__field {
+  border-color: var(--color-border-error-default-hover);
+}
+
+.rshb-legacy-input-birth-date[data-state='focused'] .rshb-legacy-input-birth-date__field,
+.rshb-legacy-input-birth-date[data-state='typing'] .rshb-legacy-input-birth-date__field {
+  border-color: var(--color-border-brand-default);
+}
+
+.rshb-legacy-input-birth-date[data-state='keyboard-focused'] .rshb-legacy-input-birth-date__field {
+  border-color: var(--color-border-default-default-focus);
+}
+
+.rshb-legacy-input-birth-date[data-state='error'] .rshb-legacy-input-birth-date__field,
+.rshb-legacy-input-birth-date[data-state='error-entered'] .rshb-legacy-input-birth-date__field {
+  border-color: var(--color-border-error-default);
+}
+
+.rshb-legacy-input-birth-date[data-state='disabled'] .rshb-legacy-input-birth-date__field,
+.rshb-legacy-input-birth-date[data-state='disabled-entered'] .rshb-legacy-input-birth-date__field {
+  border-color: transparent;
+  background: var(--color-background-default-disabled);
+}
+
+.rshb-legacy-input-birth-date[data-state='focused'] .rshb-legacy-input-birth-date__label,
+.rshb-legacy-input-birth-date[data-state='typing'] .rshb-legacy-input-birth-date__label,
+.rshb-legacy-input-birth-date[data-state='entered'] .rshb-legacy-input-birth-date__label,
+.rshb-legacy-input-birth-date[data-state='entered-hover'] .rshb-legacy-input-birth-date__label,
+.rshb-legacy-input-birth-date[data-state='error-entered'] .rshb-legacy-input-birth-date__label,
+.rshb-legacy-input-birth-date[data-state='error-entered-hover'] .rshb-legacy-input-birth-date__label,
+.rshb-legacy-input-birth-date[data-state='disabled-entered'] .rshb-legacy-input-birth-date__label {
+  inset-block-start: 0;
+  font-family: var(--typography-footnote-regular-fontFamily);
+  font-size: var(--typography-footnote-regular-fontSize);
+  font-weight: var(--typography-footnote-regular-fontWeight);
+  line-height: var(--typography-footnote-regular-lineHeight);
+}
+
+.rshb-legacy-input-birth-date[data-state='error'] .rshb-legacy-input-birth-date__label,
+.rshb-legacy-input-birth-date[data-state='error-hover'] .rshb-legacy-input-birth-date__label,
+.rshb-legacy-input-birth-date[data-state='error-entered'] .rshb-legacy-input-birth-date__label,
+.rshb-legacy-input-birth-date[data-state='error-entered-hover'] .rshb-legacy-input-birth-date__label {
+  color: var(--color-text-error-default);
+}
+
+.rshb-legacy-input-birth-date[data-state='disabled'] .rshb-legacy-input-birth-date__label,
+.rshb-legacy-input-birth-date[data-state='disabled-entered'] .rshb-legacy-input-birth-date__label,
+.rshb-legacy-input-birth-date[data-state='disabled'] .rshb-legacy-input-birth-date__control,
+.rshb-legacy-input-birth-date[data-state='disabled-entered'] .rshb-legacy-input-birth-date__control,
+.rshb-legacy-input-birth-date[data-state='disabled'] .rshb-legacy-input-birth-date__helper,
+.rshb-legacy-input-birth-date[data-state='disabled-entered'] .rshb-legacy-input-birth-date__helper,
+.rshb-legacy-input-birth-date[data-state='disabled'] .rshb-legacy-input-birth-date__native-input,
+.rshb-legacy-input-birth-date[data-state='disabled-entered'] .rshb-legacy-input-birth-date__native-input {
+  color: var(--color-text-default-disabled);
+}
+
+.rshb-legacy-input-birth-date[data-state='default'] .rshb-legacy-input-birth-date__control,
+.rshb-legacy-input-birth-date[data-state='hover'] .rshb-legacy-input-birth-date__control,
+.rshb-legacy-input-birth-date[data-state='error'] .rshb-legacy-input-birth-date__control,
+.rshb-legacy-input-birth-date[data-state='error-hover'] .rshb-legacy-input-birth-date__control,
+.rshb-legacy-input-birth-date[data-state='keyboard-focused'] .rshb-legacy-input-birth-date__control {
+  caret-color: transparent;
+}
+
+.rshb-legacy-input-birth-date[data-state='error'] .rshb-legacy-input-birth-date__mask,
+.rshb-legacy-input-birth-date[data-state='error-hover'] .rshb-legacy-input-birth-date__mask,
+.rshb-legacy-input-birth-date[data-state='error-entered'] .rshb-legacy-input-birth-date__mask,
+.rshb-legacy-input-birth-date[data-state='error-entered-hover'] .rshb-legacy-input-birth-date__mask {
+  color: var(--color-text-error-default);
+}
+
+.rshb-legacy-input-birth-date[data-state='disabled'] .rshb-legacy-input-birth-date__mask,
+.rshb-legacy-input-birth-date[data-state='disabled-entered'] .rshb-legacy-input-birth-date__mask {
+  color: var(--color-text-default-disabled);
+}
+
+.rshb-legacy-input-birth-date__action-button:hover:not(:disabled) {
+  color: var(--color-text-default-primary);
+}
+
+.rshb-legacy-input-birth-date__action-button[data-selected='true']:hover:not(:disabled) {
+  color: var(--color-text-brand-on-selection);
+}
+
+.rshb-legacy-input-birth-date__action-button:disabled {
+  color: var(--color-text-default-disabled);
+  cursor: not-allowed;
+}
+
+.rshb-legacy-input-birth-date[data-state='error'] .rshb-legacy-input-birth-date__helper,
+.rshb-legacy-input-birth-date[data-state='error-hover'] .rshb-legacy-input-birth-date__helper,
+.rshb-legacy-input-birth-date[data-state='error-entered'] .rshb-legacy-input-birth-date__helper,
+.rshb-legacy-input-birth-date[data-state='error-entered-hover'] .rshb-legacy-input-birth-date__helper {
+  color: var(--color-text-danger-tertiary);
+}
+
+.rshb-legacy-input-birth-date[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.rshb-legacy-input-birth-date[data-disabled='true'] .rshb-legacy-input-birth-date__field,
+.rshb-legacy-input-birth-date[data-disabled='true'] .rshb-legacy-input-birth-date__label,
+.rshb-legacy-input-birth-date[data-disabled='true'] .rshb-legacy-input-birth-date__native-input,
+.rshb-legacy-input-birth-date[data-disabled='true'] .rshb-legacy-input-birth-date__action-button {
+  cursor: not-allowed;
+}
