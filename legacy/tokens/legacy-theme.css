@@ -28,6 +28,16 @@
   --legacy-color-text-error-default: var(--color-text-error-default, #c10033);
   --legacy-color-text-danger-tertiary: var(--color-text-danger-tertiary, #c10033);
   --legacy-radius-xs: var(--radius-xs, 8px);
+  --legacy-radius-m: var(--radius-m, 16px);
+  --legacy-space-margins-inside-m: var(--space-margins-inside-m, 16px);
+  --legacy-space-margins-outside-2xl: var(--space-margins-outside-2xl, 24px);
+  --legacy-color-background-default-on-secondary: var(--color-background-default-on-secondary, #ffffff);
+  --legacy-color-background-default-generic: var(--color-background-default-generic, #0000000d);
+  --legacy-color-text-default-tertiary: var(--color-text-default-tertiary, #808080);
+  --legacy-typography-subheading-1-font-family: var(--typography-subheading-1-regular-fontFamily, var(--font-family-ubuntu, 'Ubuntu', sans-serif));
+  --legacy-typography-subheading-1-font-size: var(--typography-subheading-1-regular-fontSize, 24px);
+  --legacy-typography-subheading-1-font-weight: var(--typography-subheading-1-regular-fontWeight, 400);
+  --legacy-typography-subheading-1-line-height: var(--typography-subheading-1-regular-lineHeight, 28px);
   --legacy-motion-hover-duration: var(--motion-hover-duration, 50ms);
   --legacy-motion-hover-curve: var(--motion-hover-curve, ease-out);
   --legacy-motion-pressed-duration: var(--motion-pressed-duration, 50ms);
