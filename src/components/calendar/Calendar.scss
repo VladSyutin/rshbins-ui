@@ -143,15 +143,6 @@
   width: 100%;
 }
 
-.rshb-calendar__content[data-animating='true'] {
-  min-height: 284px;
-}
-
-.rshb-calendar__content[data-current-view='month'],
-.rshb-calendar__content[data-current-view='year'] {
-  min-height: 252px;
-}
-
 .rshb-calendar__content-panel--incoming,
 .rshb-calendar__content-panel--outgoing {
   position: absolute;

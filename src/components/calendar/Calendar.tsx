@@ -122,6 +122,9 @@ const MONTH_NAMES_GENITIVE = [
 ] as const;
 
 const DAY_NAMES = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'] as const;
+const CALENDAR_DAY_CELL_SIZE_PX = 40;
+const CALENDAR_GRID_GAP_PX = 2;
+const CALENDAR_MONTH_YEAR_VIEW_MIN_HEIGHT_PX = 252;
 
 function joinClassNames(...values: Array<string | false | null | undefined>): string {
   return values.filter(Boolean).join(' ');
@@ -294,6 +297,24 @@ function buildDayGrid(displayDate: Date): DayCell[][] {
   return grid;
 }
 
+function getDayViewMinHeight(displayDate: Date): number {
+  const weeksCount = buildDayGrid(displayDate).length;
+
+  return (
+    CALENDAR_DAY_CELL_SIZE_PX +
+    weeksCount * CALENDAR_DAY_CELL_SIZE_PX +
+    weeksCount * CALENDAR_GRID_GAP_PX
+  );
+}
+
+function getViewMinHeight(snapshot: CalendarSnapshot): number {
+  if (snapshot.view === 'day') {
+    return getDayViewMinHeight(snapshot.displayDate);
+  }
+
+  return CALENDAR_MONTH_YEAR_VIEW_MIN_HEIGHT_PX;
+}
+
 /**
  * Primitive calendar day button used inside the date grid and standalone previews.
  */
@@ -384,6 +405,15 @@ export function Calendar({
     () => createSnapshot(state),
     [state.displayDate, state.view, state.yearRangeStart]
   );
+  const contentStyle = useMemo<CSSProperties>(() => {
+    const snapshots = animationState.outgoingSnapshot
+      ? [animationState.outgoingSnapshot, currentSnapshot]
+      : [currentSnapshot];
+
+    return {
+      minHeight: Math.max(...snapshots.map(getViewMinHeight))
+    };
+  }, [animationState.outgoingSnapshot, currentSnapshot]);
   const canNavigatePrevious = useMemo(() => {
     if (state.view === 'day') {
       return hasSelectableMonth(
@@ -834,6 +864,7 @@ export function Calendar({
         data-animating={animationState.running ? 'true' : 'false'}
         data-current-view={state.view}
         data-direction={animationState.direction === -1 ? 'backward' : 'forward'}
+        style={contentStyle}
       >
         {animationState.outgoingSnapshot ? (
           <div className="rshb-calendar__content-panel rshb-calendar__content-panel--outgoing">
