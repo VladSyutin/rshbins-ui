@@ -10,7 +10,6 @@ const meta = {
   component: Timeout,
   tags: ['autodocs'],
   args: {
-    countdownDurationSeconds: 30,
     placement: 'inline',
     previewState: 'shown'
   },
@@ -99,14 +98,17 @@ function InteractiveDemo(args: Story['args']) {
 
 export const Default: Story = {};
 
-export const Interactive: Story = {
-  render: (args) => <InteractiveDemo {...args} />
-};
-
 export const Expired: Story = {
   args: {
     countdownDurationSeconds: 0
   }
+};
+
+export const Interactive: Story = {
+  args: {
+    countdownDurationSeconds: 30 * 60
+  },
+  render: (args) => <InteractiveDemo {...args} />
 };
 
 const surfaceStyle: CSSProperties = {
