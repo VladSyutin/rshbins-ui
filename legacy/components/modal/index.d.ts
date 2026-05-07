@@ -1,4 +1,5 @@
-import type { HTMLAttributes, InputHTMLAttributes, ReactNode } from 'react';
+import type { HTMLAttributes, ReactNode } from 'react';
+import type { LegacyInputTextProps } from '../input-text/index.js';
 
 export type LegacyModalVariant = 'default' | 'captcha' | 'text-input';
 export type LegacyModalPlacement = 'inline' | 'top-center';
@@ -17,7 +18,7 @@ export interface LegacyModalProps extends Omit<HTMLAttributes<HTMLDivElement>, '
   description?: ReactNode;
   heading?: ReactNode;
   inputPlaceholder?: string;
-  inputProps?: Omit<InputHTMLAttributes<HTMLInputElement>, 'className' | 'placeholder'>;
+  inputProps?: Omit<LegacyInputTextProps, 'className' | 'label'>;
   onClose?: () => void;
   onPrimaryAction?: () => void;
   onRefreshCaptcha?: () => void;

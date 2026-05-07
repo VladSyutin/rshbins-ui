@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import '../../tokens/legacy-theme.css';
 import './styles.css';
 import Button from '../button/index.js';
+import InputText from '../input-text/index.js';
 
 var idCounter = 0;
 
@@ -218,15 +219,11 @@ export default function Modal(props) {
         : null,
       shouldRenderInput
         ? React.createElement(
-            'label',
-            { className: 'rshb-legacy-modal__field' },
-            React.createElement(
-              'input',
-              Object.assign({}, inputProps, {
-                className: 'rshb-legacy-modal__input',
-                placeholder: inputPlaceholder
-              })
-            )
+            InputText,
+            Object.assign({}, inputProps, {
+              className: 'rshb-legacy-modal__field',
+              label: inputPlaceholder
+            })
           )
         : null
     ),
