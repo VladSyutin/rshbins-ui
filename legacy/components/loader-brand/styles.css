@@ -1,0 +1,82 @@
+.rshb-legacy-loader-brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--legacy-space-paddings-inside-xs);
+  inline-size: fit-content;
+  color: var(--legacy-color-text-default-primary);
+}
+
+.rshb-legacy-loader-brand__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  block-size: 80px;
+  overflow: hidden;
+}
+
+.rshb-legacy-loader-brand__bar {
+  display: block;
+  inline-size: 16px;
+  block-size: var(--rshb-legacy-loader-brand-bar-height);
+  flex-shrink: 0;
+  background: var(--rshb-legacy-loader-brand-bar-color);
+  transition: block-size var(--legacy-motion-loaderbrand-logo-duration) var(--legacy-motion-loaderbrand-logo-curve);
+  will-change: block-size;
+}
+
+.rshb-legacy-loader-brand__text {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  min-block-size: var(--legacy-typography-body-line-height);
+  color: var(--legacy-color-text-default-primary);
+  font-family: var(--legacy-typography-body-font-family);
+  font-size: var(--legacy-typography-body-font-size);
+  font-weight: var(--legacy-typography-body-font-weight);
+  line-height: var(--legacy-typography-body-line-height);
+  white-space: nowrap;
+}
+
+.rshb-legacy-loader-brand__text-sizer {
+  visibility: hidden;
+}
+
+.rshb-legacy-loader-brand__text-layer {
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.rshb-legacy-loader-brand__text-layer[data-phase='entering'] {
+  animation: rshb-legacy-loader-brand-text-in var(--legacy-motion-loaderbrand-text-duration) var(--legacy-motion-loaderbrand-text-curve) forwards;
+}
+
+.rshb-legacy-loader-brand__text-layer[data-phase='exiting'] {
+  animation: rshb-legacy-loader-brand-text-out var(--legacy-motion-loaderbrand-text-duration) var(--legacy-motion-loaderbrand-text-curve) forwards;
+}
+
+@keyframes rshb-legacy-loader-brand-text-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes rshb-legacy-loader-brand-text-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rshb-legacy-loader-brand__bar {
+    transition: none;
+  }
+
+  .rshb-legacy-loader-brand__text-layer[data-phase='entering'],
+  .rshb-legacy-loader-brand__text-layer[data-phase='exiting'] {
+    animation: none;
+  }
+}
