@@ -1,0 +1,17 @@
+@import '../radio/styles.css';
+
+.rshb-legacy-radio-group {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--space-margins-inside-m);
+  width: fit-content;
+  max-width: 100%;
+}
+
+.rshb-legacy-radio-group[data-direction='vertical'] {
+  flex-direction: column;
+}
+
+.rshb-legacy-radio-group[data-direction='vertical'] .rshb-legacy-radio-group__item {
+  width: 100%;
+}
