@@ -169,6 +169,7 @@ const overviewGridStyle: CSSProperties = {
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 360px))',
   gap: '32px',
+  alignItems: 'start',
   width: '100%'
 };
 

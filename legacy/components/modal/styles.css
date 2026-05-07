@@ -65,8 +65,7 @@
 }
 
 .rshb-legacy-modal__description,
-.rshb-legacy-modal__captcha-text,
-.rshb-legacy-modal__input {
+.rshb-legacy-modal__captcha-text {
   font-family: var(--legacy-typography-body-font-family);
   font-size: var(--legacy-typography-body-font-size);
   font-weight: var(--legacy-typography-body-font-weight);
