@@ -29,9 +29,9 @@ var LOGO_BAR_HEIGHTS = {
 };
 
 var LOGO_BAR_COLORS = [
-  'var(--legacy-color-logo-line-1)',
-  'var(--legacy-color-logo-line-2)',
-  'var(--legacy-color-logo-line-3)'
+  'var(--color-logo-line-1)',
+  'var(--color-logo-line-2)',
+  'var(--color-logo-line-3)'
 ];
 
 var LONGEST_TEXT_LABEL = TEXT_STEP_SEQUENCE.reduce(function (longest, step) {
