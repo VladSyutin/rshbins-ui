@@ -1,0 +1,14 @@
+.rshb-legacy-tabs {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  gap: var(--space-margins-inside-m);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+}
+
+.rshb-legacy-tabs__item {
+  flex-shrink: 0;
+}

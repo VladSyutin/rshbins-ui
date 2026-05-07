@@ -1,8 +1,6 @@
 import React from 'react';
 import './styles.css';
-
-const SPINNER_PATH =
-  'M24 12C24 14.5342 23.1977 17.0033 21.7082 19.0534C20.2187 21.1036 18.1183 22.6296 15.7082 23.4127C13.2981 24.1958 10.7019 24.1958 8.2918 23.4127C5.88167 22.6296 3.78133 21.1036 2.2918 19.0534C0.802259 17.0033 0 14.5342 0 12C0 9.46585 0.80226 6.99675 2.2918 4.94658C3.78133 2.8964 5.88168 1.37042 8.2918 0.587321C10.7019 -0.195774 13.2981 -0.195774 15.7082 0.587322L15.0778 2.52748C13.0774 1.87751 10.9226 1.87751 8.92219 2.52748C6.92179 3.17745 5.17851 4.44402 3.94219 6.14566C2.70588 7.8473 2.04 9.89665 2.04 12C2.04 14.1033 2.70587 16.1527 3.94219 17.8543C5.17851 19.556 6.92179 20.8226 8.92219 21.4725C10.9226 22.1225 13.0774 22.1225 15.0778 21.4725C17.0782 20.8226 18.8215 19.556 20.0578 17.8543C21.2941 16.1527 21.96 14.1033 21.96 12H24Z';
+import Spin from '../spin/index.js';
 
 function joinClassNames() {
   return Array.prototype.slice.call(arguments).filter(Boolean).join(' ');
@@ -121,15 +119,7 @@ export default function Button(props) {
 
       {resolvedState === 'loading' ? (
         <span aria-hidden="true" className="rshb-legacy-button__spinner">
-          <svg
-            aria-hidden="true"
-            className="rshb-legacy-button__spinner-svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d={SPINNER_PATH} />
-          </svg>
+          <Spin size={resolvedSize === 'm' ? 's' : 'xs'} />
         </span>
       ) : null}
     </button>

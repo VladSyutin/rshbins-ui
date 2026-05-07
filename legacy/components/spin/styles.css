@@ -1,0 +1,43 @@
+.rshb-legacy-spin {
+  --rshb-legacy-spin-duration: 800ms;
+  --rshb-legacy-spin-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--rshb-legacy-spin-size);
+  height: var(--rshb-legacy-spin-size);
+  color: currentColor;
+  transform-origin: center;
+  animation: rshb-legacy-spin-rotate var(--rshb-legacy-spin-duration) linear infinite;
+  will-change: transform;
+}
+
+.rshb-legacy-spin__inner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+}
+
+.rshb-legacy-spin__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.rshb-legacy-spin__path {
+  fill: currentColor;
+}
+
+@keyframes rshb-legacy-spin-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
