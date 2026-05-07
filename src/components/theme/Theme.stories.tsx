@@ -8,7 +8,7 @@ import {
 } from './Theme';
 
 const meta = {
-  title: 'Components/Theme',
+  title: 'Modern/Components/Theme',
   component: Theme,
   tags: ['autodocs'],
   args: {

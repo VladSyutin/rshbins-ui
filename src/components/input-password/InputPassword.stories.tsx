@@ -4,7 +4,7 @@ import type { InputTextPreviewState } from '../input-text/InputText';
 import { InputPassword } from './InputPassword';
 
 const meta = {
-  title: 'Components/InputPassword',
+  title: 'Modern/Components/InputPassword',
   component: InputPassword,
   args: {
     clearable: true,

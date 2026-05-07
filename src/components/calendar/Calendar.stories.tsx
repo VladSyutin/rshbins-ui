@@ -10,7 +10,7 @@ import {
 const today = new Date();
 
 const meta = {
-  title: 'Components/Calendar',
+  title: 'Modern/Components/Calendar',
   component: Calendar,
   tags: ['autodocs'],
   args: {

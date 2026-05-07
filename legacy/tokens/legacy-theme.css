@@ -1,0 +1,43 @@
+:root,
+.theme-light,
+.theme-dark {
+  --legacy-color-background-brand-default: var(--color-background-brand-default, #67a757);
+  --legacy-color-background-brand-hover: var(--color-background-brand-hover, #5f9a50);
+  --legacy-color-background-brand-focus: var(--color-background-brand-focus, #568d49);
+  --legacy-color-background-brand-selection: var(--color-background-brand-selection, #eff7ed);
+  --legacy-color-background-default-generic: var(--color-background-default-generic, #ffffff);
+  --legacy-color-background-default-generic-hover: var(--color-background-default-generic-hover, #f4f5f7);
+  --legacy-color-background-default-generic-focus: var(--color-background-default-generic-focus, #ebeef2);
+  --legacy-color-background-default-secondary: var(--color-background-default-secondary, #f6f7f9);
+  --legacy-color-background-default-disabled: var(--color-background-default-disabled, #e6eaef);
+  --legacy-color-background-default-simple-hover: var(--color-background-default-simple-hover, rgb(255 255 255 / 0.08));
+  --legacy-color-background-default-simple-focus: var(--color-background-default-simple-focus, rgb(255 255 255 / 0.14));
+  --legacy-color-text-default-primary: var(--color-text-default-primary, #202326);
+  --legacy-color-text-default-secondary: var(--color-text-default-secondary, #6d737a);
+  --legacy-color-text-default-tertiary: var(--color-text-default-tertiary, #8f959c);
+  --legacy-color-text-default-disabled: var(--color-text-default-disabled, #9ea4ab);
+  --legacy-color-text-brand-default: var(--color-text-brand-default, #67a757);
+  --legacy-color-text-brand-on-brand: var(--color-text-brand-on-brand, #ffffff);
+  --legacy-color-text-brand-on-selection: var(--color-text-brand-on-selection, #4f7f43);
+  --legacy-color-border-default-default: var(--color-border-default-default, #d7dce1);
+  --legacy-color-border-default-focus: var(--color-border-default-default-focus, #67a757);
+  --legacy-radius-xs: var(--radius-xs, 8px);
+  --legacy-motion-hover-duration: var(--motion-hover-duration, 50ms);
+  --legacy-motion-hover-curve: var(--motion-hover-curve, ease-out);
+  --legacy-motion-pressed-duration: var(--motion-pressed-duration, 50ms);
+  --legacy-motion-pressed-curve: var(--motion-pressed-curve, ease-out);
+  --legacy-typography-body-font-family: var(
+    --typography-body-regular-fontFamily,
+    var(--font-family-ubuntu, 'Ubuntu', sans-serif)
+  );
+  --legacy-typography-body-font-size: var(--typography-body-regular-fontSize, 16px);
+  --legacy-typography-body-font-weight: var(--typography-body-regular-fontWeight, 400);
+  --legacy-typography-body-line-height: var(--typography-body-regular-lineHeight, 24px);
+  --legacy-typography-footnote-font-family: var(
+    --typography-footnote-regular-fontFamily,
+    var(--font-family-ubuntu, 'Ubuntu', sans-serif)
+  );
+  --legacy-typography-footnote-font-size: var(--typography-footnote-regular-fontSize, 12px);
+  --legacy-typography-footnote-font-weight: var(--typography-footnote-regular-fontWeight, 400);
+  --legacy-typography-footnote-line-height: var(--typography-footnote-regular-lineHeight, 16px);
+}

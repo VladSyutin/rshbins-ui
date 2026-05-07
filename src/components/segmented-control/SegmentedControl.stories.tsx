@@ -23,7 +23,7 @@ const defaultOptions = [
 ];
 
 const meta = {
-  title: 'Components/SegmentedControl',
+  title: 'Modern/Components/SegmentedControl',
   component: SegmentedControl,
   tags: ['autodocs'],
   args: {

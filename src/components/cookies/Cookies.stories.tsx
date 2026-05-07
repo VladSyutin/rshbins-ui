@@ -5,7 +5,7 @@ import { Button } from '../button/Button';
 import { Cookies } from './Cookies';
 
 const meta = {
-  title: 'Components/Cookies',
+  title: 'Modern/Components/Cookies',
   component: Cookies,
   tags: ['autodocs'],
   args: {

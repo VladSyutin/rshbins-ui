@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { TheUserWasNotFound } from './TheUserWasNotFound';
 
 const meta = {
-  title: 'Dialogs/Toasts/TheUserWasNotFound',
+  title: 'Modern/Dialogs/Toasts/TheUserWasNotFound',
   component: TheUserWasNotFound,
   tags: ['autodocs'],
   args: {

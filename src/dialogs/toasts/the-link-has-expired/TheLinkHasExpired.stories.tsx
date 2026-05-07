@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { TheLinkHasExpired } from './TheLinkHasExpired';
 
 const meta = {
-  title: 'Dialogs/Toasts/TheLinkHasExpired',
+  title: 'Modern/Dialogs/Toasts/TheLinkHasExpired',
   component: TheLinkHasExpired,
   tags: ['autodocs'],
   args: {

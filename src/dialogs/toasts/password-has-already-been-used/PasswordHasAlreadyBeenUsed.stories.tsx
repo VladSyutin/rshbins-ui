@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { PasswordHasAlreadyBeenUsed } from './PasswordHasAlreadyBeenUsed';
 
 const meta = {
-  title: 'Dialogs/Toasts/PasswordHasAlreadyBeenUsed',
+  title: 'Modern/Dialogs/Toasts/PasswordHasAlreadyBeenUsed',
   component: PasswordHasAlreadyBeenUsed,
   tags: ['autodocs'],
   args: {

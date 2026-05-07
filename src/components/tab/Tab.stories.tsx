@@ -18,7 +18,7 @@ function StarIcon() {
 const starIcon = <StarIcon />;
 
 const meta = {
-  title: 'Components/Tab',
+  title: 'Modern/Components/Tab',
   component: Tab,
   tags: ['autodocs'],
   args: {

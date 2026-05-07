@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { InputName } from './InputName';
 
 const meta = {
-  title: 'Components/InputName',
+  title: 'Modern/Components/InputName',
   component: InputName,
   tags: ['autodocs'],
   args: {

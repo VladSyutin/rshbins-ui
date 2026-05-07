@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ProofOfIdentity } from './ProofOfIdentity';
 
 const meta = {
-  title: 'Dialogs/Modals/ProofOfIdentity',
+  title: 'Modern/Dialogs/Modals/ProofOfIdentity',
   component: ProofOfIdentity,
   tags: ['autodocs'],
   args: {

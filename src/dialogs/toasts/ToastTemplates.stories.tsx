@@ -13,7 +13,7 @@ import { TheUserIsRegistered } from './the-user-is-registered/TheUserIsRegistere
 import { TheUserWasNotFound } from './the-user-was-not-found/TheUserWasNotFound';
 
 const meta = {
-  title: 'Dialogs/Toasts/Overview',
+  title: 'Modern/Dialogs/Toasts/Overview',
   component: DialogToastTemplate,
   tags: ['autodocs']
 } satisfies Meta<typeof DialogToastTemplate>;

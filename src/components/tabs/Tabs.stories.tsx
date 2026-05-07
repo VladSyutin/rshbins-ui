@@ -23,7 +23,7 @@ const defaultOptions = [
 ];
 
 const meta = {
-  title: 'Components/Tabs',
+  title: 'Modern/Components/Tabs',
   component: Tabs,
   tags: ['autodocs'],
   args: {

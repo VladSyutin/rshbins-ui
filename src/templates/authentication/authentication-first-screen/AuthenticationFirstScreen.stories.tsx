@@ -7,7 +7,7 @@ import {
 import type { ThemeMode } from '../../../components/theme/Theme';
 
 const meta = {
-  title: 'Templates/Authentication/AuthenticationFirstScreen',
+  title: 'Modern/Templates/Authentication/AuthenticationFirstScreen',
   component: AuthenticationFirstScreen,
   tags: ['autodocs'],
   args: {

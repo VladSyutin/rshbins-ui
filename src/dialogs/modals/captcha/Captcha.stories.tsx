@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Captcha } from './Captcha';
 
 const meta = {
-  title: 'Dialogs/Modals/Captcha',
+  title: 'Modern/Dialogs/Modals/Captcha',
   component: Captcha,
   tags: ['autodocs'],
   args: {

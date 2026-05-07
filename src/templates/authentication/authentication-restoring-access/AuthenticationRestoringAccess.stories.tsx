@@ -8,7 +8,7 @@ import {
 import type { ThemeMode } from '../../../components/theme/Theme';
 
 const meta = {
-  title: 'Templates/Authentication/AuthenticationRestoringAccess',
+  title: 'Modern/Templates/Authentication/AuthenticationRestoringAccess',
   component: AuthenticationRestoringAccess,
   tags: ['autodocs'],
   args: {

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { AuthenticationPrototype } from './AuthenticationPrototype';
 
 const meta = {
-  title: 'Prototypes/Authentication/AuthenticationPrototype',
+  title: 'Modern/Prototypes/Authentication/AuthenticationPrototype',
   component: AuthenticationPrototype,
   parameters: {
     controls: {

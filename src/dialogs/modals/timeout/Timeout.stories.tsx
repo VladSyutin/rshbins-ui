@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Timeout } from './Timeout';
 
 const meta = {
-  title: 'Dialogs/Modals/Timeout',
+  title: 'Modern/Dialogs/Modals/Timeout',
   component: Timeout,
   tags: ['autodocs'],
   args: {

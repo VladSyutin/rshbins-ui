@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Spin } from './Spin';
 
 const meta = {
-  title: 'Components/Spin',
+  title: 'Modern/Components/Spin',
   component: Spin,
   tags: ['autodocs'],
   args: {

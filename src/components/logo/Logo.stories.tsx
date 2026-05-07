@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Logo } from './Logo';
 
 const meta = {
-  title: 'Components/Logo',
+  title: 'Modern/Components/Logo',
   component: Logo,
   tags: ['autodocs'],
   args: {

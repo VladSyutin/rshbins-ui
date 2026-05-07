@@ -6,7 +6,7 @@ import { InputBirthDate } from './InputBirthDate';
 const DEMO_DATE = new Date(2001, 5, 2);
 
 const meta = {
-  title: 'Components/InputBirthDate',
+  title: 'Modern/Components/InputBirthDate',
   component: InputBirthDate,
   args: {
     clearable: true,

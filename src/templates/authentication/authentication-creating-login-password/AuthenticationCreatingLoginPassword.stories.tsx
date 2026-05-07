@@ -4,7 +4,7 @@ import { AuthenticationCreatingLoginPassword } from './AuthenticationCreatingLog
 import type { ThemeMode } from '../../../components/theme/Theme';
 
 const meta = {
-  title: 'Templates/Authentication/AuthenticationCreatingLoginPassword',
+  title: 'Modern/Templates/Authentication/AuthenticationCreatingLoginPassword',
   component: AuthenticationCreatingLoginPassword,
   tags: ['autodocs'],
   args: {

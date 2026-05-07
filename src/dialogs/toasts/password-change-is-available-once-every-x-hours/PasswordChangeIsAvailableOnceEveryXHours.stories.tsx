@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { PasswordChangeIsAvailableOnceEveryXHours } from './PasswordChangeIsAvailableOnceEveryXHours';
 
 const meta = {
-  title: 'Dialogs/Toasts/PasswordChangeIsAvailableOnceEveryXHours',
+  title: 'Modern/Dialogs/Toasts/PasswordChangeIsAvailableOnceEveryXHours',
   component: PasswordChangeIsAvailableOnceEveryXHours,
   tags: ['autodocs'],
   args: {

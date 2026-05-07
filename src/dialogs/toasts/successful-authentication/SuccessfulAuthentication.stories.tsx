@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { SuccessfulAuthentication } from './SuccessfulAuthentication';
 
 const meta = {
-  title: 'Dialogs/Toasts/SuccessfulAuthentication',
+  title: 'Modern/Dialogs/Toasts/SuccessfulAuthentication',
   component: SuccessfulAuthentication,
   tags: ['autodocs'],
   args: {

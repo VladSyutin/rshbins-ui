@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Switch, type SwitchPreviewState, type SwitchProps } from './Switch';
 
 const meta = {
-  title: 'Components/Switch',
+  title: 'Modern/Components/Switch',
   component: Switch,
   tags: ['autodocs'],
   args: {

@@ -7,7 +7,7 @@ import {
 } from './LoaderBrand';
 
 const meta = {
-  title: 'Components/LoaderBrand',
+  title: 'Modern/Components/LoaderBrand',
   component: LoaderBrand,
   tags: ['autodocs'],
   args: {

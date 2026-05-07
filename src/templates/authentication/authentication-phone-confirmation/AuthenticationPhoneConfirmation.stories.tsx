@@ -4,7 +4,7 @@ import { AuthenticationPhoneConfirmation } from './AuthenticationPhoneConfirmati
 import type { ThemeMode } from '../../../components/theme/Theme';
 
 const meta = {
-  title: 'Templates/Authentication/AuthenticationPhoneConfirmation',
+  title: 'Modern/Templates/Authentication/AuthenticationPhoneConfirmation',
   component: AuthenticationPhoneConfirmation,
   tags: ['autodocs'],
   args: {

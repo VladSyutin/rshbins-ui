@@ -9,7 +9,7 @@ const defaultOptions = [
 ];
 
 const meta = {
-  title: 'Components/RadioGroup',
+  title: 'Modern/Components/RadioGroup',
   component: RadioGroup,
   tags: ['autodocs'],
   args: {

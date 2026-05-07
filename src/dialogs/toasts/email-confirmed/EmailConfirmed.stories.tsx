@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { EmailConfirmed } from './EmailConfirmed';
 
 const meta = {
-  title: 'Dialogs/Toasts/EmailConfirmed',
+  title: 'Modern/Dialogs/Toasts/EmailConfirmed',
   component: EmailConfirmed,
   tags: ['autodocs'],
   args: {

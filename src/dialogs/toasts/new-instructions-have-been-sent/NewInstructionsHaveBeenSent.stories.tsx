@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { NewInstructionsHaveBeenSent } from './NewInstructionsHaveBeenSent';
 
 const meta = {
-  title: 'Dialogs/Toasts/NewInstructionsHaveBeenSent',
+  title: 'Modern/Dialogs/Toasts/NewInstructionsHaveBeenSent',
   component: NewInstructionsHaveBeenSent,
   tags: ['autodocs'],
   args: {

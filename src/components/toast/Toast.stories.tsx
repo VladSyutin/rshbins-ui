@@ -5,7 +5,7 @@ import { Button } from '../button/Button';
 import { Toast, type ToastVariant } from './Toast';
 
 const meta = {
-  title: 'Components/Toast',
+  title: 'Modern/Components/Toast',
   component: Toast,
   tags: ['autodocs'],
   args: {

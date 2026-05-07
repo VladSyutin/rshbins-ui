@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { InputCaptcha } from './InputCaptcha';
 
 const meta = {
-  title: 'Components/InputCaptcha',
+  title: 'Modern/Components/InputCaptcha',
   component: InputCaptcha,
   tags: ['autodocs'],
   args: {

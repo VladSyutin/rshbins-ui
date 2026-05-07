@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { TheUserIsRegistered } from './TheUserIsRegistered';
 
 const meta = {
-  title: 'Dialogs/Toasts/TheUserIsRegistered',
+  title: 'Modern/Dialogs/Toasts/TheUserIsRegistered',
   component: TheUserIsRegistered,
   tags: ['autodocs'],
   args: {

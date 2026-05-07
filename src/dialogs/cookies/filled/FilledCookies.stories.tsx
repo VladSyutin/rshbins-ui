@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { FilledCookies } from './FilledCookies';
 
 const meta = {
-  title: 'Dialogs/Cookies/FilledCookies',
+  title: 'Modern/Dialogs/Cookies/FilledCookies',
   component: FilledCookies,
   tags: ['autodocs'],
   args: {

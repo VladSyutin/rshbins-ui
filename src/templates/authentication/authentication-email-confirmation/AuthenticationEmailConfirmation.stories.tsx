@@ -4,7 +4,7 @@ import { AuthenticationEmailConfirmation } from './AuthenticationEmailConfirmati
 import type { ThemeMode } from '../../../components/theme/Theme';
 
 const meta = {
-  title: 'Templates/Authentication/AuthenticationEmailConfirmation',
+  title: 'Modern/Templates/Authentication/AuthenticationEmailConfirmation',
   component: AuthenticationEmailConfirmation,
   tags: ['autodocs'],
   args: {

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { LogInThroughTheGosuslugi } from './LogInThroughTheGosuslugi';
 
 const meta = {
-  title: 'Dialogs/Modals/LogInThroughTheGosuslugi',
+  title: 'Modern/Dialogs/Modals/LogInThroughTheGosuslugi',
   component: LogInThroughTheGosuslugi,
   tags: ['autodocs'],
   args: {

@@ -4,7 +4,7 @@ import { Header, type HeaderProps, type HeaderSize } from './Header';
 import type { ThemeMode } from '../theme/Theme';
 
 const meta = {
-  title: 'Components/Header',
+  title: 'Modern/Components/Header',
   component: Header,
   tags: ['autodocs'],
   args: {

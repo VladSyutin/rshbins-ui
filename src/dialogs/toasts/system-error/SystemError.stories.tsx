@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { SystemError } from './SystemError';
 
 const meta = {
-  title: 'Dialogs/Toasts/SystemError',
+  title: 'Modern/Dialogs/Toasts/SystemError',
   component: SystemError,
   tags: ['autodocs'],
   args: {

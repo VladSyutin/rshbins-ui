@@ -7,7 +7,7 @@ import {
 import type { ThemeMode } from '../../../components/theme/Theme';
 
 const meta = {
-  title: 'Templates/Authentication/AuthenticationRegistrationData',
+  title: 'Modern/Templates/Authentication/AuthenticationRegistrationData',
   component: AuthenticationRegistrationData,
   tags: ['autodocs'],
   args: {

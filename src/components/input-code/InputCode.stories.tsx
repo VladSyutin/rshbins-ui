@@ -4,7 +4,7 @@ import type { InputTextPreviewState } from '../input-text/InputText';
 import { InputCode } from './InputCode';
 
 const meta = {
-  title: 'Components/InputCode',
+  title: 'Modern/Components/InputCode',
   component: InputCode,
   tags: ['autodocs'],
   args: {
