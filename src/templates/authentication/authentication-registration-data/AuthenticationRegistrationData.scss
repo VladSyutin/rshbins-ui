@@ -50,14 +50,19 @@
 .rshb-authentication-registration-data__field,
 .rshb-authentication-registration-data__field.rshb-input-text,
 .rshb-authentication-registration-data__field.rshb-input-middle-name,
-.rshb-authentication-registration-data__field.rshb-input-birth-date {
+.rshb-authentication-registration-data__field.rshb-input-birth-date,
+.rshb-authentication-registration-data__field.rshb-legacy-input-text,
+.rshb-authentication-registration-data__field.rshb-legacy-input-middle-name,
+.rshb-authentication-registration-data__field.rshb-legacy-input-birth-date {
   width: 100%;
   max-width: none;
   min-width: 0;
 }
 
 .rshb-authentication-registration-data__field .rshb-input-text__field,
-.rshb-authentication-registration-data__field .rshb-input-birth-date__field {
+.rshb-authentication-registration-data__field .rshb-input-birth-date__field,
+.rshb-authentication-registration-data__field .rshb-legacy-input-text__field,
+.rshb-authentication-registration-data__field .rshb-legacy-input-birth-date__field {
   width: 100%;
   min-width: 0;
 }
@@ -141,7 +146,8 @@
   width: 100%;
 }
 
-.rshb-authentication-registration-data__action.rshb-button {
+.rshb-authentication-registration-data__action.rshb-button,
+.rshb-authentication-registration-data__action.rshb-legacy-button {
   display: flex;
   width: 100%;
 }

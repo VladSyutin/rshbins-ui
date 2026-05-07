@@ -97,7 +97,9 @@
 
 .rshb-authentication-registration__field,
 .rshb-authentication-registration__field.rshb-input-text,
-.rshb-authentication-registration__field.rshb-input-phone {
+.rshb-authentication-registration__field.rshb-input-phone,
+.rshb-authentication-registration__field.rshb-legacy-input-text,
+.rshb-authentication-registration__field.rshb-legacy-input-phone {
   display: flex;
   width: 100%;
   max-width: none;
@@ -105,7 +107,9 @@
 }
 
 .rshb-authentication-registration__field .rshb-input-text__field,
-.rshb-authentication-registration__field .rshb-input-phone__field {
+.rshb-authentication-registration__field .rshb-input-phone__field,
+.rshb-authentication-registration__field .rshb-legacy-input-text__field,
+.rshb-authentication-registration__field .rshb-legacy-input-phone__field {
   width: 100%;
   min-width: 0;
 }
@@ -163,7 +167,8 @@
   width: 100%;
 }
 
-.rshb-authentication-registration__action.rshb-button {
+.rshb-authentication-registration__action.rshb-button,
+.rshb-authentication-registration__action.rshb-legacy-button {
   display: flex;
   width: 100%;
 }
