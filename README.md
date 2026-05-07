@@ -14,7 +14,8 @@ src/
   theme/          runtime token data and theme utilities
 legacy/
   components/     React 17-compatible delivery components (plain CSS)
-  tokens/         (removed — legacy components now use shared design tokens directly)
+  dialogs/        scenario templates: modals/, toasts/, cookies/
+  templates/      reusable auth compositions (mirrors src/templates/)
 design-tokens/    Figma raw export and normalized runtime artifacts
 icons/            shared SVG icon library
 scripts/
@@ -81,9 +82,19 @@ button, calendar, checkbox, cookies, divider, gender, gender-item, header, input
 
 ### Legacy (`legacy/components/`)
 
-button, calendar, input-text, loader-brand, modal, toast
+button, calendar, checkbox, cookies, divider, gender, gender-item, header, input-birth-date, input-captcha, input-code, input-code-item, input-email, input-inn, input-login, input-middle-name, input-name, input-password, input-phone, input-surname, input-text, loader-brand, logo, modal, radio, radio-group, segment, segmented-control, spin, switch, tab, tabs, theme, toast
 
 Legacy components are React 17-compatible, use plain CSS, and share the same design tokens as modern components (`src/styles/tokens.css`).
+
+### Legacy dialogs (`legacy/dialogs/`)
+
+cookies, modals, toasts — scenario-level compositions matching `src/dialogs/`.
+
+### Legacy templates (`legacy/templates/authentication/`)
+
+authentication-creating-login-password, authentication-email-confirmation, authentication-first-screen, authentication-phone-confirmation, authentication-registration, authentication-registration-data, authentication-restoring-access
+
+Legacy auth templates mirror `src/templates/authentication/` and import their SCSS directly from the modern layer. Each template ships as a JSX file, a `.d.ts` entrypoint, and a Storybook story with `Playground` + `Overview` exports.
 
 ## Contribution rules
 
