@@ -36,7 +36,7 @@
   align-items: center;
   justify-content: center;
   min-height: 56px;
-  padding: 16px;
+  padding: var(--space-paddings-inside-m);
   box-sizing: border-box;
   border-style: solid;
   border-color: var(--gender-item-border-color);

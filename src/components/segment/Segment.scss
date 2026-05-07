@@ -46,7 +46,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: var(--space-margins-inside-xs);
   min-height: 56px;
   max-width: 100%;
   padding: var(--space-paddings-inside-m);

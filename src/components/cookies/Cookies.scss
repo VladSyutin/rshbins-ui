@@ -24,7 +24,7 @@
   position: fixed;
   z-index: 1000;
   inset-inline-start: 50%;
-  inset-block-end: 32px;
+  inset-block-end: var(--space-margins-inside-2xl);
   transform: translateX(-50%);
 }
 

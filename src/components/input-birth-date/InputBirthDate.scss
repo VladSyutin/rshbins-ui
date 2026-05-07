@@ -12,7 +12,7 @@
 .rshb-input-birth-date__field {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-margins-inside-xs);
   min-height: 58px;
   padding: 7px 8px 7px 16px;
   border: 2px solid var(--color-border-default-default);
@@ -191,7 +191,7 @@
 .rshb-input-birth-date__helper {
   display: flex;
   align-items: flex-start;
-  gap: 4px;
+  gap: var(--space-margins-inside-2xs);
   width: 100%;
   color: var(--color-text-default-tertiary);
 }

@@ -2,7 +2,7 @@
   display: inline-flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 8px;
+  gap: var(--space-margins-inside-xs);
   width: 361px;
   max-width: 100%;
 }
