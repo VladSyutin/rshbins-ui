@@ -65,7 +65,7 @@
 
 .rshb-legacy-calendar__title-button:focus-visible,
 .rshb-legacy-calendar__action-button:focus-visible {
-  --calendar-button-ring: inset 0 0 0 2px var(--color-border-default-focus);
+  --calendar-button-ring: inset 0 0 0 2px var(--color-border-default-default-focus);
 }
 
 .rshb-legacy-calendar__title-button {
@@ -255,7 +255,7 @@
 
 .rshb-legacy-calendar-day-item[data-selected='true'],
 .rshb-legacy-calendar-period-item[data-selected='true'] {
-  --calendar-item-ring: inset 0 0 0 2px var(--color-border-brand-default, var(--color-border-default-focus));
+  --calendar-item-ring: inset 0 0 0 2px var(--color-border-brand-default, var(--color-border-default-default-focus));
 }
 
 .rshb-legacy-calendar-day-item:not([data-selected='true']):not(:disabled):hover,
@@ -286,7 +286,7 @@
 .rshb-legacy-calendar-period-item:focus-visible,
 .rshb-legacy-calendar-period-item[data-preview-state='focused'] {
   --calendar-item-color: var(--color-text-default-primary);
-  --calendar-item-ring: inset 0 0 0 2px var(--color-border-default-focus);
+  --calendar-item-ring: inset 0 0 0 2px var(--color-border-default-default-focus);
 }
 
 @keyframes rshb-legacy-calendar-slide-in-forward {

@@ -132,7 +132,7 @@
 }
 
 .rshb-legacy-button[data-state='focused'] {
-  --button-ring: inset 0 0 0 2px var(--color-border-default-focus);
+  --button-ring: inset 0 0 0 2px var(--color-border-default-default-focus);
 }
 
 .rshb-legacy-button[data-state='loading'][data-variant='brand'],
@@ -169,7 +169,7 @@
 .rshb-legacy-button[data-variant='brand'][data-state='default']:focus-visible {
   --button-background: var(--color-background-brand-default);
   --button-color: var(--color-text-brand-on-brand);
-  --button-ring: inset 0 0 0 2px var(--color-border-default-focus);
+  --button-ring: inset 0 0 0 2px var(--color-border-default-default-focus);
 }
 
 .rshb-legacy-button[data-variant='brand'][data-state='disabled'] {
@@ -201,7 +201,7 @@
 .rshb-legacy-button[data-variant='normal'][data-state='default']:focus-visible {
   --button-background: var(--color-background-default-generic);
   --button-color: var(--color-text-default-primary);
-  --button-ring: inset 0 0 0 2px var(--color-border-default-focus);
+  --button-ring: inset 0 0 0 2px var(--color-border-default-default-focus);
 }
 
 .rshb-legacy-button[data-variant='normal'][data-state='disabled'] {
@@ -231,7 +231,7 @@
 
 .rshb-legacy-button[data-variant='flat-primary'][data-state='default']:focus-visible {
   --button-color: var(--color-text-default-primary);
-  --button-ring: inset 0 0 0 2px var(--color-border-default-focus);
+  --button-ring: inset 0 0 0 2px var(--color-border-default-default-focus);
 }
 
 .rshb-legacy-button[data-variant='flat-primary'][data-state='disabled'] {
@@ -257,7 +257,7 @@
 
 .rshb-legacy-button[data-variant='flat-secondary'][data-state='default']:focus-visible {
   --button-color: var(--color-text-default-primary);
-  --button-ring: inset 0 0 0 2px var(--color-border-default-focus);
+  --button-ring: inset 0 0 0 2px var(--color-border-default-default-focus);
 }
 
 .rshb-legacy-button[data-variant='flat-secondary'][data-state='disabled'] {

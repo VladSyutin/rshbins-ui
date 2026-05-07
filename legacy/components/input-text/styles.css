@@ -183,7 +183,7 @@
 }
 
 .rshb-legacy-input-text[data-state='keyboard-focused'] .rshb-legacy-input-text__field {
-  border-color: var(--color-border-default-focus);
+  border-color: var(--color-border-default-default-focus);
 }
 
 /* Error states */
