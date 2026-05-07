@@ -29,7 +29,7 @@
 .rshb-legacy-toast[data-placement='top-center'] {
   position: fixed;
   z-index: 1000;
-  inset-block-start: 32px;
+  inset-block-start: var(--space-margins-inside-2xl);
   inset-inline-start: 50%;
   transform: translateX(-50%);
 }
@@ -72,7 +72,7 @@
   width: 40px;
   height: 40px;
   margin: 0;
-  padding: 12px;
+  padding: var(--space-paddings-inside-s);
   border: 0;
   border-radius: var(--radius-xs);
   background: transparent;

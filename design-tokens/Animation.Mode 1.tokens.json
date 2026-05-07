@@ -114,7 +114,7 @@
     },
     "Duration": {
       "$type": "dimension",
-      "$value": "200px"
+      "$value": "800px"
     }
   },
   "LoaderBrand": {

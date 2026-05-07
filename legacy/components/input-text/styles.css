@@ -136,7 +136,7 @@
 .rshb-legacy-input-text__helper {
   display: flex;
   align-items: flex-start;
-  gap: 4px;
+  gap: var(--space-margins-inside-2xs);
   width: 100%;
   color: var(--color-text-default-tertiary);
 }

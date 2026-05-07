@@ -39,7 +39,7 @@
       },
       "overlay": {
         "$type": "color",
-        "$value": "{white.250}"
+        "$value": "{white.150}"
       },
       "disabled": {
         "$type": "color",
