@@ -90,9 +90,9 @@ const cellStyle: CSSProperties = {
 
 const labelStyle: CSSProperties = {
   margin: 0,
-  color: 'var(--legacy-color-text-default-secondary, #6d737a)',
-  fontFamily: 'var(--legacy-typography-footnote-font-family)',
-  fontSize: 'var(--legacy-typography-footnote-font-size)',
-  fontWeight: 'var(--legacy-typography-footnote-font-weight)',
-  lineHeight: 'var(--legacy-typography-footnote-line-height)'
+  color: 'var(--color-text-default-secondary)',
+  fontFamily: 'var(--typography-footnote-regular-fontFamily)',
+  fontSize: 'var(--typography-footnote-regular-fontSize)',
+  fontWeight: 'var(--typography-footnote-regular-fontWeight)',
+  lineHeight: 'var(--typography-footnote-regular-lineHeight)'
 };
