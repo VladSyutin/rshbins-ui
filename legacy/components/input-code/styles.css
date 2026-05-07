@@ -1,0 +1,58 @@
+@import '../input-text/styles.css';
+
+.rshb-legacy-input-code__control,
+.rshb-legacy-input-code__mask {
+  font-variant-numeric: tabular-nums;
+}
+
+.rshb-legacy-input-code .rshb-legacy-input-text__field {
+  background: transparent;
+}
+
+.rshb-legacy-input-code__mask {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  display: block;
+  overflow: hidden;
+  color: var(--color-text-default-disabled);
+  font-family: var(--typography-body-regular-fontFamily);
+  font-size: var(--typography-body-regular-fontSize);
+  font-weight: var(--typography-body-regular-fontWeight);
+  line-height: var(--typography-body-regular-lineHeight);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.rshb-legacy-input-code__mask-filled {
+  color: var(--color-text-default-primary);
+}
+
+.rshb-legacy-input-code__mask-placeholder {
+  color: var(--color-text-default-disabled);
+}
+
+.rshb-legacy-input-code[data-state='disabled'] .rshb-legacy-input-code__mask,
+.rshb-legacy-input-code[data-state='disabled-entered'] .rshb-legacy-input-code__mask,
+.rshb-legacy-input-code[data-state='disabled'] .rshb-legacy-input-code__mask-filled,
+.rshb-legacy-input-code[data-state='disabled-entered'] .rshb-legacy-input-code__mask-filled,
+.rshb-legacy-input-code[data-state='disabled'] .rshb-legacy-input-code__mask-placeholder,
+.rshb-legacy-input-code[data-state='disabled-entered'] .rshb-legacy-input-code__mask-placeholder {
+  color: var(--color-text-default-disabled);
+}
+
+.rshb-legacy-input-code[data-state='error'] .rshb-legacy-input-code__mask,
+.rshb-legacy-input-code[data-state='error-hover'] .rshb-legacy-input-code__mask,
+.rshb-legacy-input-code[data-state='error-entered'] .rshb-legacy-input-code__mask,
+.rshb-legacy-input-code[data-state='error-entered-hover'] .rshb-legacy-input-code__mask,
+.rshb-legacy-input-code[data-state='error'] .rshb-legacy-input-code__mask-filled,
+.rshb-legacy-input-code[data-state='error-hover'] .rshb-legacy-input-code__mask-filled,
+.rshb-legacy-input-code[data-state='error-entered'] .rshb-legacy-input-code__mask-filled,
+.rshb-legacy-input-code[data-state='error-entered-hover'] .rshb-legacy-input-code__mask-filled,
+.rshb-legacy-input-code[data-state='error'] .rshb-legacy-input-code__mask-placeholder,
+.rshb-legacy-input-code[data-state='error-hover'] .rshb-legacy-input-code__mask-placeholder,
+.rshb-legacy-input-code[data-state='error-entered'] .rshb-legacy-input-code__mask-placeholder,
+.rshb-legacy-input-code[data-state='error-entered-hover'] .rshb-legacy-input-code__mask-placeholder {
+  color: var(--color-text-error-default);
+}
