@@ -37,6 +37,17 @@
   --legacy-motion-loaderbrand-text-duration: var(--motion-loaderbrand-text-duration, 300ms);
   --legacy-motion-loaderbrand-text-curve: var(--motion-loaderbrand-text-curve, ease-out);
   --legacy-space-paddings-inside-xs: var(--space-paddings-inside-xs, 8px);
+  --legacy-space-paddings-inside-m: var(--space-paddings-inside-m, 16px);
+  --legacy-space-margins-inside-xs: var(--space-margins-inside-xs, 8px);
+  --legacy-shadow-flyout: var(--shadow-flyout, 0px 8px 20px 0px #00000026);
+  --legacy-motion-move-in-down-duration: var(--motion-move-in-down-duration, 150ms);
+  --legacy-motion-move-in-down-curve: var(--motion-move-in-down-curve, ease-out);
+  --legacy-motion-move-in-up-duration: var(--motion-move-in-up-duration, 150ms);
+  --legacy-motion-move-in-up-curve: var(--motion-move-in-up-curve, ease-out);
+  --legacy-color-background-danger-default: var(--color-background-danger-default, #c10033);
+  --legacy-color-text-danger-on-danger: var(--color-text-danger-on-danger, #ffe5ea);
+  --legacy-color-background-positive-default: var(--color-background-positive-default, #67a757);
+  --legacy-color-text-positive-on-positive: var(--color-text-positive-on-positive, #ecf7ea);
   --legacy-color-logo-line-1: var(--color-logo-line-1, #ffcb05);
   --legacy-color-logo-line-2: var(--color-logo-line-2, #a6ce39);
   --legacy-color-logo-line-3: var(--color-logo-line-3, #238441);
