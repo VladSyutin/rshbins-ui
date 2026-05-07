@@ -133,7 +133,9 @@
 
 .rshb-authentication-restoring-access__field,
 .rshb-authentication-restoring-access__field.rshb-input-text,
-.rshb-authentication-restoring-access__field.rshb-input-phone {
+.rshb-authentication-restoring-access__field.rshb-input-phone,
+.rshb-authentication-restoring-access__field.rshb-legacy-input-text,
+.rshb-authentication-restoring-access__field.rshb-legacy-input-phone {
   display: flex;
   width: 100%;
   max-width: none;
@@ -141,7 +143,9 @@
 }
 
 .rshb-authentication-restoring-access__field .rshb-input-text__field,
-.rshb-authentication-restoring-access__field .rshb-input-phone__field {
+.rshb-authentication-restoring-access__field .rshb-input-phone__field,
+.rshb-authentication-restoring-access__field .rshb-legacy-input-text__field,
+.rshb-authentication-restoring-access__field .rshb-legacy-input-phone__field {
   width: 100%;
   min-width: 0;
 }
@@ -199,7 +203,8 @@
   width: 100%;
 }
 
-.rshb-authentication-restoring-access__action.rshb-button {
+.rshb-authentication-restoring-access__action.rshb-button,
+.rshb-authentication-restoring-access__action.rshb-legacy-button {
   display: flex;
   width: 100%;
 }

@@ -131,7 +131,8 @@
   text-transform: var(--typography-footnote-regular-textTransform);
 }
 
-.rshb-authentication-email-confirmation__action.rshb-button {
+.rshb-authentication-email-confirmation__action.rshb-button,
+.rshb-authentication-email-confirmation__action.rshb-legacy-button {
   display: flex;
   width: 100%;
 }
