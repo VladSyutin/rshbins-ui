@@ -1,13 +1,16 @@
-export { default } from './AuthenticationCreatingLoginPassword.jsx';
 import type { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from 'react';
+import type { LegacyThemeProps } from '../../../components/theme/index.js';
 
 export type LegacyAuthenticationCreatingLoginPasswordDevice = 'auto' | 'desktop' | 'mobile';
-export type LegacyAuthenticationCreatingLoginPasswordMode = 'login' | 'password' | 'login-and-password';
+export type LegacyAuthenticationCreatingLoginPasswordMode =
+  | 'login'
+  | 'password'
+  | 'login-and-password';
 
 export interface LegacyAuthenticationCreatingLoginPasswordSubmitPayload {
-  login?: string;
-  password?: string;
-  repeatedPassword?: string;
+  login: string;
+  password: string;
+  repeatedPassword: string;
 }
 
 export interface LegacyAuthenticationCreatingLoginPasswordProps
@@ -23,9 +26,9 @@ export interface LegacyAuthenticationCreatingLoginPasswordProps
   onSubmit?: (payload: LegacyAuthenticationCreatingLoginPasswordSubmitPayload) => void;
   passwordInputProps?: Record<string, unknown>;
   repeatedPasswordInputProps?: Record<string, unknown>;
-  saveButtonProps?: Record<string, unknown>;
+  saveButtonProps?: Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children' | 'type'>;
   saveButtonLabel?: ReactNode;
-  themeProps?: Record<string, unknown>;
+  themeProps?: Omit<LegacyThemeProps, 'className'>;
   title?: ReactNode;
 }
 

@@ -1,5 +1,5 @@
-export { default } from './AuthenticationPhoneConfirmation.jsx';
 import type { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from 'react';
+import type { LegacyThemeProps } from '../../../components/theme/index.js';
 
 export type LegacyAuthenticationPhoneConfirmationDevice = 'auto' | 'desktop' | 'mobile';
 export type LegacyAuthenticationPhoneConfirmationPhoneMode = 'visible' | 'hidden';
@@ -20,7 +20,7 @@ export interface LegacyAuthenticationPhoneConfirmationProps
   resendButtonProps?: Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children' | 'type'>;
   safetyLabel?: ReactNode;
   showEmailButton?: boolean;
-  themeProps?: Record<string, unknown>;
+  themeProps?: Omit<LegacyThemeProps, 'className'>;
   title?: ReactNode;
 }
 

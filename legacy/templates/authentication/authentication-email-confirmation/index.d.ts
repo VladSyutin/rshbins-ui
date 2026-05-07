@@ -1,5 +1,5 @@
-export { default } from './AuthenticationEmailConfirmation.jsx';
 import type { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from 'react';
+import type { LegacyThemeProps } from '../../../components/theme/index.js';
 
 export type LegacyAuthenticationEmailConfirmationDevice = 'auto' | 'desktop' | 'mobile';
 export type LegacyAuthenticationEmailConfirmationEmailMode = 'visible' | 'hidden';
@@ -12,12 +12,12 @@ export interface LegacyAuthenticationEmailConfirmationProps
   email: ReactNode;
   emailMode?: LegacyAuthenticationEmailConfirmationEmailMode;
   hiddenEmail?: ReactNode;
-  onChangeEmail?: () => void;
   resendButtonLabel?: ReactNode;
   resendButtonProps?: Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children' | 'type'>;
   safetyLabel?: ReactNode;
-  themeProps?: Record<string, unknown>;
+  themeProps?: Omit<LegacyThemeProps, 'className'>;
   title?: ReactNode;
+  onChangeEmail?: () => void;
 }
 
 export default function AuthenticationEmailConfirmation(

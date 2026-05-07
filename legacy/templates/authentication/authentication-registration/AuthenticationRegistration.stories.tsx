@@ -1,8 +1,7 @@
-import type { CSSProperties } from 'react';
-import { useState } from 'react';
+import { useState, type CSSProperties } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import AuthenticationRegistration from './index.js';
-import type { LegacyAuthenticationRegistrationMethod } from './index.js';
+import type { LegacyThemeMode } from '../../../components/theme/index.js';
 
 const meta = {
   title: 'Legacy/Templates/Authentication/AuthenticationRegistration',
@@ -36,21 +35,59 @@ const mobileWidthStyle: CSSProperties = {
   maxWidth: '100%'
 };
 
+const overviewSectionStyle: CSSProperties = {
+  display: 'grid',
+  gap: '16px'
+};
+
+const desktopOverviewGridStyle: CSSProperties = {
+  display: 'grid',
+  gap: '24px',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(448px, max-content))',
+  alignItems: 'start'
+};
+
+const mobileOverviewGridStyle: CSSProperties = {
+  display: 'grid',
+  gap: '24px',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(361px, max-content))',
+  alignItems: 'start'
+};
+
+const sectionStyle: CSSProperties = {
+  display: 'grid',
+  gap: '12px',
+  alignContent: 'start'
+};
+
+const labelStyle: CSSProperties = {
+  margin: 0,
+  color: 'var(--color-text-default-secondary)',
+  fontFamily: 'var(--typography-footnote-regular-fontFamily)',
+  fontSize: 'var(--typography-footnote-regular-fontSize)',
+  fontWeight: 'var(--typography-footnote-regular-fontWeight)',
+  lineHeight: 'var(--typography-footnote-regular-lineHeight)'
+};
+
 export const Playground: Story = {
   render: (args) => {
-    const [method, setMethod] = useState<LegacyAuthenticationRegistrationMethod>(
-      args.defaultMethod ?? 'email'
+    const [mode, setMode] = useState<LegacyThemeMode>('light');
+    const [method, setMethod] = useState<'email' | 'phone'>(
+      (args.defaultMethod as 'email' | 'phone') ?? 'email'
     );
 
     return (
-      <div style={surfaceStyle}>
-        <div style={storyWidthStyle}>
+      <div className={`theme-${mode}`} style={surfaceStyle}>
+        <div style={args.device === 'mobile' ? mobileWidthStyle : storyWidthStyle}>
           <AuthenticationRegistration
             {...args}
             method={method}
             onMethodChange={setMethod}
-            onBack={() => console.log('Back')}
-            onSubmit={(payload) => console.log('Submit', payload)}
+            themeProps={{
+              applyToDocument: false,
+              mode,
+              onModeChange: setMode
+            }}
           />
         </div>
       </div>
@@ -58,47 +95,67 @@ export const Playground: Story = {
   }
 };
 
-export const Email: Story = {
-  render: (args) => (
-    <div style={surfaceStyle}>
-      <div style={storyWidthStyle}>
-        <AuthenticationRegistration {...args} defaultMethod="email" />
-      </div>
-    </div>
-  )
-};
-
-export const Phone: Story = {
-  render: (args) => (
-    <div style={surfaceStyle}>
-      <div style={storyWidthStyle}>
-        <AuthenticationRegistration {...args} defaultMethod="phone" />
-      </div>
-    </div>
-  )
-};
-
-export const Mobile: Story = {
-  render: (args) => (
-    <div style={surfaceStyle}>
-      <div style={mobileWidthStyle}>
-        <AuthenticationRegistration {...args} device="mobile" />
-      </div>
-    </div>
-  )
-};
-
 export const Overview: Story = {
-  render: (args) => (
+  parameters: {
+    controls: {
+      disable: true
+    }
+  },
+  render: () => (
     <div style={surfaceStyle}>
-      <div style={{ display: 'grid', gap: '24px', gridTemplateColumns: 'repeat(auto-fit, minmax(448px, max-content))' }}>
-        <div style={storyWidthStyle}>
-          <AuthenticationRegistration {...args} defaultMethod="email" />
+      <section style={overviewSectionStyle}>
+        <p style={labelStyle}>Desktop</p>
+        <div style={desktopOverviewGridStyle}>
+          <section style={sectionStyle}>
+            <p style={labelStyle}>Email</p>
+            <div className="theme-light" style={storyWidthStyle}>
+              <AuthenticationRegistration
+                defaultMethod="email"
+                device="desktop"
+                themeProps={{ applyToDocument: false }}
+              />
+            </div>
+          </section>
+
+          <section style={sectionStyle}>
+            <p style={labelStyle}>Phone</p>
+            <div className="theme-light" style={storyWidthStyle}>
+              <AuthenticationRegistration
+                defaultMethod="phone"
+                device="desktop"
+                themeProps={{ applyToDocument: false }}
+              />
+            </div>
+          </section>
         </div>
-        <div style={storyWidthStyle}>
-          <AuthenticationRegistration {...args} defaultMethod="phone" />
+      </section>
+
+      <section style={overviewSectionStyle}>
+        <p style={labelStyle}>Mobile</p>
+        <div style={mobileOverviewGridStyle}>
+          <section style={sectionStyle}>
+            <p style={labelStyle}>Email</p>
+            <div className="theme-light" style={mobileWidthStyle}>
+              <AuthenticationRegistration
+                defaultMethod="email"
+                device="mobile"
+                themeProps={{ applyToDocument: false }}
+              />
+            </div>
+          </section>
+
+          <section style={sectionStyle}>
+            <p style={labelStyle}>Phone</p>
+            <div className="theme-light" style={mobileWidthStyle}>
+              <AuthenticationRegistration
+                defaultMethod="phone"
+                device="mobile"
+                themeProps={{ applyToDocument: false }}
+              />
+            </div>
+          </section>
         </div>
-      </div>
+      </section>
     </div>
   )
 };

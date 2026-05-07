@@ -8,6 +8,7 @@ import InputLogin from '../../../components/input-login/index.js';
 import InputPassword from '../../../components/input-password/index.js';
 import InputPhone from '../../../components/input-phone/index.js';
 import SegmentedControl from '../../../components/segmented-control/index.js';
+import gosuslugiIconUrl from '../../../../icons/gosuslugi.svg';
 
 var PERSONAL_DATA_POLICY_URL = 'https://rshbins.ru/about/documentation/Politika_obrabotki_PDN.pdf';
 
@@ -166,6 +167,13 @@ export default function AuthenticationFirstScreen(props) {
             <div className="rshb-authentication-first-screen__group rshb-authentication-first-screen__group--tight">
               <Button
                 className="rshb-authentication-first-screen__action"
+                leadingIcon={
+                  <span
+                    aria-hidden="true"
+                    className="rshb-authentication-first-screen__gosuslugi-icon"
+                    style={{ '--rshb-authentication-first-screen-icon-url': 'url("' + gosuslugiIconUrl + '")' }}
+                  />
+                }
                 onClick={onGosuslugiLogin}
                 variant="brand"
               >

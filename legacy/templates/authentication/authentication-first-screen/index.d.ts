@@ -1,17 +1,18 @@
-export { default } from './AuthenticationFirstScreen.jsx';
 import type { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from 'react';
+import type { LegacyThemeProps } from '../../../components/theme/index.js';
 
 export type LegacyAuthenticationClientType = 'individual' | 'corporate';
 export type LegacyAuthenticationFirstScreenDevice = 'auto' | 'desktop' | 'mobile';
 
 export interface LegacyIndividualSubmitPayload {
-  consentAccepted: boolean;
-  phone: string;
+  consent: boolean;
+  login: string;
+  password: string;
 }
 
 export interface LegacyCorporateSubmitPayload {
-  login: string;
-  password: string;
+  consent: boolean;
+  phone: string;
 }
 
 export interface LegacyAuthenticationFirstScreenProps
@@ -29,7 +30,7 @@ export interface LegacyAuthenticationFirstScreenProps
   forgotCredentialsLabel?: ReactNode;
   gosuslugiButtonLabel?: ReactNode;
   loginButtonLabel?: ReactNode;
-  loginButtonProps?: Record<string, unknown>;
+  loginButtonProps?: Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children' | 'type'>;
   loginInputProps?: Record<string, unknown>;
   onClientTypeChange?: (clientType: LegacyAuthenticationClientType) => void;
   onCorporateSubmit?: (payload: LegacyCorporateSubmitPayload) => void;
@@ -41,7 +42,7 @@ export interface LegacyAuthenticationFirstScreenProps
   passwordInputProps?: Record<string, unknown>;
   phoneInputProps?: Record<string, unknown>;
   registerButtonLabel?: ReactNode;
-  themeProps?: Record<string, unknown>;
+  themeProps?: Omit<LegacyThemeProps, 'className'>;
 }
 
 export default function AuthenticationFirstScreen(

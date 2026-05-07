@@ -1,11 +1,11 @@
-export { default } from './AuthenticationRegistration.jsx';
 import type { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from 'react';
+import type { LegacyThemeProps } from '../../../components/theme/index.js';
 
-export type LegacyAuthenticationRegistrationDevice = 'auto' | 'desktop' | 'mobile';
 export type LegacyAuthenticationRegistrationMethod = 'email' | 'phone';
+export type LegacyAuthenticationRegistrationDevice = 'auto' | 'desktop' | 'mobile';
 
 export interface LegacyAuthenticationRegistrationSubmitPayload {
-  consentAccepted: boolean;
+  consent: boolean;
   inn: string;
   method: LegacyAuthenticationRegistrationMethod;
   value: string;
@@ -31,9 +31,9 @@ export interface LegacyAuthenticationRegistrationProps
   onPersonalDataClick?: () => void;
   onSubmit?: (payload: LegacyAuthenticationRegistrationSubmitPayload) => void;
   phoneInputProps?: Record<string, unknown>;
-  registerButtonProps?: Record<string, unknown>;
+  registerButtonProps?: Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children' | 'type'>;
   registerButtonLabel?: ReactNode;
-  themeProps?: Record<string, unknown>;
+  themeProps?: Omit<LegacyThemeProps, 'className'>;
 }
 
 export default function AuthenticationRegistration(

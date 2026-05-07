@@ -1,17 +1,16 @@
-export { default } from './AuthenticationRestoringAccess.jsx';
 import type { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from 'react';
+import type { LegacyThemeProps } from '../../../components/theme/index.js';
 
 export type LegacyAuthenticationRestoringAccessDevice = 'auto' | 'desktop' | 'mobile';
-export type LegacyAuthenticationRestoringAccessFlow = 'password' | 'login';
 export type LegacyAuthenticationRestoringAccessMethod = 'email' | 'phone';
+export type LegacyAuthenticationRestoringAccessFlow = 'password' | 'login';
 
 export interface LegacyAuthenticationRestoringPasswordSubmitPayload {
-  login: string;
+  inn: string;
 }
 
 export interface LegacyAuthenticationRestoringLoginSubmitPayload {
-  consentAccepted: boolean;
-  inn: string;
+  consent: boolean;
   method: LegacyAuthenticationRestoringAccessMethod;
   value: string;
 }
@@ -42,8 +41,8 @@ export interface LegacyAuthenticationRestoringAccessProps
   onRestoringLoginSubmit?: (payload: LegacyAuthenticationRestoringLoginSubmitPayload) => void;
   phoneInputProps?: Record<string, unknown>;
   restoringFlow?: LegacyAuthenticationRestoringAccessFlow;
-  submitButtonProps?: Record<string, unknown>;
-  themeProps?: Record<string, unknown>;
+  submitButtonProps?: Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children' | 'type'>;
+  themeProps?: Omit<LegacyThemeProps, 'className'>;
 }
 
 export default function AuthenticationRestoringAccess(

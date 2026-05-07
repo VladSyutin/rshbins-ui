@@ -1,14 +1,14 @@
-export { default } from './AuthenticationRegistrationData.jsx';
 import type { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from 'react';
-import type { LegacyGenderValue } from '../../../components/gender/index.js';
+import type { LegacyThemeProps } from '../../../components/theme/index.js';
 
 export type LegacyAuthenticationRegistrationDataDevice = 'auto' | 'desktop' | 'mobile';
+export type LegacyGenderValue = 'male' | 'female';
 
 export interface LegacyAuthenticationRegistrationDataSubmitPayload {
-  birthDate?: Date;
-  consentAccepted: boolean;
+  birthDate: Date | undefined;
+  consent: boolean;
   email: string;
-  gender?: LegacyGenderValue;
+  gender: LegacyGenderValue | undefined;
   middleName: string;
   name: string;
   surname: string;
@@ -37,10 +37,10 @@ export interface LegacyAuthenticationRegistrationDataProps
   onConsentChange?: (checked: boolean) => void;
   onPersonalDataClick?: () => void;
   onSubmit?: (payload: LegacyAuthenticationRegistrationDataSubmitPayload) => void;
-  saveButtonProps?: Record<string, unknown>;
+  saveButtonProps?: Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children' | 'type'>;
   saveButtonLabel?: ReactNode;
   surnameInputProps?: Record<string, unknown>;
-  themeProps?: Record<string, unknown>;
+  themeProps?: Omit<LegacyThemeProps, 'className'>;
 }
 
 export default function AuthenticationRegistrationData(
