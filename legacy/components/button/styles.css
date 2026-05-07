@@ -37,12 +37,12 @@
 
 .rshb-legacy-button[data-size='m'][data-icon-only='false'] {
   min-height: 56px;
-  padding: 16px;
+  padding: var(--space-paddings-inside-m);
 }
 
 .rshb-legacy-button[data-size='s'][data-icon-only='false'] {
   min-height: 40px;
-  padding: 8px 16px;
+  padding: var(--space-paddings-inside-xs) var(--space-paddings-inside-m);
 }
 
 .rshb-legacy-button[data-size='m'][data-icon-only='true'] {
@@ -61,7 +61,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: var(--space-margins-inside-xs);
   min-width: 0;
 }
 

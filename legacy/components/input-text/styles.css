@@ -11,7 +11,7 @@
 .rshb-legacy-input-text__field {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-margins-inside-xs);
   min-height: 58px;
   padding: 7px 8px 7px 16px;
   border: 2px solid var(--color-border-default-default);

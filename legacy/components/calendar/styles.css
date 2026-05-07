@@ -3,7 +3,7 @@
   display: inline-flex;
   flex-direction: column;
   gap: 2px;
-  padding: 8px;
+  padding: var(--space-paddings-inside-xs);
   border-radius: var(--radius-xs);
   background: var(--color-background-default-on-secondary, var(--color-background-default-generic, #ffffff));
   box-shadow: var(--shadow-flyout, 0 16px 32px rgb(32 35 38 / 12%));
@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: var(--space-margins-inside-xs);
 }
 
 .rshb-legacy-calendar__title-button,
@@ -69,9 +69,9 @@
 }
 
 .rshb-legacy-calendar__title-button {
-  gap: 8px;
+  gap: var(--space-margins-inside-xs);
   min-height: 40px;
-  padding: 8px 16px;
+  padding: var(--space-paddings-inside-xs) var(--space-paddings-inside-m);
 }
 
 .rshb-legacy-calendar__title-label,
@@ -188,7 +188,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  padding: 8px;
+  padding: var(--space-paddings-inside-xs);
   border-radius: var(--radius-xs);
   background: transparent;
 }
@@ -217,7 +217,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: var(--space-paddings-inside-xs);
   border-radius: var(--radius-xs);
   background: var(--calendar-item-background);
   box-shadow: var(--calendar-item-ring);

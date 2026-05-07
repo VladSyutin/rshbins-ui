@@ -105,7 +105,7 @@
 
 .rshb-authentication-restoring-access__switch .rshb-segment__content {
   width: 100%;
-  padding-inline: 12px;
+  padding-inline: var(--space-paddings-inside-s);
 }
 
 .rshb-authentication-restoring-access__switch .rshb-segment__label {
