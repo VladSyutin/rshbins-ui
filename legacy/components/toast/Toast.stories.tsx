@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import type { LegacyToastVariant, LegacyToastProps } from './index.js';
 import Toast from './index.js';
+import Button from '../button/index.js';
 
 const meta = {
   title: 'Legacy/Components/Toast',
@@ -87,9 +88,9 @@ function InteractiveToastDemo(args: Story['args']) {
   return (
     <div style={surfaceStyle}>
       <div style={demoStyle}>
-        <button onClick={showToast} style={triggerButtonStyle} type="button">
+        <Button onClick={showToast} variant="brand">
           Показать toast
-        </button>
+        </Button>
         {isVisible ? (
           <ParentDocumentPortal>
             <Toast
@@ -159,14 +160,3 @@ const demoStyle: CSSProperties = {
   minHeight: '220px'
 };
 
-const triggerButtonStyle: CSSProperties = {
-  padding: '12px 24px',
-  borderRadius: '8px',
-  border: 'none',
-  background: 'var(--legacy-color-background-brand-default, #67a757)',
-  color: '#ffffff',
-  fontFamily: 'var(--legacy-typography-body-font-family)',
-  fontSize: 'var(--legacy-typography-body-font-size)',
-  fontWeight: 600,
-  cursor: 'pointer'
-};
