@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import '../../tokens/legacy-theme.css';
 import './styles.css';
 
 var LOGO_STEP_SEQUENCE = ['1', '2', '3', '4', '5', '6', '7', '8'];
@@ -30,9 +29,9 @@ var LOGO_BAR_HEIGHTS = {
 };
 
 var LOGO_BAR_COLORS = [
-  'var(--legacy-color-logo-line-1)',
-  'var(--legacy-color-logo-line-2)',
-  'var(--legacy-color-logo-line-3)'
+  'var(--color-logo-line-1)',
+  'var(--color-logo-line-2)',
+  'var(--color-logo-line-3)'
 ];
 
 var LONGEST_TEXT_LABEL = TEXT_STEP_SEQUENCE.reduce(function (longest, step) {

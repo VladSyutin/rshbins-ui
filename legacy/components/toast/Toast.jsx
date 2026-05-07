@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import '../../tokens/legacy-theme.css';
 import './styles.css';
 
 var TOAST_EXIT_DURATION = 150;

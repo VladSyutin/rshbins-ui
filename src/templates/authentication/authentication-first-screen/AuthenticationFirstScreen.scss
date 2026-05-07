@@ -56,7 +56,7 @@
 
 .rshb-authentication-first-screen__type-switch .rshb-segment__content {
   width: 100%;
-  padding-inline: 12px;
+  padding-inline: var(--space-paddings-inside-s);
 }
 
 .rshb-authentication-first-screen__type-switch .rshb-segment__label {

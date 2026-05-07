@@ -7,7 +7,7 @@ React 17-compatible delivery of the animated brand loader for FOS integration.
 - `LoaderBrand.jsx` — component implementation
 - `styles.css` — loader styles
 - `index.js` — default export entry point
-- `../../tokens/legacy-theme.css` — shared legacy token aliases with semantic-token fallbacks
+- `src/styles/tokens.css` — design tokens (loaded globally, not imported per-component)
 
 ### Integration Notes
 

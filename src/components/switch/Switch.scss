@@ -8,7 +8,7 @@
   position: relative;
   display: inline-flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: var(--space-margins-inside-xs);
   width: fit-content;
   max-width: 100%;
   color: var(--color-text-default-primary);

@@ -153,7 +153,7 @@ const surfaceStyle: CSSProperties = {
   display: 'grid',
   gap: '24px',
   padding: '28px 36px 40px',
-  border: '1px dashed var(--legacy-color-border-default-default, #d7dce1)',
+  border: '1px dashed var(--color-border-default-default)',
   borderRadius: '4px',
   background: 'var(--color-background-default-primary)'
 };

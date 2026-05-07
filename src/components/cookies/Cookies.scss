@@ -24,7 +24,7 @@
   position: fixed;
   z-index: 1000;
   inset-inline-start: 50%;
-  inset-block-end: 32px;
+  inset-block-end: var(--space-margins-inside-2xl);
   transform: translateX(-50%);
 }
 
@@ -43,7 +43,7 @@
   width: 361px;
   max-width: min(
     361px,
-    calc(100vw - (var(--space-margins-outside-2xl) * 2))
+    calc(100vw - (var(--space-margins-inside-xl) * 2))
   );
   padding: var(--space-paddings-inside-m);
 }
@@ -217,7 +217,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: calc(100vw - (var(--space-margins-outside-2xl) * 2));
+    width: calc(100vw - (var(--space-margins-inside-xl) * 2));
     padding: var(--space-paddings-inside-m);
   }
 

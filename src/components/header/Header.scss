@@ -1,5 +1,5 @@
 .rshb-header {
-  --rshb-header-inline-padding: 64px;
+  --rshb-header-inline-padding: var(--space-margins-outside-6xl);
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -61,7 +61,7 @@
 }
 
 .rshb-header[data-size='responsive'] {
-  --rshb-header-inline-padding: 64px;
+  --rshb-header-inline-padding: var(--space-margins-outside-6xl);
 }
 
 @media (max-width: 1023px) {

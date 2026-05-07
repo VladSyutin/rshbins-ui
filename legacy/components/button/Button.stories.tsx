@@ -158,7 +158,7 @@ export const Overview: Story = {
 const surfaceStyle: CSSProperties = {
   padding: '16px',
   borderRadius: '24px',
-  border: '1px dashed var(--legacy-color-border-default-default, #d7dce1)',
+  border: '1px dashed var(--color-border-default-default)',
   backgroundColor: 'var(--color-background-default-primary)'
 };
 
@@ -187,9 +187,9 @@ const rowStyle: CSSProperties = {
 
 const metaStyle: CSSProperties = {
   margin: 0,
-  color: 'var(--legacy-color-text-default-secondary, #6d737a)',
-  fontFamily: 'var(--legacy-typography-footnote-font-family)',
-  fontSize: 'var(--legacy-typography-footnote-font-size)',
-  fontWeight: 'var(--legacy-typography-footnote-font-weight)',
-  lineHeight: 'var(--legacy-typography-footnote-line-height)'
+  color: 'var(--color-text-default-secondary)',
+  fontFamily: 'var(--typography-footnote-regular-fontFamily)',
+  fontSize: 'var(--typography-footnote-regular-fontSize)',
+  fontWeight: 'var(--typography-footnote-regular-fontWeight)',
+  lineHeight: 'var(--typography-footnote-regular-lineHeight)'
 };

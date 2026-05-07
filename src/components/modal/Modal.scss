@@ -14,7 +14,7 @@
   width: 360px;
   max-width: min(
     360px,
-    calc(100vw - (var(--space-margins-outside-2xl) * 2))
+    calc(100vw - (var(--space-margins-inside-xl) * 2))
   );
   padding: var(--space-paddings-inside-m) var(--space-paddings-inside-xs) var(--space-paddings-inside-xs);
   border-radius: var(--radius-m);
@@ -31,7 +31,7 @@
 .rshb-modal[data-placement='top-center'] {
   position: fixed;
   z-index: 1000;
-  inset-block-start: 32px;
+  inset-block-start: var(--space-margins-inside-2xl);
   inset-inline-start: 50%;
   transform: translateX(-50%);
 }
@@ -48,7 +48,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-margins-inside-xs);
-  padding-inline: 4px;
+  padding-inline: var(--space-paddings-inside-2xs);
 }
 
 .rshb-modal__title,
@@ -208,6 +208,6 @@
 @media (max-width: 743px) {
   .rshb-modal {
     width: 313px;
-    max-width: calc(100vw - 32px);
+    max-width: calc(100vw - var(--space-paddings-inside-2xl));
   }
 }

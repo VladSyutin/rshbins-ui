@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../tokens/legacy-theme.css';
 import './styles.css';
 
 const SPINNER_PATH =
