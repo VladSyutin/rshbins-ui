@@ -1,0 +1,9 @@
+.rshb-legacy-filled-cookies__link {
+  color: var(--color-text-default-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.rshb-legacy-filled-cookies__link:hover {
+  color: var(--color-text-default-accent-hover);
+}
