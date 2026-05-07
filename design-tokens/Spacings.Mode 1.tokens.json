@@ -63,10 +63,6 @@
       }
     },
     "outside": {
-      "2XL": {
-        "$type": "dimension",
-        "$value": "24px"
-      },
       "3XL": {
         "$type": "dimension",
         "$value": "40px"

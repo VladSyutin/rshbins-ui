@@ -6,7 +6,7 @@
     "Animation timing tokens are exported as px by the Figma plugin; runtime output normalizes them to ms."
   ],
   "stats": {
-    "rawTokenCount": 566,
+    "rawTokenCount": 565,
     "resolvedReferenceCount": 90
   },
   "checkedFiles": [

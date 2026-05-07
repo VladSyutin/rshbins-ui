@@ -14,7 +14,7 @@
   width: 360px;
   max-width: min(
     360px,
-    calc(100vw - (var(--space-margins-outside-2xl) * 2))
+    calc(100vw - (var(--space-margins-inside-xl) * 2))
   );
   padding: var(--space-paddings-inside-m) var(--space-paddings-inside-xs) var(--space-paddings-inside-xs);
   border-radius: var(--radius-m);
