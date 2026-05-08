@@ -89,7 +89,8 @@
   min-width: 0;
 }
 
-.rshb-authentication-restoring-access__switch.rshb-segmented-control {
+.rshb-authentication-restoring-access__switch.rshb-segmented-control,
+.rshb-authentication-restoring-access__switch.rshb-legacy-segmented-control {
   display: flex;
   gap: var(--space-margins-inside-m);
   width: 100%;
@@ -97,18 +98,22 @@
 }
 
 .rshb-authentication-restoring-access__switch .rshb-segmented-control__item,
-.rshb-authentication-restoring-access__switch .rshb-segment {
+.rshb-authentication-restoring-access__switch .rshb-segment,
+.rshb-authentication-restoring-access__switch .rshb-legacy-segmented-control__item,
+.rshb-authentication-restoring-access__switch .rshb-legacy-segment {
   flex: 1 1 0;
   width: 100%;
   min-width: 0;
 }
 
-.rshb-authentication-restoring-access__switch .rshb-segment__content {
+.rshb-authentication-restoring-access__switch .rshb-segment__content,
+.rshb-authentication-restoring-access__switch .rshb-legacy-segment__content {
   width: 100%;
   padding-inline: var(--space-paddings-inside-s);
 }
 
-.rshb-authentication-restoring-access__switch .rshb-segment__label {
+.rshb-authentication-restoring-access__switch .rshb-segment__label,
+.rshb-authentication-restoring-access__switch .rshb-legacy-segment__label {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

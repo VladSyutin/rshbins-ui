@@ -41,25 +41,30 @@
   min-width: 0;
 }
 
-.rshb-authentication-first-screen__type-switch.rshb-segmented-control {
+.rshb-authentication-first-screen__type-switch.rshb-segmented-control,
+.rshb-authentication-first-screen__type-switch.rshb-legacy-segmented-control {
   display: flex;
   width: 100%;
   max-width: none;
 }
 
 .rshb-authentication-first-screen__type-switch .rshb-segmented-control__item,
-.rshb-authentication-first-screen__type-switch .rshb-segment {
+.rshb-authentication-first-screen__type-switch .rshb-segment,
+.rshb-authentication-first-screen__type-switch .rshb-legacy-segmented-control__item,
+.rshb-authentication-first-screen__type-switch .rshb-legacy-segment {
   flex: 1 1 0;
   width: 100%;
   min-width: 0;
 }
 
-.rshb-authentication-first-screen__type-switch .rshb-segment__content {
+.rshb-authentication-first-screen__type-switch .rshb-segment__content,
+.rshb-authentication-first-screen__type-switch .rshb-legacy-segment__content {
   width: 100%;
   padding-inline: var(--space-paddings-inside-s);
 }
 
-.rshb-authentication-first-screen__type-switch .rshb-segment__label {
+.rshb-authentication-first-screen__type-switch .rshb-segment__label,
+.rshb-authentication-first-screen__type-switch .rshb-legacy-segment__label {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
