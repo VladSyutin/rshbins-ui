@@ -6,6 +6,7 @@ import {
   type ReactNode
 } from 'react';
 import { InputText, type InputTextProps } from '../input-text/InputText';
+import { latinToCyrillic } from '../transliterate';
 import { Switch } from '../switch/Switch';
 import './InputMiddleName.scss';
 
@@ -41,7 +42,11 @@ function formatFirstLetter(value: string): string {
 function sanitizeMiddleNameValue(value: string): string {
   let sanitizedValue = '';
 
-  for (const character of value) {
+  for (const rawCharacter of value) {
+    const character = MIDDLE_NAME_ALLOWED_CHARACTER_PATTERN.test(rawCharacter)
+      ? rawCharacter
+      : latinToCyrillic(rawCharacter);
+
     if (!MIDDLE_NAME_ALLOWED_CHARACTER_PATTERN.test(character)) {
       continue;
     }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import InputText from '../input-text/index.js';
+import { cyrillicToLatin } from '../transliterate.js';
 import './styles.css';
 
 const LOGIN_REQUIRED_ERROR = 'Обязательно для заполнения';
@@ -15,7 +16,10 @@ function sanitizeLoginValue(value) {
   const input = String(value);
 
   for (let index = 0; index < input.length; index += 1) {
-    const character = input[index];
+    const rawCharacter = input[index];
+    const character = LOGIN_ALLOWED_CHARACTER_PATTERN.test(rawCharacter)
+      ? rawCharacter
+      : cyrillicToLatin(rawCharacter);
 
     if (!LOGIN_ALLOWED_CHARACTER_PATTERN.test(character)) {
       continue;

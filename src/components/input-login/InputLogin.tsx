@@ -6,6 +6,7 @@ import {
   type ReactNode
 } from 'react';
 import { InputText, type InputTextProps } from '../input-text/InputText';
+import { cyrillicToLatin } from '../transliterate';
 import './InputLogin.scss';
 
 const LOGIN_REQUIRED_ERROR = 'Обязательно для заполнения';
@@ -27,7 +28,11 @@ function joinClassNames(...values: Array<string | false | null | undefined>): st
 function sanitizeLoginValue(value: string): string {
   let sanitizedValue = '';
 
-  for (const character of value) {
+  for (const rawCharacter of value) {
+    const character = LOGIN_ALLOWED_CHARACTER_PATTERN.test(rawCharacter)
+      ? rawCharacter
+      : cyrillicToLatin(rawCharacter);
+
     if (!LOGIN_ALLOWED_CHARACTER_PATTERN.test(character)) {
       continue;
     }

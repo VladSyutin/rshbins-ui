@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import InputText from '../input-text/index.js';
+import { latinToCyrillic } from '../transliterate.js';
 import './styles.css';
 
 const NAME_REQUIRED_ERROR = 'Обязательно для заполнения';
@@ -26,7 +27,10 @@ function sanitizeNameValue(value) {
   const input = String(value);
 
   for (let index = 0; index < input.length; index += 1) {
-    const character = input[index];
+    const rawCharacter = input[index];
+    const character = NAME_ALLOWED_CHARACTER_PATTERN.test(rawCharacter)
+      ? rawCharacter
+      : latinToCyrillic(rawCharacter);
 
     if (!NAME_ALLOWED_CHARACTER_PATTERN.test(character)) {
       continue;

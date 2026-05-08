@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import InputText from '../input-text/index.js';
+import { cyrillicToLatin } from '../transliterate.js';
 import './styles.css';
 
 const EMAIL_MAX_LENGTH = 254;
@@ -24,11 +25,15 @@ function sanitizeEmailValue(value) {
   const input = String(value).toLowerCase();
 
   for (let index = 0; index < input.length; index += 1) {
-    const rawCharacter = input[index];
+    const inputCharacter = input[index];
 
     if (sanitizedValue.length >= EMAIL_MAX_LENGTH) {
       break;
     }
+
+    const rawCharacter = EMAIL_ALLOWED_CHARACTER_PATTERN.test(inputCharacter)
+      ? inputCharacter
+      : cyrillicToLatin(inputCharacter);
 
     if (!EMAIL_ALLOWED_CHARACTER_PATTERN.test(rawCharacter)) {
       continue;

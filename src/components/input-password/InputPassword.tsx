@@ -9,6 +9,7 @@ import {
   type ReactNode
 } from 'react';
 import type { InputTextPreviewState } from '../input-text/InputText';
+import { cyrillicToLatin } from '../transliterate';
 import '../input-text/InputText.scss';
 import './InputPassword.scss';
 import circleExclamationFillIconUrl from '../../../icons/circle-exclamation-fill.svg';
@@ -49,7 +50,11 @@ function joinClassNames(...values: Array<string | false | null | undefined>): st
 function sanitizePasswordValue(value: string): string {
   let sanitizedValue = '';
 
-  for (const character of value) {
+  for (const rawCharacter of value) {
+    const character = PASSWORD_ALLOWED_CHARACTER_PATTERN.test(rawCharacter)
+      ? rawCharacter
+      : cyrillicToLatin(rawCharacter);
+
     if (PASSWORD_ALLOWED_CHARACTER_PATTERN.test(character)) {
       sanitizedValue += character;
     }

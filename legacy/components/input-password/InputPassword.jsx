@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { cyrillicToLatin } from '../transliterate.js';
 import './styles.css';
 
 const PASSWORD_REQUIRED_ERROR = 'Обязательно для заполнения';
@@ -19,7 +20,10 @@ function sanitizePasswordValue(value) {
   const input = String(value);
 
   for (let index = 0; index < input.length; index += 1) {
-    const character = input[index];
+    const rawCharacter = input[index];
+    const character = PASSWORD_ALLOWED_CHARACTER_PATTERN.test(rawCharacter)
+      ? rawCharacter
+      : cyrillicToLatin(rawCharacter);
 
     if (PASSWORD_ALLOWED_CHARACTER_PATTERN.test(character)) {
       sanitizedValue += character;
