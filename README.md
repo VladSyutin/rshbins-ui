@@ -16,10 +16,13 @@ legacy/
   components/     React 17-compatible delivery components (plain CSS)
   dialogs/        scenario templates: modals/, toasts/, cookies/
   templates/      reusable auth compositions (mirrors src/templates/)
+  prototypes/     experimental auth-flow screen prototypes (mirrors src/prototypes/)
+  tokens/         legacy token artifacts
 design-tokens/    Figma raw export and normalized runtime artifacts
 icons/            shared SVG icon library
 scripts/
   design_tokens/  token build pipeline
+  project_memory/ memory management scripts (log_session, flush, lint)
 .storybook/       Storybook configuration (Modern/* and Legacy/* roots)
 ```
 
@@ -29,7 +32,7 @@ scripts/
 |---|---|
 | Modern | React 19, TypeScript, Sass, Vite |
 | Legacy | React 17-compatible JSX, plain CSS, CommonJS-friendly entrypoints |
-| Stories | Storybook 8 |
+| Stories | Storybook 10 |
 | Tokens | Figma export → Python build pipeline → CSS custom properties |
 
 ## Getting started
@@ -95,6 +98,10 @@ cookies, modals, toasts — scenario-level compositions matching `src/dialogs/`.
 authentication-creating-login-password, authentication-email-confirmation, authentication-first-screen, authentication-phone-confirmation, authentication-registration, authentication-registration-data, authentication-restoring-access
 
 Legacy auth templates mirror `src/templates/authentication/` and import their SCSS directly from the modern layer. Each template ships as a JSX file, a `.d.ts` entrypoint, and a Storybook story with `Playground` + `Overview` exports.
+
+### Legacy prototypes (`legacy/prototypes/authentication/`)
+
+`AuthenticationPrototype` — a full auth-flow screen assembled from legacy templates and dialogs. Mirrors `src/prototypes/authentication/`. Ships as JSX, `.d.ts` entrypoint, and a Storybook story.
 
 ## Contribution rules
 
