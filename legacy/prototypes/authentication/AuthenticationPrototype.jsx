@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import '../../../src/prototypes/authentication/AuthenticationPrototype.scss';
 import LoaderBrand from '../../components/loader-brand/index.js';
 import Captcha from '../../dialogs/modals/captcha/index.js';
 import Timeout from '../../dialogs/modals/timeout/index.js';
@@ -15,6 +14,7 @@ import AuthenticationCreatingLoginPassword from '../../templates/authentication/
 import AuthenticationRegistrationData from '../../templates/authentication/authentication-registration-data/index.js';
 import AuthenticationRegistration from '../../templates/authentication/authentication-registration/index.js';
 import AuthenticationRestoringAccess from '../../templates/authentication/authentication-restoring-access/index.js';
+import '../../../src/prototypes/authentication/AuthenticationPrototype.scss';
 
 function joinClassNames() {
   return Array.prototype.slice.call(arguments).filter(Boolean).join(' ');
