@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import InputText from '../input-text/index.js';
+import { latinToCyrillic } from '../transliterate.js';
 import Switch from '../switch/index.js';
 import './styles.css';
 
@@ -27,7 +28,10 @@ function sanitizeMiddleNameValue(value) {
   const input = String(value);
 
   for (let index = 0; index < input.length; index += 1) {
-    const character = input[index];
+    const rawCharacter = input[index];
+    const character = MIDDLE_NAME_ALLOWED_CHARACTER_PATTERN.test(rawCharacter)
+      ? rawCharacter
+      : latinToCyrillic(rawCharacter);
 
     if (!MIDDLE_NAME_ALLOWED_CHARACTER_PATTERN.test(character)) {
       continue;

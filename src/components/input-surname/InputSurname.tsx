@@ -6,6 +6,7 @@ import {
   type ReactNode
 } from 'react';
 import { InputText, type InputTextProps } from '../input-text/InputText';
+import { latinToCyrillic } from '../transliterate';
 import './InputSurname.scss';
 
 const SURNAME_REQUIRED_ERROR = 'Обязательно для заполнения';
@@ -38,7 +39,11 @@ function formatFirstLetter(value: string): string {
 function sanitizeSurnameValue(value: string): string {
   let sanitizedValue = '';
 
-  for (const character of value) {
+  for (const rawCharacter of value) {
+    const character = SURNAME_ALLOWED_CHARACTER_PATTERN.test(rawCharacter)
+      ? rawCharacter
+      : latinToCyrillic(rawCharacter);
+
     if (!SURNAME_ALLOWED_CHARACTER_PATTERN.test(character)) {
       continue;
     }
