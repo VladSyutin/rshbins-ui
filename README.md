@@ -22,7 +22,6 @@ design-tokens/    Figma raw export and normalized runtime artifacts
 icons/            shared SVG icon library
 scripts/
   design_tokens/  token build pipeline
-  project_memory/ memory management scripts (log_session, flush, lint)
 .storybook/       Storybook configuration (Modern/* and Legacy/* roots)
 ```
 
