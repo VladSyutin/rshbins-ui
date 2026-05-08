@@ -17,7 +17,6 @@ legacy/
   dialogs/        scenario templates: modals/, toasts/, cookies/
   templates/      reusable auth compositions (mirrors src/templates/)
   prototypes/     experimental auth-flow screen prototypes (mirrors src/prototypes/)
-  tokens/         legacy token artifacts
 design-tokens/    Figma raw export and normalized runtime artifacts
 icons/            shared SVG icon library
 scripts/
